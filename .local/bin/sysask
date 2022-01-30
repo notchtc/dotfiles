@@ -3,7 +3,7 @@
 case "$(printf 'leave dwm\nrestart dwm\nshutdown\nreboot' | dmenu $* -i -p 'What do you want to do? ')" in
     'leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
     'restart dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
-    'shutdown') /sbin/poweroff ;;
-    'reboot') /sbin/reboot ;;
+    'shutdown') doas /sbin/poweroff ;;
+    'reboot') doas /sbin/reboot ;;
     *) exit 1;;
 esac

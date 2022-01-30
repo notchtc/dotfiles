@@ -39,5 +39,5 @@ export GPG_TTY=$(tty)
 export PATH="$PATH:$HOME/.local/bin:$GEM_HOME/bin:$XDG_CONFIG_HOME/emacs/bin:$LIBERICA_DIR/bin"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx "$XDG_CONFIG_HOME/X11/xinitrc"
+  exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
 fi
