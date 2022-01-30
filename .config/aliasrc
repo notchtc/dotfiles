@@ -38,7 +38,7 @@ smn() {
 }
 
 alias bat="bat --theme ansi"
-alias cmus="screen -q -r -D cmus || screen -S cmus $(which --skip-alias cmus)"
+alias cmus='screen -q -r -D cmus || screen -S cmus $(which --skip-alias cmus)'
 alias sudo="doas"
 
 alias ..="cd .."
