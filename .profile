@@ -33,6 +33,8 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
+export GPG_TTY=$(tty)
+
 # Set path
 export PATH="$PATH:$HOME/.local/bin:$GEM_HOME/bin:$XDG_CONFIG_HOME/emacs/bin:$LIBERICA_DIR/bin"
 
