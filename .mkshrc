@@ -1,0 +1,13 @@
+# prompt
+PS1=$'\E[36m''${PWD/#"$HOME"/\~}'$'\E[0m \E[32mΣ \E[0m'
+
+HISTFILE="$XDG_CONFIG_HOME"/mksh/history
+HISTSIZE=10104096
+
+bind ^[a=beginning-of-line
+bind ^[e=end-of-line
+bind ^L=clear-screen
+
+. "$XDG_CONFIG_HOME"/mksh/key-bindings.mksh
+. "$XDG_CONFIG_HOME"/mksh/completion.mksh
+. "$XDG_CONFIG_HOME"/aliasrc

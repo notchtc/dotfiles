@@ -1,0 +1,22 @@
+#!/bin/sh
+
+diff="$1"
+
+shift
+
+getpkgs() {
+    grep "$1" "$diff" | cut -d "$1" -f 2- | cut -d " " -f 2-
+}
+
+uninstall=$(for i in $(getpkgs "<"); do
+    xbps-query -RS "$i" | grep pkgname | cut -d ":" -f 2- | cut -d " " -f 2-
+done)
+
+install=$(for i in $(getpkgs ">"); do
+    xbps-query -RS "$i" | grep pkgname | cut -d ":" -f 2- | cut -d " " -f 2-
+done)
+
+
+doas xbps-remove -RFo $uninstall
+
+doas xbps-install -S $install

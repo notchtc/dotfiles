@@ -1,0 +1,7 @@
+xrdb -load ~/.config/X11/Xresources &
+setxkbmap pl -option "caps:swapescape" &
+pipewire &
+pipewire-pulse &
+dwmblocks &
+hsetroot -cover ~/Pictures/wallpapers/kombajn.png &
+exec dwm
