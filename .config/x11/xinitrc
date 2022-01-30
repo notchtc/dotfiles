@@ -3,5 +3,5 @@ setxkbmap pl -option "caps:swapescape" &
 pipewire &
 pipewire-pulse &
 dwmblocks &
-hsetroot -cover ~/Pictures/wallpapers/kombajn.png &
+hsetroot -cover ~/.local/share/wall.png &
 exec dwm
