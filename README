@@ -33,5 +33,4 @@ git clone https://github.com/notchtc/dotfiles.git "$HOME"/.dotfiles
 3. Enter the dotfiles directory.
 cd "$HOME"/.dotfiles
 
-4. Install the dotfiles.
-cp .config/ .local/bin/ .mkshrc .profile ~ -r
+4. Run the install script.
