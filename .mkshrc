@@ -8,6 +8,8 @@ bind ^[a=beginning-of-line
 bind ^[e=end-of-line
 bind ^L=clear-screen
 
+export GPG_TTY=$(tty)
+
 . "$XDG_CONFIG_HOME"/mksh/key-bindings.mksh
 . "$XDG_CONFIG_HOME"/mksh/completion.mksh
 . "$XDG_CONFIG_HOME"/aliasrc
