@@ -4,14 +4,14 @@ set mpris=false
 
 set resume=true
 
-set format_current= %1{continue}%1{follow}%1{repeat}%1{shuffle}
-set format_statusline= %{status} %a - %t %=%{volume} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}
+set format_current=%1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline=%{status} %a - %t %=%{?volume? %{volume}%%} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}
 
 set color_win_bg=default
 set color_win_fg=default
 set color_win_sel_attr=default
 set color_win_sel_bg=default
-set color_win_sel_fg=cyan
+set color_win_sel_fg=yellow
 set color_win_title_bg=default
 
 set color_titleline_attr=default
@@ -22,24 +22,24 @@ set color_statusline_attr=default
 set color_statusline_bg=default
 set color_statusline_fg=default
 
-set color_separator=cyan
+set color_separator=red
 
 set color_win_cur_attr=default
-set color_win_cur=green
+set color_win_cur=yellow
 set color_win_cur_sel_attr=default
 set color_win_cur_sel_bg=default
-set color_win_cur_sel_fg=cyan
+set color_win_cur_sel_fg=red
 set color_win_inactive_sel_attr=bold
 set color_win_inactive_sel_bg=default
 set color_win_inactive_sel_fg=default
 set color_win_inactive_cur_sel_attr=bold
 set color_win_inactive_cur_sel_bg=default
-set color_win_inactive_cur_sel_fg=cyan
+set color_win_inactive_cur_sel_fg=yellow
 
 set color_win_dir=default
 
 set color_error=red
-set color_info=cyan
+set color_info=blue
 
 set status_display_program=cmusfm
 

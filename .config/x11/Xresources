@@ -28,3 +28,4 @@ dwm.selbordercolor: #f7768e
 dwm.selbgcolor: #f7768e
 
 st.font: Iosevka Term:size=12:antialias=true:autohint=true
+st.borderpx: 6
