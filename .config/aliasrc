@@ -5,10 +5,10 @@ alias e="$EDITOR"
 alias se="doas $EDITOR"
 
 # ls
-alias ls="exa --group-directories-first"
-alias lsa="exa -a --group-directories-first"
-alias lsl="exa -a -l --git --group-directories-first"
-alias lsla="exa -a -l --git --group-directories-first"
+alias ls="exa --icons --group-directories-first"
+alias lsa="exa --icons -a --group-directories-first"
+alias lsl="exa --icons -a -l --git --group-directories-first"
+alias lsla="exa --icons -a -l --git --group-directories-first"
 
 # trash
 alias rm="trash-put"
@@ -38,7 +38,6 @@ smn() {
 }
 
 alias bat="bat --theme ansi"
-alias cmus='screen -q -r -D cmus || screen -S cmus $(which --skip-alias cmus)'
 alias sudo="doas"
 
 alias ..="cd .."

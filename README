@@ -18,7 +18,7 @@ Used
          PDF Reader: zathura
             Browser: firefox
 Notification Daemon: dunst
-            Font(s): iosevka & iosevka term & iosevka aile
+            Font(s): iosevka & iosevka term & iosevka aile & iosevka nerd font
         Colorscheme: tokyonight
 
 Here is a full list of everything (stuff that is either used somewhere in configs/scripts) that wasn't mentioned previously: adwaita (yes I know that it doesn't fit, but I rarely open a gtk app anyway), adwaita++, asciidoctor, asciidoctor-pdf, doas, exa, notify-send, pipewire, pipewire-pulse, trash-cli, wget, xprop

@@ -27,5 +27,8 @@ dwm.selfgcolor: #1a1b26
 dwm.selbordercolor: #f7768e
 dwm.selbgcolor: #f7768e
 
-st.font: Iosevka Term:size=12:antialias=true:autohint=true
+dwm.font: Iosevka Nerd Font:size=12
+dwm.dmenufont: Iosevka:size=12
+
+st.font: Iosevka Nerd Font Mono:size=12:antialias=true:autohint=true
 st.borderpx: 6

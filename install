@@ -51,5 +51,7 @@ ln -sf "$path"/.local/share/wall.png "$XDG_DATA_HOME"/wall.png
 [ ! -d "$HOME"/.local/bin ] && mkdir "$HOME"/.local/bin
 ln -sf "$path"/.local/bin/battery "$HOME"/.local/bin/battery
 ln -sf "$path"/.local/bin/fetch "$HOME"/.local/bin/fetch
+ln -sf "$path"/.local/bin/nowplaying "$HOME"/.local/bin/nowplaying
 ln -sf "$path"/.local/bin/sysask "$HOME"/.local/bin/sysask
+ln -sf "$path"/.local/bin/volume "$HOME"/.local/bin/volume
 ln -sf "$path"/.local/bin/xbpsdiff "$HOME"/.local/bin/xbpsdiff

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+track=$(playerctl metadata --player=cmus --format "{{ artist }} - {{ title }}")
+
+if [ -n "$track" ]; then
+    printf " %s" "$track"
+else
+    printf ""
+fi
