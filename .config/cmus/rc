@@ -6,6 +6,8 @@ set resume=true
 
 set format_current=%1{continue}%1{follow}%1{repeat}%1{shuffle}
 set format_statusline=%{status} %a - %t %=%{?volume? %{volume}%%} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}
+set format_trackwin=%3n. %t%= %d
+set format_trackwin_va=%3n. %t%= %a %d
 
 set color_win_bg=default
 set color_win_fg=default
@@ -41,6 +43,6 @@ set color_win_dir=default
 set color_error=red
 set color_info=blue
 
-set status_display_program=cmusfm && kill -35 $(pidof dwmblocks)
+set status_display_program=cmusstatus
 
 bind -f common q quit -i
