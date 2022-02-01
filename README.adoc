@@ -13,7 +13,7 @@ Shell:: https://www.mirbsd.org/mksh.htm[mksh]
 WM:: https://github.com/notchtc/dwm[dwm]
 Bar:: https://github.com/notchtc/dwmblocks[dwmblocks]
 Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
-Terminal:: https://github.com/notchtc/st[st] or [foot] when on wayland
+Terminal:: https://github.com/notchtc/st[st] or https://codeberg.org/dnkl/foot[foot] when on wayland
 Text Editor:: https://neovim.io[neovim]
 Music Player:: https://cmus.github.io[cmus]
 Media Player:: https://mpv.io[mpv]
