@@ -20,7 +20,7 @@ Music Player:: https://cmus.github.io[cmus]
 Media Player:: https://mpv.io[mpv]
 Image Viewer:: https://sr.ht/~exec64/imv/[imv]
 PDF Reader:: https://pwmt.org/projects/zathura/[zathura]
-Browser:: https://www.mozilla.org/en-US/firefox/new[firefox]
+Browser:: https://www.mozilla.org/en-US/firefox/new[firefox] (with https://addons.mozilla.org/en-US/firefox/addon/tokyonight_vim[this theme])
 Notification Daemon:: https://github.com/dunst-project/dunst[dunst]
 Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font]
 Colorscheme:: https://github.com/folke/tokyonight.nvim[tokyonight]
