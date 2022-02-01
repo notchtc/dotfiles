@@ -18,6 +18,7 @@ export DOOMDIR="$XDG_CONFIG_HOME/doom"
 export DOOMLOCALDIR="$DOOMDIR/local"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export WINEPREFIX="$XDG_DATA_HOME/wine"
 export LESSHISTFILE=-
 
 # Default apps
