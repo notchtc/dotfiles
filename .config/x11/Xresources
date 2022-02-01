@@ -29,6 +29,7 @@ dwm.selbgcolor: #f7768e
 
 dwm.font: Iosevka Nerd Font:size=12
 dwm.dmenufont: Iosevka:size=12
+dwm.snap: 6
 
 st.font: Iosevka Nerd Font Mono:size=12:antialias=true:autohint=true
 st.borderpx: 6

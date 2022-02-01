@@ -8,21 +8,21 @@ Older rices are in the https://github.com/notchtc/dotfiles-old[dotfiles-old repo
 
 == Used
 [horizontal]
-OS:: void linux
-Shell:: mksh
+OS:: https://voidlinux.org[void linux]
+Shell:: https://www.mirbsd.org/mksh.htm[mksh]
 WM:: https://github.com/notchtc/dwm[dwm]
 Bar:: https://github.com/notchtc/dwmblocks[dwmblocks]
-Wallpaper Setter:: hsetroot
-Terminal:: https://github.com/notchtc/st[st] or foot when on wayland
-Text Editor:: neovim
-Music Player:: cmus
-Media Player:: mpv
-Image Viewer:: imv
-PDF Reader:: zathura
-Browser:: firefox
-Notification Daemon:: dunst
-Font(s):: iosevka & iosevka term & iosevka aile & iosevka nerd font
-Colorscheme:: tokyonight
+Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
+Terminal:: https://github.com/notchtc/st[st] or [foot] when on wayland
+Text Editor:: https://neovim.io[neovim]
+Music Player:: https://cmus.github.io[cmus]
+Media Player:: https://mpv.io[mpv]
+Image Viewer:: https://sr.ht/~exec64/imv/[imv]
+PDF Reader:: https://pwmt.org/projects/zathura/[zathura]
+Browser:: https://www.mozilla.org/en-US/firefox/new[firefox]
+Notification Daemon:: https://github.com/dunst-project/dunst[dunst]
+Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font]
+Colorscheme:: https://github.com/folke/tokyonight.nvim[tokyonight]
 
 Here is a full list of everything (stuff that either has a config or is used somewhere) that wasn't mentioned previously:
 
