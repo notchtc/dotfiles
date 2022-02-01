@@ -12,6 +12,7 @@ OS:: https://voidlinux.org[void linux]
 Shell:: https://www.mirbsd.org/mksh.htm[mksh]
 WM:: https://github.com/notchtc/dwm[dwm]
 Bar:: https://github.com/notchtc/dwmblocks[dwmblocks]
+Screen Locker:: https://github.com/notchtc/slock[slock]
 Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
 Terminal:: https://github.com/notchtc/st[st] or https://codeberg.org/dnkl/foot[foot] when on wayland
 Text Editor:: https://neovim.io[neovim]
