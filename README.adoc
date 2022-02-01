@@ -1,0 +1,37 @@
+= Dotfiles
+chtc <notnotcha0t1c@protonmail.com>
+{docdate}
+
+These are my very horrible dotfiles.
+
+Older rices are in the https://github.com/notchtc/dotfiles-old[dotfiles-old repository].
+
+== Used
+[horizontal]
+OS:: void linux
+Shell:: mksh
+WM:: https://github.com/notchtc/dwm[dwm]
+Bar:: https://github.com/notchtc/dwmblocks[dwmblocks]
+Wallpaper Setter:: hsetroot
+Terminal:: https://github.com/notchtc/st[st] or foot when on wayland
+Text Editor:: neovim
+Music Player:: cmus
+Media Player: mpv
+Image Viewer:: imv
+PDF Reader:: zathura
+Browser:: firefox
+Notification Daemon:: dunst
+Font(s):: iosevka & iosevka term & iosevka aile & iosevka nerd font
+Colorscheme:: tokyonight
+
+Here is a full list of everything (stuff that is either used somewhere in configs/scripts) that wasn't mentioned previously: adwaita (yes I know that it doesn't fit, but I rarely open a gtk app anyway), adwaita++, asciidoctor, asciidoctor-pdf, doas, exa, notify-send, pipewire, pipewire-pulse, trash-cli, wget, xprop
+
+== How to install
+1. Install dependencies
+2. Clone the repository
+[source,shell]
+git clone https://github.com/notchtc/dotfiles.git "$HOME"/.dotfiles
+3. Enter the dotfiles directory.
+[source,shell]
+cd "$HOME"/.dotfiles
+4. Run the install script.
