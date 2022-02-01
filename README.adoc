@@ -16,7 +16,7 @@ Wallpaper Setter:: hsetroot
 Terminal:: https://github.com/notchtc/st[st] or foot when on wayland
 Text Editor:: neovim
 Music Player:: cmus
-Media Player: mpv
+Media Player:: mpv
 Image Viewer:: imv
 PDF Reader:: zathura
 Browser:: firefox
