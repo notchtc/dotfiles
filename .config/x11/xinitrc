@@ -4,4 +4,4 @@ pipewire &
 pipewire-pulse &
 dwmblocks &
 hsetroot -cover ~/.local/share/wall.png &
-dbus-launch --sh-syntax --exit-with-session dwm >/dev/null 2>&1
+exec dbus-launch --exit-with-session dwm
