@@ -35,6 +35,7 @@ Here is a full list of everything (stuff that either has a config or is used som
 - notify-send
 - pipewire & pipewire-pulse
 - trash-cli
+- unclutter
 - wget
 - xprop
 
