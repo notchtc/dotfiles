@@ -35,7 +35,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 export QT_QPA_PLATFORMTHEME=gtk2
 
 # Set path
-export PATH="$PATH:$HOME/.local/bin:$GEM_HOME/bin:$XDG_CONFIG_HOME/emacs/bin:$LIBERICA_DIR/bin"
+export PATH="$PATH:$HOME/.local/bin:$GEM_HOME/bin:$XDG_CONFIG_HOME/emacs/bin:$LIBERICA_DIR/bin:$XDG_DATA_HOME/npm/bin"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx "$XDG_CONFIG_HOME/x11/xinitrc"

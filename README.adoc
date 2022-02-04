@@ -23,21 +23,22 @@ PDF Reader:: https://pwmt.org/projects/zathura/[zathura]
 Browser:: https://www.mozilla.org/en-US/firefox/new[firefox] (with https://addons.mozilla.org/en-US/firefox/addon/tokyonight_vim[this theme])
 Notification Daemon:: https://github.com/dunst-project/dunst[dunst]
 Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font]
-Colorscheme:: https://github.com/folke/tokyonight.nvim[tokyonight]
+Colorscheme:: https://github.com/ishan9299/nvim-solarized-lua[solarized]
 
 Here is a full list of everything (stuff that either has a config or is used somewhere) that wasn't mentioned previously:
 
-- adwaita (yes I know that it doesn't fit, but I rarely open a gtk app anyway),
 - adwaita++
 - asciidoctor & asciidoctor-pdf
 - doas
 - exa
 - notify-send
 - pipewire & pipewire-pulse
+- solarized-dark-colorpack (specifically solarized-dark-orange-3.36)
 - trash-cli
 - unclutter
 - wget
 - xprop
+- yt-dlp
 
 == How to install
 1. Install dependencies

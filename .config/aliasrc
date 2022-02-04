@@ -22,13 +22,6 @@ alias dnr="doas dnf remove"
 alias dnu="doas dnf upgrade"
 alias dnc="doas dnf autoremove && doas dnf clean all"
 
-# xbps
-alias xi="doas xbps-install"
-alias xr="doas xbps-remove -Ro"
-alias xu="doas xbps-install -Su"
-alias xq="xbps-query"
-alias xc="doas xbps-remove -ROo"
-
 # other
 adf() {
     asciidoctor-pdf -o - $1 | zathura -

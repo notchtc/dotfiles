@@ -1,35 +1,86 @@
-*.background: #1a1b26
-*.foreground: #c0caf5
-*.cursorColor: #c0caf5
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
 
-*.color0: #15161e
-*.color1: #f7768e
-*.color2: #9ece6a
-*.color3: #e0af68
-*.color4: #7aa2f7
-*.color5: #bb9af7
-*.color6: #7dcfff
-*.color7: #a9b1d6
 
-*.color8: #414868
-*.color9: #f7768e
-*.color10: #9ece6a
-*.color11: #e0af68
-*.color12: #7aa2f7
-*.color13: #bb9af7
-*.color14: #7dcfff
-*.color15: #c0caf5
+! Common
 
-dwm.normbgcolor: #1a1b26
-dwm.normbordercolor: #1a1b26
-dwm.normfgcolor: #c0caf5
-dwm.selfgcolor: #1a1b26
-dwm.selbordercolor: #f7768e
-dwm.selbgcolor: #f7768e
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-dwm.font: Iosevka Nerd Font:size=12
-dwm.dmenufont: Iosevka:size=12
-dwm.snap: 6
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+*background:              S_base03
+*foreground:              S_base0
+*fading:                  40
+*fadeColor:               S_base03
+*cursorColor:             S_base1
+*pointerColorBackground:  S_base01
+*pointerColorForeground:  S_base1
+
+*color0:                  S_base02
+*color1:                  S_red
+*color2:                  S_green
+*color3:                  S_yellow
+*color4:                  S_blue
+*color5:                  S_magenta
+*color6:                  S_cyan
+*color7:                  S_base2
+*color9:                  S_orange
+*color8:                  S_base03
+*color10:                 S_base01
+*color11:                 S_base00
+*color12:                 S_base0
+*color13:                 S_violet
+*color14:                 S_base1
+*color15:                 S_base3
+
+*.normbgcolor: S_base03
+*.normbordercolor: S_base03
+*.normfgcolor: S_base0
+*.selfgcolor: S_base03
+*.selbordercolor: S_yellow
+*.selbgcolor: S_yellow
+
+dwm.font: Iosevka Nerd Font:size=13
+dwm.dmenufont: Iosevka Nerd Font:size=13
+
+dmenu.fuzzycolor: S_red
+dmenu.font: Iosevka Nerd Font:size=13
 
 st.font: Iosevka Nerd Font Mono:size=12:antialias=true:autohint=true
 st.borderpx: 6

@@ -5,4 +5,5 @@ pipewire-pulse &
 dwmblocks &
 hsetroot -cover ~/.local/share/wall.png &
 unclutter &
+connman-ui-gtk &
 exec dbus-launch --exit-with-session dwm

@@ -13,7 +13,7 @@ return packer.startup(function()
     }
 
     use {
-        "folke/tokyonight.nvim",
+        "ishan9299/nvim-solarized-lua",
         after = "packer.nvim",
         as = "colorscheme",
         config = function()

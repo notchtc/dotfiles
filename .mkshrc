@@ -1,5 +1,5 @@
 # prompt
-PS1=$'\E[31m''${PWD/#"$HOME"/\~}'$'/\E[0m '
+PS1=$'\E[33m''${PWD/#"$HOME"/\~}'$'/\E[0m '
 
 HISTFILE="$XDG_CONFIG_HOME"/mksh/history
 HISTSIZE=10104096

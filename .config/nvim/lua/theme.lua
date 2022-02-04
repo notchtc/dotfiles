@@ -3,10 +3,9 @@ local cmd = vim.cmd
 
 local colors = require "colors"
 
-g.tokyonight_style = "night"
-g.tokyonight_dark_sidebar = false
+vim.g.solarized_statusline = "flat"
 
-cmd "colorscheme tokyonight"
+cmd "colorscheme solarized"
 
 local function fg(group, color)
     cmd("hi " .. group .. " guifg=" .. color)
@@ -24,7 +23,9 @@ local function link(group1, group2)
     cmd("hi! link " .. group1 .. " " .. group2)
 end
 
+bg("LineNr", colors.bg)
+fg_bg("GitSignsAdd", colors.green, colors.bg)
+fg_bg("GitSignsChange", colors.yellow, colors.bg)
+fg_bg("GitSignsDelete", colors.red, colors.bg)
+cmd("hi GitSignsDelete gui=NONE cterm=NONE")
 fg("NvimTreeVertSplit", colors.bg)
-fg("IndentBlanklineChar", "#3b4261")
-link("IndentBlanklineSpaceChar", "SpecialKey")
-link("IndentBlanklineSpaceCharBlankline", "SpecialKey")

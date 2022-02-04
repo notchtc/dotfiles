@@ -24,7 +24,7 @@ set color_statusline_attr=default
 set color_statusline_bg=default
 set color_statusline_fg=default
 
-set color_separator=red
+set color_separator=yellow
 
 set color_win_cur_attr=default
 set color_win_cur=yellow
@@ -41,7 +41,7 @@ set color_win_inactive_cur_sel_fg=yellow
 set color_win_dir=default
 
 set color_error=red
-set color_info=blue
+set color_info=yellow
 
 set status_display_program=cmusstatus
 
