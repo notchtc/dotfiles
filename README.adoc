@@ -29,11 +29,13 @@ Here is a full list of everything (stuff that either has a config or is used som
 
 - adwaita++
 - asciidoctor & asciidoctor-pdf
+- connman-ui-gtk
+- dbus-launch
 - doas
-- exa
+- hsetroot
 - notify-send
 - pipewire & pipewire-pulse
-- solarized-dark-colorpack (specifically solarized-dark-orange-3.36)
+- https://github.com/Ferdi265/numix-solarized-gtk-theme[numix-solarized-gtk-theme] (dark yellow variant)
 - trash-cli
 - unclutter
 - wget

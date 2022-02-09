@@ -27,5 +27,5 @@ bg("LineNr", colors.bg)
 fg_bg("GitSignsAdd", colors.green, colors.bg)
 fg_bg("GitSignsChange", colors.yellow, colors.bg)
 fg_bg("GitSignsDelete", colors.red, colors.bg)
-cmd("hi GitSignsDelete gui=NONE cterm=NONE")
+cmd "hi GitSignsDelete gui=NONE cterm=NONE"
 fg("NvimTreeVertSplit", colors.bg)

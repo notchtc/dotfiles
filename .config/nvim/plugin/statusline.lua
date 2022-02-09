@@ -3,26 +3,26 @@ local bo = vim.bo
 local colors = require "colors"
 
 local mode_colors = {
-    ["n"]  = { "normal", colors.green },
+    ["n"] = { "normal", colors.green },
     ["no"] = { "n-pending", colors.green },
-    ["i"]  = { "insert", colors.blue },
+    ["i"] = { "insert", colors.blue },
     ["ic"] = { "insert", colors.blue },
-    ["t"]  = { "terminal", colors.green },
-    ["v"]  = { "visual", colors.yellow },
-    ["V"]  = { "v-line", colors.yellow },
+    ["t"] = { "terminal", colors.green },
+    ["v"] = { "visual", colors.yellow },
+    ["V"] = { "v-line", colors.yellow },
     [""] = { "v-block", colors.yellow },
-    ["R"]  = { "replace", colors.cyan },
+    ["R"] = { "replace", colors.cyan },
     ["Rv"] = { "v-replace", colors.cyan },
-    ["s"]  = { "select", colors.cyan },
-    ["S"]  = { "s-line", colors.cyan },
+    ["s"] = { "select", colors.cyan },
+    ["S"] = { "s-line", colors.cyan },
     [""] = { "s-block", colors.cyan },
-    ["c"]  = { "command", colors.green },
+    ["c"] = { "command", colors.green },
     ["cv"] = { "command", colors.green },
     ["ce"] = { "command", colors.green },
-    ["r"]  = { "prompt", colors.green },
+    ["r"] = { "prompt", colors.green },
     ["rm"] = { "more", colors.green },
     ["r?"] = { "confirm", colors.green },
-    ["!"]  = { "shell", colors.green },
+    ["!"] = { "shell", colors.green },
 }
 
 local function mode()

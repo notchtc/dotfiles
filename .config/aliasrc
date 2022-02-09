@@ -5,10 +5,10 @@ alias e="$EDITOR"
 alias se="doas $EDITOR"
 
 # ls
-alias ls="exa --icons --group-directories-first"
-alias lsa="exa --icons -a --group-directories-first"
-alias lsl="exa --icons -a -l --git --group-directories-first"
-alias lsla="exa --icons -a -l --git --group-directories-first"
+alias ls="ls --color=auto --group-directories-first"
+alias lsa="ls --color=auto -A --group-directories-first"
+alias lsl="ls --color=auto -l --group-directories-first"
+alias lsla="ls --color=auto -Al --group-directories-first"
 
 # trash
 alias rm="trash-put"
@@ -22,6 +22,11 @@ alias dnr="doas dnf remove"
 alias dnu="doas dnf upgrade"
 alias dnc="doas dnf autoremove && doas dnf clean all"
 
+# xbps
+alias xr="doas xbps-remove -Ro"
+alias xu="doas xbps-install -Su"
+alias xc="doas xbps-remove -ROo"
+
 # other
 adf() {
     asciidoctor-pdf -o - $1 | zathura -
@@ -30,9 +35,8 @@ smn() {
     apropos . | cut -d "(" -f 1 | cut -d "," -f 1 | fzf --multi -q "$1" --preview "man {1}" | xargs -ro man
 }
 
-alias bat="bat --theme ansi"
 alias sudo="doas"
 
-alias ..="cd .."
+alias buildsite="command rm -f docs/.files && ssg6 src docs \"chtc's site\" \"https://notchtc.github.io\""
 
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias ..="cd .."
