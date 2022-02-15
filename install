@@ -59,6 +59,9 @@ ln -sf "$path"/.config/polybar/info-hlwm-workspaces.sh "$XDG_CONFIG_HOME"/polyba
 ln -sf "$path"/.config/herbstluftwm/autostart "$XDG_CONFIG_HOME"/herbstluftwm/autostart
 ln -sf "$path"/.config/herbstluftwm/theme "$XDG_CONFIG_HOME"/herbstluftwm/theme
 
+[ ! - d "$XDG_CONFIG_HOME"/newsboat ] && mkdir "$XDG_CONFIG_HOME"/newsboat
+ln -sf "$path"/.config/newsboat/config "$XDG_CONFIG_HOME"/newsboat/config
+
 [ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
 ln -sf "$path"/.local/share/wall.png "$XDG_DATA_HOME"/wall.png
 
