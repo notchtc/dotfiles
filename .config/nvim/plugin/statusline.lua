@@ -37,7 +37,7 @@ local function filetype()
     if type == "" then
         return ""
     else
-        return type .. " "
+        return type .. " | "
     end
 end
 
@@ -47,7 +47,7 @@ local function fileencoding()
     if encoding == "utf-8" then
         return ""
     else
-        return encoding .. " "
+        return encoding .. " | "
     end
 end
 
@@ -57,7 +57,7 @@ local function fileformat()
     if format == "unix" then
         return ""
     else
-        return format .. " "
+        return format .. " | "
     end
 end
 

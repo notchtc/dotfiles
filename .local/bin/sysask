@@ -1,9 +1,9 @@
 #!/bin/sh
 
-case "$(printf 'lock\nleave dwm\nrestart dwm\nshutdown\nreboot' | dmenu "$@" -i -p 'What do you want to do? ')" in
+case "$(printf 'lock\nrestart\nquit\nshutdown\nreboot' | dmenu "$@" -i -p 'What do you want to do? ')" in
     'lock') slock ;;
-    'leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
-    'restart dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
+    'quit') herbstclient quit || kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
+    'restart') herbstclient reload || kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
     'shutdown') doas /sbin/poweroff ;;
     'reboot') doas /sbin/reboot ;;
     *) exit 1;;

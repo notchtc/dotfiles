@@ -2,8 +2,9 @@ xrdb -load ~/.config/x11/Xresources &
 setxkbmap pl -option "caps:swapescape" &
 pipewire &
 pipewire-pulse &
-dwmblocks &
 hsetroot -cover ~/.local/share/wall.png &
 unclutter &
 connman-ui-gtk &
-exec dbus-launch --exit-with-session dwm
+xcompmgr &
+~/.config/polybar/launch.sh &
+exec dbus-launch --exit-with-session herbstluftwm
