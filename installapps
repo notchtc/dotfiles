@@ -1,5 +1,0 @@
-#!/bin/sh
-mkdir /etc/xbps.d
-echo repository=https://github.com/notchtc/custom-void-packages/raw/repo/current >/etc/xbps.d/00-repository-custom.conf
-xbps-install -Sy
-xbps-install -fy connman dmenu libXft numix-solarized-gtk-theme slock st stylua ytfzf 2>/dev/null

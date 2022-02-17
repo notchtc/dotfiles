@@ -129,7 +129,8 @@ hc rule class="Firefox" tag=9
 hc rule class="mpv" fullscreen=on
 hc rule class="KeePassXC" floating=on
 hc rule class="Ripcord" tag=8
-hc rule class="Telegram" tag=8
+hc rule class="TelegramDesktop" tag=8
+hc rule class="Steam" floating=on
 
 hc set tree_style '╾│ ├└╼─┐'
 
