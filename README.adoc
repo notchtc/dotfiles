@@ -22,8 +22,7 @@ Image Viewer:: https://sr.ht/~exec64/imv/[imv]
 PDF Reader:: https://pwmt.org/projects/zathura/[zathura]
 Browser:: https://www.mozilla.org/en-US/firefox/new[firefox]
 Notification Daemon:: https://github.com/dunst-project/dunst[dunst]
-Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font]
-Compositor:: https://gitlab.freedesktop.org/xorg/app/xcompmgr[xcompmgr] (I only need transparency)
+Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font] & noto fonts emoji
 Colorscheme:: https://github.com/ishan9299/nvim-solarized-lua[solarized]
 
 Here is a full list of everything (stuff that either has a config or is used somewhere) that wasn't mentioned previously:
