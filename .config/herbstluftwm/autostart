@@ -142,3 +142,12 @@ hc unlock
 # or simply:
 hc detect_monitors
 hc set auto_detect_monitors 1
+
+xrdb -load "$XDG_CONFIG_HOME"/x11/Xresources &
+setxkbmap pl -option "capas:swapescape" &
+hsetroot -cover "$XDG_DATA_HOME"/wall.png &
+pgrep -x pipewire || pipewire &
+pgrep -x pipewire-pulse || pipewire-pulse &
+pgrep -x unclutter || unclutter &
+pgrep -x connman-ui-gtk || connman-ui-gtk &
+~/.config/polybar/launch.sh &
