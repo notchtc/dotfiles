@@ -11,7 +11,7 @@ hc emit_hook reload
 # remove all existing keybindings
 hc keyunbind --all
 
-source ~/.config/herbstluftwm/theme
+source "$XDG_CONFIG_HOME"/herbstluftwm/theme
 
 # keybindings
 # if you have a super key you will be much happier with Mod set to Mod4
