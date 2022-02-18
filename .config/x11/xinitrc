@@ -5,6 +5,5 @@ pipewire-pulse &
 hsetroot -cover ~/.local/share/wall.png &
 unclutter &
 connman-ui-gtk &
-xcompmgr &
 ~/.config/polybar/launch.sh &
 exec dbus-launch --exit-with-session herbstluftwm

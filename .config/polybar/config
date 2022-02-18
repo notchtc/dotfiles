@@ -1,11 +1,6 @@
 [colors]
 background = ${xrdb:background}
-background-alt = #444
 foreground = ${xrdb:foreground}
-foreground-alt = #555
-primary = ${xrdb:color3}
-secondary = #e60053
-alert = #bd2c40
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -20,7 +15,6 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = #f00
 
 border-size = 0
 
@@ -118,25 +112,6 @@ animation-discharging-2 = 
 animation-discharging-3 = 
 animation-discharging-4 = 
 animation-discharging-framerate = 1024
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
 
 [settings]
 screenchange-reload = true
