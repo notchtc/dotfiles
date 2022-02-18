@@ -34,9 +34,6 @@ ln -sf "$path"/.config/gtk-2.0/gtkrc "$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 [ ! -d "$XDG_CONFIG_HOME"/gtk-3.0 ] && mkdir "$XDG_CONFIG_HOME"/gtk-3.0
 ln -sf "$path"/.config/gtk-3.0/settings.ini "$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 
-[ ! -d "$XDG_CONFIG_HOME"/imv ] && mkdir "$XDG_CONFIG_HOME"/imv
-ln -sf "$path"/.config/imv/config "$XDG_CONFIG_HOME"/imv/config
-
 [ -d "$XDG_CONFIG_HOME/nvim" ] && rm -rf "$XDG_CONFIG_HOME"/nvim
 ln -sf "$path"/.config/nvim "$XDG_CONFIG_HOME"/nvim
 
@@ -51,7 +48,7 @@ ln -sf "$path"/.config/x11/Xresources "$XDG_CONFIG_HOME"/x11/Xresources
 ln -sf "$path"/.config/zathura/zathurarc "$XDG_CONFIG_HOME"/zathura/zathurarc
 
 [ ! -d "$XDG_CONFIG_HOME"/mpv ] && mkdir "$XDG_CONFIG_HOME"/mpv
-[ ! -d "$XDG_CONFIG_HOME"/scripts ] && mkdir "$XDG_CONFIG_HOME"/mpv/scripts
+[ ! -d "$XDG_CONFIG_HOME"/mpv/scripts ] && mkdir "$XDG_CONFIG_HOME"/mpv/scripts
 ln -sf "$path"/.config/mpv/mpv.conf "$XDG_CONFIG_HOME"/mpv/mpv.conf
 ln -sf "$path"/.config/mpv/scripts/copy-permalink.lua "$XDG_CONFIG_HOME"/mpv/scripts/copy-permalink.lua
 
@@ -66,6 +63,10 @@ ln -sf "$path"/.config/herbstluftwm/theme "$XDG_CONFIG_HOME"/herbstluftwm/theme
 
 [ ! -d "$XDG_CONFIG_HOME"/newsboat ] && mkdir "$XDG_CONFIG_HOME"/newsboat
 ln -sf "$path"/.config/newsboat/config "$XDG_CONFIG_HOME"/newsboat/config
+
+[ ! -d "$XDG_CONFIG_HOME"/nsxiv ] && mkdir "$XDG_CONFIG_HOME"/nsxiv
+[ ! -d "$XDG_CONFIG_HOME"/nsxiv/exec ] && mkdir "$XDG_CONFIG_HOME"/nsxiv/exec
+ln -sf "$path"/.config/nsxiv/exec/key-handler "$XDG_CONFIG_HOME"/nsxiv/exec/key-handler
 
 [ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
 ln -sf "$path"/.local/share/wall.png "$XDG_DATA_HOME"/wall.png
