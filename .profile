@@ -35,6 +35,8 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+export LIBERICA_DIR=/usr/lib/jvm/bellsoft-java8-full-amd64
+
 # Set path
 export PATH="$PATH:$HOME/.local/bin:$GEM_HOME/bin:$XDG_CONFIG_HOME/emacs/bin:$LIBERICA_DIR/bin:$XDG_DATA_HOME/npm/bin"
 
