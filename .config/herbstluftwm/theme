@@ -34,6 +34,6 @@ hc attr theme.background_color '#002b36'
 
 hc set window_gap 0
 hc set frame_padding 0
-hc set smart_window_surroundings on
+hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0

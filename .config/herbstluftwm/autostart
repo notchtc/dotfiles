@@ -128,7 +128,6 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class="Firefox" tag=9
-hc rule class="mpv" pseudotile=on
 hc rule class="KeePassXC" floating=on
 hc rule class="TelegramDesktop" tag=8 floating=on
 hc rule class="Element" tag=8 floating=on
