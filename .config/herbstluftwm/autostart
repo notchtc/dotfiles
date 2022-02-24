@@ -116,6 +116,8 @@ hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn firefox
 hc keybind $Mod-Control-Shift-m spawn st -e cmus
 hc keybind $Mod-Control-Shift-n spawn st -e newsboat
+hc keybind $Mod-Shift-b chain , spawn polybar-msg cmd hide , spawn herbstclient pad 0 0
+hc keybind $Mod-b spawn polybar-msg cmd show
 
 # rules
 hc unrule -F
@@ -126,11 +128,12 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class="Firefox" tag=9
-hc rule class="mpv" fullscreen=on
+hc rule class="mpv" pseudotile=on
 hc rule class="KeePassXC" floating=on
 hc rule class="TelegramDesktop" tag=8 floating=on
 hc rule class="Element" tag=8 floating=on
 hc rule class="Steam" floating=on
+hc rule class~".*\.exe" floating=on
 hc rule title="Picture-in-Picture" tag=0
 
 hc set tree_style '╾│ ├└╼─┐'
@@ -149,4 +152,16 @@ pgrep -x pipewire || pipewire &
 pgrep -x pipewire-pulse || pipewire-pulse &
 pgrep -x unclutter || unclutter &
 pgrep -x connman-ui-gtk || connman-ui-gtk &
-~/.config/polybar/launch.sh &
+
+{
+    pids=( )
+    # reserve some space
+    hc pad 0 24
+    # launch polybar
+    polybar bar -r &
+    pids+=( $! )
+    # wait until the panels should be stopped
+    herbstclient -w '(quit_panel|reload)'
+    # stop all started panels
+    kill ${pids[@]}
+}

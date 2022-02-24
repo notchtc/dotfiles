@@ -9,7 +9,7 @@ height = 24
 radius = 0
 fixed-center = true
 
-ipc = true
+enable-ipc = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
