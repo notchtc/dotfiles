@@ -78,7 +78,7 @@
 
 dwm.font: Iosevka Nerd Font:size=13
 
-dmenu.fuzzycolor: S_red
+dmenu.fuzzycolor: S_base2
 dmenu.font: Iosevka Nerd Font:size=13
 
 st.font: Iosevka Nerd Font Mono:size=12:antialias=true:autohint=true
