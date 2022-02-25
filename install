@@ -78,3 +78,5 @@ ln -sf "$path"/.local/bin/sysask "$HOME"/.local/bin/sysask
 ln -sf "$path"/.local/bin/volume "$HOME"/.local/bin/volume
 ln -sf "$path"/.local/bin/xbpsdiff "$HOME"/.local/bin/xbpsdiff
 ln -sf "$path"/.local/bin/cmusstatus "$HOME"/.local/bin/cmusstatus
+
+sudo rm -rf /root/.dotfiles 2>/dev/null || doas rm -rf /root/.dotfiles 2>/dev/null
