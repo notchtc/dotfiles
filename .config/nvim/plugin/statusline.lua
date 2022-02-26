@@ -44,7 +44,7 @@ end
 local function fileencoding()
     local encoding = bo.fileencoding
 
-    if encoding == "utf-8" then
+    if encoding == "utf-8" or encoding == "" then
         return ""
     else
         return encoding .. " | "
@@ -54,7 +54,7 @@ end
 local function fileformat()
     local format = bo.fileformat
 
-    if format == "unix" then
+    if format == "unix" or format == "" then
         return ""
     else
         return format .. " | "
