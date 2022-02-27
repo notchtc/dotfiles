@@ -23,9 +23,9 @@ alias dnu="doas dnf upgrade"
 alias dnc="doas dnf autoremove && doas dnf clean all"
 
 # xbps
-alias xr="doas xbps-remove -Ro"
+alias xr="doas xbps-remove -Rof"
 alias xu="doas xbps-install -Su"
-alias xc="doas xbps-remove -ROo"
+alias xc="doas xbps-remove -Oof"
 
 # other
 adf() {
