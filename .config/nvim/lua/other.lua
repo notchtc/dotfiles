@@ -10,7 +10,7 @@ cmd [[ au BufWritePost Xresources !xrdb -load ~/.config/x11/Xresources ]]
 cmd [[ au WinEnter * setlocal statusline=%!luaeval('statusline()') ]]
 -- Inactive statusline
 cmd [[ au WinLeave * setlocal statusline=%!luaeval('statusline_inactive()') ]]
-cmd [[ au BufEnter NvimTree setlocal statusline=%!luaeval('statusline_inactive()') ]]
+cmd [[ au BufEnter NvimTree_* setlocal statusline=%!luaeval('statusline_inactive()') ]]
 
 -- We can write to the shada file now
 vim.opt.shadafile = ""
