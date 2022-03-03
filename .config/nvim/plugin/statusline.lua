@@ -26,9 +26,9 @@ local mode_colors = {
 }
 
 local function mode()
-    vim.cmd("hi StatusLineMode guifg=" .. colors.bg .. " guibg=" .. mode_colors[vim.fn.mode()][2])
+    vim.cmd("hi StatusLineMode guifg=" .. mode_colors[vim.fn.mode()][2])
 
-    return " " .. mode_colors[vim.fn.mode()][1] .. " "
+    return mode_colors[vim.fn.mode()][1]
 end
 
 local function filetype()
@@ -63,10 +63,9 @@ end
 
 function statusline()
     local stl = {
-        "%#StatusLineMode#",
+        "%#StatusLineMode# ",
         mode(),
-        "%#StatusLine#",
-        " ",
+        "%#StatusLine# ",
         "%(%f %)",
         "%(%M %)",
         "%(%R%)",
@@ -80,7 +79,7 @@ function statusline()
 end
 
 function statusline_inactive()
-    return " %f"
+    return " %f "
 end
 
 vim.opt.statusline = "%!luaeval('statusline()')"

@@ -29,3 +29,5 @@ fg_bg("GitSignsChange", colors.yellow, colors.bg)
 fg_bg("GitSignsDelete", colors.red, colors.bg)
 cmd "hi GitSignsDelete gui=NONE cterm=NONE"
 fg("NvimTreeVertSplit", colors.bg)
+fg("StatusLine", colors.bg)
+fg("StatusLineNC", colors.bg)

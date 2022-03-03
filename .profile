@@ -2,7 +2,6 @@
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
-
 # Clean up ~/
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
@@ -30,9 +29,8 @@ export VISUAL="$EDITOR"
 export PAGER=less
 
 export FZF_DEFAULT_OPTS="-m --color '16,bg+:-1,border:0' --border sharp --preview-window sharp:wrap --layout=reverse-list --info inline"
-
+export LESS="--mouse"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 export LIBERICA_DIR=/usr/lib/jvm/bellsoft-java8-full-amd64
