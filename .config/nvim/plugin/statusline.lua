@@ -63,7 +63,7 @@ end
 
 function statusline()
     local stl = {
-        "%#StatusLineMode# ",
+        "%#StatusLineMode#",
         mode(),
         "%#StatusLine# ",
         "%(%f %)",
@@ -73,7 +73,7 @@ function statusline()
         filetype(),
         fileencoding(),
         fileformat(),
-        "%l:%c ",
+        "%l:%c",
     }
     return table.concat(stl)
 end
