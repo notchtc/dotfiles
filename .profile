@@ -20,6 +20,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
 export LESSHISTFILE=-
 export DVDCSS_CACHE="$XDG_DATA_HOME/dvdcss"
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # Default apps
 export BROWSER=firefox
