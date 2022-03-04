@@ -79,7 +79,7 @@ function statusline()
 end
 
 function statusline_inactive()
-    return " %f "
+    return "%f "
 end
 
 vim.opt.statusline = "%!luaeval('statusline()')"
