@@ -71,7 +71,7 @@ end
 
 M.nvimtree = function()
     -- Toggle visibility of nvim-tree
-    map("n", "<leader>n", "<CMD>NvimTreeToggle<CR>", opt)
+    map("n", "<leader>n", "<CMD>NvimTreeFindFileToggle<CR>", opt)
     -- Focus nvim-tree
     map("n", "<leader>N", "<CMD>NvimTreeFocus<CR>", opt)
     -- Refresh nvim-tree
