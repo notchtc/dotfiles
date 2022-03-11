@@ -1,0 +1,3 @@
+#!/bin/sh
+export TERM=st
+screen -q -r -D cmus || screen -S cmus /usr/bin/cmus

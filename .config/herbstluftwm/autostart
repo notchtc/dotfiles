@@ -114,10 +114,9 @@ hc keybind XF86MonBrightnessDown spawn xbacklight -dec 15
 
 hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn firefox
-hc keybind $Mod-Control-Shift-m spawn st -e cmus
+hc keybind $Mod-Control-Shift-m spawn st -e music
 hc keybind $Mod-Control-Shift-n spawn st -e newsboat
-hc keybind $Mod-Shift-b chain , spawn polybar-msg cmd hide , spawn herbstclient pad 0 0
-hc keybind $Mod-b spawn polybar-msg cmd show
+hc keybind $Mod-b chain , pad 0 0 , spawn polybar-msg cmd toggle
 
 # rules
 hc unrule -F
@@ -127,7 +126,7 @@ hc rule floatplacement=smart
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc rule class="Firefox" tag=9
+hc rule class~"[F-f]irefox.*" tag=9
 hc rule class="KeePassXC" floating=on
 hc rule class="TelegramDesktop" tag=8 floating=on
 hc rule class="Element" tag=8 floating=on
