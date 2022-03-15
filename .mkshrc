@@ -7,6 +7,7 @@ HISTSIZE=10104096
 bind ^[a=beginning-of-line
 bind ^[e=end-of-line
 bind ^L=clear-screen
+bind -m ^[h='^ucd $HOME^[^e^m'
 
 export GPG_TTY=$(tty)
 
