@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+bg=$(xrdb -get background)
+fg=$(xrdb -get foreground)
+gray=$(xrdb -get color10)
+color1=$(xrdb -get color13)
+color2=$(xrdb -get color3)
+color3=$(xrdb -get color9)
+color4=$(xrdb -get color1)
+
 # Multi monitor support. Needs MONITOR environment variable to be set for each instance of polybar
 # If MONITOR environment variable is not set this will default to monitor 0
 # Check https://github.com/polybar/polybar/issues/763
@@ -21,37 +29,37 @@ herbstclient --idle "tag_*" 2>/dev/null | {
                     '.')
                         # the tag is empty
                         # TODO Add your formatting tags
-                        echo "%{F#586e75}"
+                        echo "%{F$gray}"
                         ;;
                     ':')
                         # the tag is not empty
                         # TODO Add your formatting tags
-                        echo "%{F#839496}"
+                        echo "%{F$fg}"
                         ;;
                     '+')
                         # the tag is viewed on the specified MONITOR, but this monitor is not focused.
                         # TODO Add your formatting tags
-                        echo "%{F#002b36}%{B#cb4b16}"
+                        echo "%{F$bg}%{B$color1}"
                         ;;
                     '#')
                         # the tag is viewed on the specified MONITOR and it is focused.
                         # TODO Add your formatting tags
-                        echo "%{F#002b36}%{B#b58900}"
+                        echo "%{F$bg}%{B$color2}"
                         ;;
                     '-')
                         # the tag is viewed on a different MONITOR, but this monitor is not focused.
                         # TODO Add your formatting tags
-                        echo "%{F#002b36}%{B#d33682}"
+                        echo "%{F$bg}%{B$color1}"
                         ;;
                     '%')
                         # the tag is viewed on a different MONITOR and it is focused.
                         # TODO Add your formatting tags
-                        echo "%{F#002b36}%{B#b58900}"
+                        echo "%{F$bg}%{B$color3}"
                         ;;
                     '!')
                         # the tag contains an urgent window
                         # TODO Add your formatting tags
-                        echo "%{F#002b36}%{B#dc322f}"
+                        echo "%{F$bg}%{B$color4}"
                         ;;
                 esac
 
