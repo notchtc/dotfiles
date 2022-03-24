@@ -37,7 +37,6 @@ Here is a full list of everything (stuff that either has a config or is used som
 - pipewire & pipewire-pulse
 - https://github.com/Ferdi265/numix-solarized-gtk-theme[numix-solarized-gtk-theme] (dark yellow variant)
 - trash-cli
-- unclutter
 - wget
 - xprop
 - yt-dlp

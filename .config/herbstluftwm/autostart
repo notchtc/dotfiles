@@ -148,7 +148,6 @@ hc set auto_detect_monitors 1
 hsetroot -cover "$XDG_DATA_HOME"/wall.png &
 pgrep -x pipewire || pipewire &
 pgrep -x pipewire-pulse || pipewire-pulse &
-pgrep -x unclutter || unclutter &
 pgrep -x connman-ui-gtk || connman-ui-gtk &
 
 {

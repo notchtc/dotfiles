@@ -18,6 +18,7 @@ export DOOMLOCALDIR="$DOOMDIR/local"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
+export FVWM_USERDIR="$XDG_CONFIG_HOME/fvwm"
 export LESSHISTFILE=-
 export DVDCSS_CACHE="$XDG_DATA_HOME/dvdcss"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
