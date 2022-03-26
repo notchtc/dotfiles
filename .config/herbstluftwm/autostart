@@ -1,19 +1,15 @@
 #!/usr/bin/env bash
 
-# this is a simple config for herbstluftwm
-
 hc() {
     herbstclient "$@"
 }
 
 hc emit_hook reload
 
+# keybindings {{{
 # remove all existing keybindings
 hc keyunbind --all
 
-source "$XDG_CONFIG_HOME"/herbstluftwm/theme
-
-# keybindings
 # if you have a super key you will be much happier with Mod set to Mod4
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
@@ -117,8 +113,9 @@ hc keybind $Mod-Control-Shift-b spawn firefox
 hc keybind $Mod-Control-Shift-m spawn st -e music
 hc keybind $Mod-Control-Shift-n spawn st -e newsboat
 hc keybind $Mod-b chain , pad 0 0 , spawn polybar-msg cmd toggle
+# }}}
 
-# rules
+# rules {{{
 hc unrule -F
 hc rule focus=on # normally focus new clients
 hc set focus_follows_mouse 1
@@ -133,8 +130,46 @@ hc rule class="Element" tag=8 floating=on
 hc rule class="Steam" floating=on
 hc rule class~".*\.exe" floating=on
 hc rule title="Picture-in-Picture" tag=0
+# }}}
 
 hc set tree_style '╾│ ├└╼─┐'
+
+# theme {{{
+bg=$(xrdb -get background)
+bg_alt=$(xrdb -get color0)
+fg=$(xrdb -get foreground)
+fg_alt=$(xrdb -get color15)
+focus=$(xrdb -get color1)
+urgent=$(xrdb -get color5)
+
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+hc set frame_border_normal_color $bg
+hc set frame_border_active_color $focus
+hc set frame_bg_normal_color $bg_alt
+hc set frame_bg_active_color $focus
+hc set frame_border_width 0
+hc set always_show_frame on
+hc set frame_bg_transparent on
+hc set smart_frame_surroundings on
+
+hc attr theme.background_color $bg
+hc attr theme.normal.color $bg
+hc attr theme.active.color $bg_alt
+hc attr theme.urgent.color $urgent
+hc attr theme.border_width 0
+hc attr theme.title_font "Iosevka Aile:size=10"
+hc attr theme.title_color $fg
+hc attr theme.urgent.title_color $bg
+hc attr theme.floating.title_height 15
+hc attr theme.floating.title_depth 3
+hc attr theme.floating.border_width 1
+
+hc watch tags.focus.frame_count
+hc -i attribute_changed tags.focus.frame_count | while read; do
+    hc or / and , compare tags.focus.frame_count = 1 , set frame_transparent_width 0 / set frame_transparent_width 2
+done &
+# }}}
 
 # unlock, just to be sure
 hc unlock
@@ -149,6 +184,7 @@ hsetroot -cover "$XDG_DATA_HOME"/wall.png &
 pgrep -x pipewire || pipewire &
 pgrep -x pipewire-pulse || pipewire-pulse &
 pgrep -x connman-ui-gtk || connman-ui-gtk &
+pgrep -x picom || picom -b --experimental-backends &
 
 {
     pids=( )
@@ -162,3 +198,5 @@ pgrep -x connman-ui-gtk || connman-ui-gtk &
     # stop all started panels
     kill ${pids[@]}
 }
+
+# vim:foldmethod=marker
