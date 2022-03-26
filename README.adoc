@@ -12,6 +12,7 @@ OS:: https://voidlinux.org[void linux]
 Shell:: https://www.mirbsd.org/mksh.htm[mksh]
 WM:: https://herbstluftwm.org[herbstluftwm]
 Bar:: https://polybar.github.io/[polybar]
+Compositor:: https://github.com/yshui/picom[picom]
 Screen Locker:: https://github.com/notchtc/slock[slock]
 Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
 Terminal:: https://github.com/notchtc/st[st]
@@ -35,7 +36,7 @@ Here is a full list of everything (stuff that either has a config or is used som
 - hsetroot
 - notify-send
 - pipewire & pipewire-pulse
-- https://github.com/Ferdi265/numix-solarized-gtk-theme[numix-solarized-gtk-theme] (dark yellow variant)
+- https://github.com/Ferdi265/numix-solarized-gtk-theme[numix-solarized-gtk-theme] (dark red variant)
 - trash-cli
 - wget
 - xprop
