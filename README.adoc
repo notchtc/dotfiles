@@ -30,13 +30,12 @@ Here is a full list of everything (stuff that either has a config or is used som
 
 - adwaita++
 - asciidoctor & asciidoctor-pdf
-- connman-ui-gtk
 - dbus-launch
 - doas
 - hsetroot
 - notify-send
 - pipewire & pipewire-pulse
-- https://github.com/Ferdi265/numix-solarized-gtk-theme[numix-solarized-gtk-theme] (dark red variant)
+- https://github.com/Ferdi265/numix-solarized-gtk-theme[numix-solarized-gtk-theme] (dark magenta variant)
 - trash-cli
 - wget
 - xprop

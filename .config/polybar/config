@@ -4,10 +4,12 @@ foreground = ${xrdb:foreground}
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
-height = 24
+width = 100%:-8
+height = 23
 radius = 0
 fixed-center = true
+
+offset-x = 4
 
 enable-ipc = true
 
