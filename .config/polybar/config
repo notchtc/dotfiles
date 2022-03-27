@@ -5,7 +5,7 @@ foreground = ${xrdb:foreground}
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%:-8
-height = 23
+height = 24
 radius = 0
 fixed-center = true
 

@@ -192,7 +192,7 @@ dz_col &
 {
     pids=( )
     # reserve some space
-    hc pad 0 29
+    hc pad 0 24
     # launch polybar
     polybar bar -r &
     pids+=( $! )
