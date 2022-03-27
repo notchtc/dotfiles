@@ -125,7 +125,7 @@ interval = 5
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 label-connected = %{A1:st -e iwctl:}直  connected%{A}
-label-disconnected = %{A1:st -e iwctl:}睊 disconnected%{A}
+label-disconnected = %{A1:st -e iwctl:}睊  disconnected%{A}
 
 [settings]
 screenchange-reload = true

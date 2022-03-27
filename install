@@ -12,7 +12,6 @@ ln -sf "$path"/.config/aliasrc "$XDG_CONFIG_HOME"/aliasrc
 ln -sf "$path"/.config/wgetrc "$XDG_CONFIG_HOME"/wgetrc
 ln -sf "$path"/.config/picom.conf "$XDG_CONFIG_HOME"/picom.conf
 
-
 [ ! -d "$XDG_CONFIG_HOME"/mksh ] && mkdir "$XDG_CONFIG_HOME"/mksh
 ln -sf "$path"/.config/mksh/completion.mksh "$XDG_CONFIG_HOME"/mksh/completion.mksh
 ln -sf "$path"/.config/mksh/key-bindings.mksh "$XDG_CONFIG_HOME"/mksh/key-bindings.mksh
@@ -80,3 +79,4 @@ ln -sf "$path"/.local/bin/volume "$HOME"/.local/bin/volume
 ln -sf "$path"/.local/bin/xbpsdiff "$HOME"/.local/bin/xbpsdiff
 ln -sf "$path"/.local/bin/cmusstatus "$HOME"/.local/bin/cmusstatus
 ln -sf "$path"/.local/bin/music "$HOME"/.local/bin/music
+ln -sf "$path"/.local/bin/dz_col "$HOME"/.local/bin/dz_col

@@ -108,6 +108,8 @@ hc keybind Shift-Print spawn sh -c "maim -su | xclip -selection clipboard -t ima
 hc keybind XF86MonBrightnessUp spawn xbacklight -inc 15
 hc keybind XF86MonBrightnessDown spawn xbacklight -dec 15
 
+hc keybind $Mod-Control-r spawn giph --stop
+
 hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn firefox
 hc keybind $Mod-Control-Shift-m spawn st -e music
@@ -139,8 +141,8 @@ bg=$(xrdb -get background)
 bg_alt=$(xrdb -get color0)
 fg=$(xrdb -get foreground)
 fg_alt=$(xrdb -get color15)
-focus=$(xrdb -get color1)
-urgent=$(xrdb -get color5)
+focus=$(xrdb -get color5)
+urgent=$(xrdb -get color1)
 
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
@@ -155,12 +157,12 @@ hc set smart_frame_surroundings on
 
 hc attr theme.background_color $bg
 hc attr theme.normal.color $bg
-hc attr theme.active.color $bg_alt
+hc attr theme.active.color $focus
 hc attr theme.urgent.color $urgent
 hc attr theme.border_width 0
 hc attr theme.title_font "Iosevka Aile:size=10"
-hc attr theme.title_color $fg
-hc attr theme.urgent.title_color $bg
+hc attr theme.title_color $bg
+hc attr theme.normal.title_color $fg
 hc attr theme.floating.title_height 15
 hc attr theme.floating.title_depth 3
 hc attr theme.floating.border_width 1
@@ -185,6 +187,7 @@ pgrep -x pipewire || pipewire &
 pgrep -x pipewire-pulse || pipewire-pulse &
 pgrep -x connman-ui-gtk || connman-ui-gtk &
 pgrep -x picom || picom -b --experimental-backends &
+dz_col &
 
 {
     pids=( )
