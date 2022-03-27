@@ -73,7 +73,7 @@ dmenu.normfgcolor: S_base0
 dmenu.selbgcolor: S_magenta
 dmenu.selfgcolor: S_base03
 dmenu.fuzzycolor: S_base2
-dmenu.font: Iosevka Nerd Font:size=12
+dmenu.font: Iosevka Nerd Font:size=13
 
 st.font: Iosevka Nerd Font Mono:size=12:antialias=true:autohint=true
 st.borderpx: 6
