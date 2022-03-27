@@ -88,7 +88,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#859900" # bg_alt
+    frame_color = "#073642" # bg_alt
 
     # Define a color for the separator.
     # possible values are:
@@ -290,12 +290,12 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#859900" # bg_alt
+    background = "#073642" # bg_alt
     foreground = "#839496" # fg
     timeout = 10
 
 [urgency_normal]
-    background = "#859900" # bg_alt
+    background = "#073642" # bg_alt
     foreground = "#fdf6e3" # fg_alt
     timeout = 20
 

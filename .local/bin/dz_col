@@ -1,7 +1,7 @@
 #!/bin/sh
 
 bg=$(xrdb -get background)
-bg_alt=$(xrdb -get color2)
+bg_alt=$(xrdb -get color0)
 fg=$(xrdb -get foreground)
 fg_alt=$(xrdb -get color15)
 accent=$(xrdb -get color5)
