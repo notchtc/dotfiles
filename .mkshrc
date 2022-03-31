@@ -1,5 +1,18 @@
-# prompt
-PS1=$'\E[35m''${PWD/#"$HOME"/\~}'$'\E[0m '
+exitcode() {
+    if [ "$?" == "0" ]; then
+        printf $'\E[35m'
+    else
+        printf $'\E[31m'
+    fi
+}
+
+pwd() (
+    pwd=${PWD/#"$HOME"/\~}
+    pwd=${pwd%/}/
+    printf '%s' "$pwd"
+)
+
+PS1='`exitcode``pwd`'$'\E[0m '
 
 HISTFILE="$XDG_CONFIG_HOME"/mksh/history
 HISTSIZE=10104096
