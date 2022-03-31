@@ -114,7 +114,7 @@ hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn firefox
 hc keybind $Mod-Control-Shift-m spawn st -e music
 hc keybind $Mod-Control-Shift-n spawn st -e newsboat
-hc keybind $Mod-b chain , pad 0 0 , spawn polybar-msg cmd toggle
+hc keybind $Mod-b chain , pad 0 0 , cycle_value settings.frame_gap 0 4 , spawn polybar-msg cmd toggle
 # }}}
 
 # rules {{{
