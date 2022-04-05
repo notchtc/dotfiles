@@ -24,7 +24,7 @@ alias dnc="doas dnf autoremove && doas dnf clean all"
 
 # xbps
 alias xr="doas xbps-remove -Rof"
-alias xu="doas xbps-install -Su && doas xbps-remove -ROo"
+alias xu="doas xbps-install -Su"
 alias xc="doas xbps-remove -ROo"
 
 # other
