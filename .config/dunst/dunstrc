@@ -300,8 +300,8 @@
     timeout = 20
 
 [urgency_critical]
-    background = "#dc322f # critical
+    background = "#dc322f" # critical
     foreground = "#fdf6e3" # fg_alt
-    frame_color = "#dc322f # critical
+    frame_color = "#dc322f" # critical
     timeout = 0
 # vim: ft=cfg
