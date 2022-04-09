@@ -24,8 +24,6 @@ end
 nvimtree.setup {
     -- Open the tree by default when opening (n)vim or (n)vim $DIR
     auto_open = false,
-    -- Close the tree when it's the last window
-    auto_close = true,
     -- Disable netrw
     disable_netrw = true,
     -- Prevent netrw from automatically opening when opening directories
