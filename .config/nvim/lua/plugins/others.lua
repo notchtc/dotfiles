@@ -4,14 +4,21 @@ local g = vim.g
 
 M.colorizer = function()
     local present, colorizer = pcall(require, "colorizer")
-    if present then
-        colorizer.setup({}, { css = true })
-        vim.cmd "ColorizerReloadAllBuffers"
+    if not present then
+        return
     end
+
+    colorizer.setup()
+    COLORIZER_SETUP_HOOK()
 end
 
 M.blankline = function()
-    require("indent_blankline").setup {
+    local present, blankline = pcall(require, "indent_blankline")
+    if not present then
+        return
+    end
+
+    blankline.setup {
         enabled = true,
         char_list = { "│", "╎", "┆", "┊", "╵" },
         filetype_exclude = { "txt", "packer", "help", "NvimTree" },

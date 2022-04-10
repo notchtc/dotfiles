@@ -1,5 +1,4 @@
 local present, packer = pcall(require, "packerInit")
-
 if not present then
     return false
 end
@@ -11,6 +10,8 @@ return packer.startup(function()
         "wbthomason/packer.nvim",
         event = "VimEnter",
     }
+
+    use "lewis6991/impatient.nvim"
 
     use {
         "ishan9299/nvim-solarized-lua",
@@ -39,7 +40,7 @@ return packer.startup(function()
 
     use {
         "nvim-treesitter/nvim-treesitter",
-        event = "BufRead",
+        event = { "BufRead", "BufNewFile" },
         config = function()
             require "plugins.treesitter"
         end,
@@ -47,6 +48,8 @@ return packer.startup(function()
 
     use {
         "lukas-reineke/indent-blankline.nvim",
+        after = "colorscheme",
+        event = "BufRead",
         config = function()
             require("plugins.others").blankline()
         end,
@@ -54,34 +57,47 @@ return packer.startup(function()
 
     use {
         "lewis6991/gitsigns.nvim",
-        opt = true,
+        after = "plenary.nvim",
         config = function()
             require "plugins.gitsigns"
-        end,
-        setup = function()
-            require("utils").packer_lazy_load "gitsigns.nvim"
         end,
     }
 
     use {
         "norcalli/nvim-colorizer.lua",
-        cmd = "ColorizerAttachToBuffer",
+        event = "VimEnter",
         config = function()
             require("plugins.others").colorizer()
-        end,
-        setup = function()
-            require("mappings").colorizer()
         end,
     }
 
     use {
         "kyazdani42/nvim-tree.lua",
-        cmd = { "NvimTreeFindFileToggle", "NvimTreeFocus" },
+        cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle", "NvimTreeFocus" },
         config = function()
             require "plugins.nvimtree"
         end,
         setup = function()
             require("mappings").nvimtree()
+        end,
+    }
+
+    use {
+        "Pocco81/TrueZen.nvim",
+        cmd = "TZAtaraxis",
+        config = function()
+            require "plugins.truezen"
+        end,
+        setup = function()
+            require("mappings").truezen()
+        end,
+    }
+
+    use {
+        "folke/twilight.nvim",
+        after = "TrueZen.nvim",
+        config = function()
+            require "plugins.twilight"
         end,
     }
 end)

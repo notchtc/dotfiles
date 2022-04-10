@@ -1,7 +1,7 @@
 local opt = vim.opt
 
--- Don't write to shadafile yet
-opt.shadafile = "NONE"
+-- Set shell to more minimal one
+opt.shell = "/bin/sh"
 
 -- Make life better
 opt.clipboard = "unnamedplus"

@@ -15,5 +15,5 @@ cmd [[ au BufEnter NvimTree_* setlocal statusline=%!luaeval('statusline_inactive
 -- Quit nvim-tree when it's the last window
 cmd [[ autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif ]]
 
--- We can write to the shada file now
+-- We can write to the shadafile now
 vim.opt.shadafile = ""

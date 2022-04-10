@@ -78,11 +78,8 @@ M.nvimtree = function()
     map("n", "<leader>r", "<CMD>NvimTreeRefresh<CR>", opt)
 end
 
-M.colorizer = function()
-    -- Enable colorizer in current buffer
-    map("n", "<leader>ca", "<CMD>ColorizerAttachToBuffer<CR>", opt)
-    -- Disable colorizer in current buffer
-    map("n", "<leader>cd", "<CMD>ColorizerDetachFromBuffer<CR>", opt)
+M.truezen = function()
+    map("n", "<leader>tz", "<CMD>TZAtaraxis<CR>", opt)
 end
 
 return M
