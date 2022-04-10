@@ -7,7 +7,7 @@ fg_alt=$(xrdb -get color15)
 accent=$(xrdb -get color5)
 critical=$(xrdb -get color1)
 
-sed --follow-symlinks -i -e "s/#.*# bg$/$bg # bg/" -e "s/#.*# fg$/$fg # fg/" -e "s/#.*# bg_alt$/$bg_alt # bg_alt/" -e "s/#.*# accent$/$accent # accent/" "$XDG_CONFIG_HOME"/zathura/zathurarc
+sed --follow-symlinks -i -e "s/\\\\.*# bg$/\\\\$bg # bg/" -e "s/\\\\#.*# fg$/\\\\$fg # fg/" -e "s/\\\\#.*# bg_alt$/\\\\$bg_alt # bg_alt/" -e "s/\\\\#.*# accent$/\\\\$accent # accent/" "$XDG_CONFIG_HOME"/zathura/zathurarc
 
 pkill -x dunst
-sed --follow-symlinks -i -e "s/#.*# bg_alt$/$bg_alt\" # bg_alt/" -e "s/#.*# fg$/$fg\" # fg/" -e "s/#.*# fg_alt$/$fg_alt\" # fg_alt/" -e "s/#.*# critical$/$critical\" # critical/" "$XDG_CONFIG_HOME"/dunst/dunstrc
+sed --follow-symlinks -i -e "s/=.*# bg_alt$/= \"$bg_alt\" # bg_alt/" -e "s/=.*# fg$/= \"$fg\" # fg/" -e "s/=.*# fg_alt$/= \"$fg_alt\" # fg_alt/" -e "s/=.*# critical$/= \"$critical\" # critical/" "$XDG_CONFIG_HOME"/dunst/dunstrc
