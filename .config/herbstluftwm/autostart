@@ -169,7 +169,7 @@ hc attr theme.floating.title_depth 3
 hc attr theme.floating.border_width 1
 
 hc watch tags.focus.frame_count
-hc -i attribute_changed tags.focus.frame_count | while read -r; do
+hc -i attribute_changed tags.focus.frame_count | while read -r frame; do
     hc or / and , compare tags.focus.frame_count = 1 , set frame_transparent_width 0 / set frame_transparent_width 2
 done &
 # }}}
@@ -189,15 +189,18 @@ pgrep -x pipewire-pulse || pipewire-pulse &
 pgrep -x picom || picom -b --experimental-backends &
 dz_col &
 
+# if you are gonna launch multiple bars then use pkill or something instead
 {
     # reserve some space
     hc pad 0 24
     # launch polybar
     polybar bar -r &
+    pid="$!"
     # wait until the panels should be stopped
     herbstclient -w '(quit_panel|reload)'
     # stop all started panels
-    pkill -x polybar
-}
+    kill "$pid"
+    hc pad 0 0
+} &
 
 # vim:foldmethod=marker
