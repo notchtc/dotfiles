@@ -4,6 +4,8 @@ set mpris=true
 
 set resume=true
 
+set mouse=true
+
 set format_current=%1{continue}%1{follow}%1{repeat}%1{shuffle}
 set format_statusline=%{status} %a - %t %=%{?volume? %{volume}%%} %{?show_playback_position?%{position}%{?duration? / %{duration}}?%{?duration?%{duration}}}
 set format_trackwin=%3n. %t%= %d
