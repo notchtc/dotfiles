@@ -1,6 +1,15 @@
 = Dotfiles
 chtc <notnotcha0t1c@protonmail.com>
 {docdate}
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
 
 These are my very horrible dotfiles.
 
@@ -9,20 +18,20 @@ Older rices are in the https://github.com/notchtc/dotfiles-old[dotfiles-old repo
 == Used
 [horizontal]
 OS:: https://voidlinux.org[void linux]
-Shell:: https://www.mirbsd.org/mksh.htm[mksh]
-WM:: https://herbstluftwm.org[herbstluftwm]
-Bar:: https://polybar.github.io/[polybar]
-Compositor:: https://github.com/yshui/picom[picom]
+Shell:: https://www.mirbsd.org/mksh.htm[mksh] (link:./.mkshrc[config is here])
+WM:: https://herbstluftwm.org[herbstluftwm] (link:./.config/herbstluftwm[config is here])
+Bar:: https://polybar.github.io/[polybar] (link:./.config/polybar[config is here]])
+Compositor:: https://github.com/yshui/picom[picom] (link:./.config/picom.conf[config is here])
 Screen Locker:: https://github.com/notchtc/slock[slock]
 Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
 Terminal:: https://github.com/notchtc/st[st]
-Text Editor:: https://neovim.io[neovim]
-Music Player:: https://cmus.github.io[cmus]
-Media Player:: https://mpv.io[mpv]
-Image Viewer:: https://github.com/nsxiv/nsxiv[nsxiv]
-PDF Reader:: https://pwmt.org/projects/zathura/[zathura]
+Text Editor:: https://neovim.io[neovim] (link:./.config/nvim[config is here])
+Music Player:: https://cmus.github.io[cmus] (link:./.config/cmus/rc[config is here])
+Media Player:: https://mpv.io[mpv] (link:./.config/mpv[config is here])
+Image Viewer:: https://github.com/nsxiv/nsxiv[nsxiv] (link:./.config/nsxiv/exec[config is here])
+PDF Reader:: https://pwmt.org/projects/zathura/[zathura] (link:./.config/zathura/zathurarc[config is here])
 Browser:: https://www.mozilla.org/en-US/firefox/new[firefox]
-Notification Daemon:: https://github.com/dunst-project/dunst[dunst]
+Notification Daemon:: https://github.com/dunst-project/dunst[dunst] (link:./.config/dunst/dunstrc[config is here])
 Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font] & noto fonts emoji
 Colorscheme:: https://github.com/ishan9299/nvim-solarized-lua[solarized]
 
