@@ -5,20 +5,30 @@ chtc <notnotcha0t1c@protonmail.com
 :toc:
 
 == Keybindings
+=== Launching
 |===
 |Keybinding|Purpose
 
 |kbd:[Super+Shift+q]
 |Launch link:../../.local/bin/sysask[powermenu]
 
-|kbd:[Super+Shift+c]
-|Close focused window or remove the current frame if it's empty
-
 |kbd:[Super+Enter]
 |Launch terminal (st)
 
 |kbd:[Super+d]
 |Launch dmenu
+
+|kbd:[Super+Control+Shift+y]
+|Launch ytfzf with dmenu
+
+|kbd:[Super+Control+Shift+b]
+|Launch browser (firefox)
+
+|kbd:[Super+Control+Shift+m]
+|Launch music player (st, cmus)
+
+|kbd:[Super+Control+Shift+n]
+|Launch RSS reader (st, newsboat)
 |===
 
 === Clients, frames and tags
@@ -48,6 +58,9 @@ chtc <notnotcha0t1c@protonmail.com
 
 |kbd:[Super+Shift+l]
 |Shift client to the right
+
+|kbd:[Super+Shift+c]
+|Close focused window or remove the current frame if it's empty
 
 |kbd:[Super+u]
 |Create a frame at the bottom
@@ -158,18 +171,6 @@ chtc <notnotcha0t1c@protonmail.com
 
 |kbd:[Super+Control+r]
 |Stop giph recording
-
-|kbd:[Super+Control+Shift+y]
-|Spawn ytfzf with dmenu
-
-|kbd:[Super+Control+Shift+b]
-|Launch browser (firefox)
-
-|kbd:[Super+Control+Shift+m]
-|Launch music player (st, cmus)
-
-|kbd:[Super+Control+Shift+n]
-|Launch RSS reader (st, newsboat)
 
 |kbd:[Super+b]
 |Toggle bar and frame gaps
