@@ -1,0 +1,217 @@
+= https://herbstluftwm.org[herbstluftwm]
+chtc <notnotcha0t1c@protonmail.com
+{docdate}
+:experimental:
+:toc:
+
+== Keybindings
+|===
+|Keybinding|Purpose
+
+|kbd:[Super+Shift+q]
+|Launch file:../../.local/bin/sysask[powermenu]
+
+|kbd:[Super+Shift+c]
+|Close focused window or remove the current frame if it's empty
+
+|kbd:[Super+Enter]
+|Launch terminal (st)
+
+|kbd:[Super+d]
+|Launch dmenu
+|===
+
+=== Clients, frames and tags
+|===
+|Keybinding|Purpose
+
+|kbd:[Super+h]
+|Focus client on the left
+
+|kbd:[Super+j]
+|Focus client on the bottom
+
+|kbd:[Super+k]
+|Focus client on the top
+
+|kbd:[Super+l]
+|Focus client on the right
+
+|kbd:[Super+Shift+h]
+|Shift client to the left
+
+|kbd:[Super+Shift+j]
+|Shift client to the bottom
+
+|kbd:[Super+Shift+k]
+|Shift client to the top
+
+|kbd:[Super+Shift+l]
+|Shift client to the right
+
+|kbd:[Super+u]
+|Create a frame at the bottom
+
+|kbd:[Super+o]
+|Create a frame at the right
+
+|kbd:[Super+Control+Space]
+|Split the current frame
+
+|kbd:[Super+Control+h]
+|Resize the left side of a current frame or floating client
+
+|kbd:[Super+Control+j]
+|Resize the bottom side of a current frame or floating client
+
+|kbd:[Super+Control+k]
+|Resize the top side of a current frame or floating client
+
+|kbd:[Super+Control+l]
+|Resize the right side of a current frame or floating client
+
+|kbd:[Super+1-9]
+|Switch to the specified tag (ranging from 1 to 9)
+
+|kbd:[Super+Shift+1-9]
+|Move client to the specified tag (ranging from 1 to 9)
+
+|kbd:[Super+.]
+|Cycle through tags
+
+|kbd:[Super+,]
+|Same thing as before but backwards
+
+|kbd:[Super+r]
+|Remove frame and merge windows to closest neighbour
+
+|kbd:[Super+s]
+|Toggle between floating and tiling mode
+
+|kbd:[Super+f]
+|Toggle fullscreen state for current client
+
+|kbd:[Super+Shift+f]
+|Toggle floating for current client
+
+|kbd:[Super+Shift+m]
+|Minimize client
+
+|kbd:[Super+Control+m]
+|Go to last minimized client
+
+|kbd:[Super+p]
+|Toggle pseudotile
+
+|kbd:[Super+Space]
+|Cycle through layouts in current frame
+
+|kbd:[Super+Backspace]
+|Cycle through monitors
+
+|kbd:[Super+Tab]
+|Cycle through clients in tag
+
+|kbd:[Super+Shift+Tab]
+|Same thing as before but backwards
+
+|kbd:[Super+c]
+|Cycle between clients in frame
+
+|kbd:[Super+i]
+|Go to urgent client
+|===
+
+=== Other
+|===
+|Keybinding|Purpose
+
+|kbd:[XF86AudioRaiseVolume]
+|Raise volume by 5% (pamixer)
+
+|kbd:[XF86AudioLowerVolume]
+|Lower volume by 5% (pamixer)
+
+|kbd:[XF86AudioMute]
+|Toggle mute (pamixer)
+
+|kbd:[XF86AudioPrev]
+|Go to previous track (playerctl)
+
+|kbd:[XF86AudioNext]
+|Go to next track (playerctl)
+
+|kbd:[XF86AudioPlay]
+|Toggle between play/pause (playerctl)
+
+|kbd:[XF86MonBrightnessUp]
+|Raise screen brightness by 15
+
+|kbd:[XF86MonBrightnessDown]
+|Lower screen brightness by 15
+
+|kbd:[Print]
+|Screenshot whole screen and copy it to clipboard (maim, xclip)
+
+|kbd:[Shift+Print]
+|Screenshot selection and copy it to clipboard (maim, xclip)
+
+|kbd:[Super+Control+r]
+|Stop giph recording
+
+|kbd:[Super+Control+Shift+y]
+|Spawn ytfzf with dmenu
+
+|kbd:[Super+Control+Shift+b]
+|Launch browser (firefox)
+
+|kbd:[Super+Control+Shift+m]
+|Launch music player (st, cmus)
+
+|kbd:[Super+Control+Shift+n]
+|Launch RSS reader (st, newsboat)
+
+|kbd:[Super+b]
+|Toggle bar and frame gaps
+|===
+
+== Rules
+|===
+|Condition|Consequence
+
+|Dialogs
+|Floating
+
+|_NET_WM_WINDOW_TYPE_NOTIFICATION,DOCK,DESKTOP
+|Not managed by window manager
+
+|Firefox
+|Spawn on tag 9
+
+|KeePassXC
+|Floating
+
+|Telegram
+|Spawn on tag 8, floating
+
+|Element
+|Spawn on tag 8, floating
+
+|Steam
+|Floating
+
+|Anything launched with wine
+|Floating
+
+|Picture in Picture
+|Visible on all tags
+|===
+
+== Autostart
+This config launches:
+
+- hsetroot
+- pipewire & pipewire-pulse
+- picom
+- file:../../.local/bin/dz_col[dz_col] script
+- polybar

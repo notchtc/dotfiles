@@ -42,6 +42,13 @@ Here is a full list of everything (stuff that either has a config or is used som
 - yt-dlp
 
 == How to install
+[WARNING]
+====
+This will replace your existing configuration!
+
+If you want only some of the configs, copy them to the appropriate directory.
+====
+
 1. Install dependencies
 2. Clone the repository
 [source,shell]

@@ -96,17 +96,17 @@ hc keybind $Mod-i jumpto urgent
 # media keys
 hc keybind XF86AudioRaiseVolume spawn pamixer -i 5
 hc keybind XF86AudioLowerVolume spawn pamixer -d 5
-
 hc keybind XF86AudioMute spawn pamixer -t
+
 hc keybind XF86AudioPrev spawn playerctl previous
 hc keybind XF86AudioNext spawn playerctl next
 hc keybind XF86AudioPlay spawn playerctl play-pause
 
-hc keybind Print spawn sh -c "maim -u | xclip -selection clipboard -t image/png"
-hc keybind Shift-Print spawn sh -c "maim -su | xclip -selection clipboard -t image/png"
-
 hc keybind XF86MonBrightnessUp spawn xbacklight -inc 15
 hc keybind XF86MonBrightnessDown spawn xbacklight -dec 15
+
+hc keybind Print spawn sh -c "maim -u | xclip -selection clipboard -t image/png"
+hc keybind Shift-Print spawn sh -c "maim -su | xclip -selection clipboard -t image/png"
 
 hc keybind $Mod-Control-r spawn giph --stop
 
