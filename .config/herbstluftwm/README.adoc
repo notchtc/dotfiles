@@ -9,7 +9,7 @@ chtc <notnotcha0t1c@protonmail.com
 |Keybinding|Purpose
 
 |kbd:[Super+Shift+q]
-|Launch file:../../.local/bin/sysask[powermenu]
+|Launch link:../../.local/bin/sysask[powermenu]
 
 |kbd:[Super+Shift+c]
 |Close focused window or remove the current frame if it's empty
@@ -213,5 +213,5 @@ This config launches:
 - hsetroot
 - pipewire & pipewire-pulse
 - picom
-- file:../../.local/bin/dz_col[dz_col] script
+- link:../../.local/bin/dz_col[dz_col] script
 - polybar
