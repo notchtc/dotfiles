@@ -20,7 +20,7 @@ Older rices are in the https://github.com/notchtc/dotfiles-old[dotfiles-old repo
 OS:: https://voidlinux.org[void linux]
 Shell:: https://www.mirbsd.org/mksh.htm[mksh] (link:./.mkshrc[config is here])
 WM:: https://herbstluftwm.org[herbstluftwm] (link:./.config/herbstluftwm[config is here])
-Bar:: https://polybar.github.io/[polybar] (link:./.config/polybar[config is here]])
+Bar:: https://polybar.github.io/[polybar] (link:./.config/polybar[config is here])
 Compositor:: https://github.com/yshui/picom[picom] (link:./.config/picom.conf[config is here])
 Screen Locker:: https://github.com/notchtc/slock[slock]
 Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
