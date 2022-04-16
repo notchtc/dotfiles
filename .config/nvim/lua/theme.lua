@@ -3,9 +3,8 @@ local cmd = vim.cmd
 
 local colors = require "colors"
 
-vim.g.solarized_statusline = "flat"
-
-cmd "colorscheme solarized"
+local base16 = require "base16"
+base16(base16.themes.woodland, true)
 
 local function fg(group, color)
     cmd("hi " .. group .. " guifg=" .. color)
@@ -23,12 +22,13 @@ local function link(group1, group2)
     cmd("hi! link " .. group1 .. " " .. group2)
 end
 
-bg("LineNr", colors.bg)
+fg_bg("StatusLine", colors.fg, colors.bg)
+fg_bg("StatusLineNC", colors.fg, colors.bg)
 fg_bg("GitSignsAdd", colors.green, colors.bg)
-fg_bg("GitSignsChange", colors.yellow, colors.bg)
+fg_bg("GitSignsChange", colors.blue, colors.bg)
 fg_bg("GitSignsDelete", colors.red, colors.bg)
-cmd "hi GitSignsDelete gui=NONE cterm=NONE"
-fg("NvimTreeVertSplit", colors.bg)
-fg("StatusLine", colors.bg)
-fg_bg("StatusLine", colors.bg, colors.fg2)
-fg_bg("StatusLineNC", colors.bg, colors.fg2)
+bg("VertSplit", colors.bg)
+link("LineNr", "Normal")
+link("SignColumn", "Normal")
+link("IndentBlanklineChar", "NonText")
+link("IndentBlanklineSpaceChar", "IndentBlanklineChar")

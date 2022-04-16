@@ -8,7 +8,9 @@ M.colorizer = function()
         return
     end
 
-    colorizer.setup()
+    colorizer.setup({
+      '*';
+    }, { rgb_fn = true; })
     COLORIZER_SETUP_HOOK()
 end
 

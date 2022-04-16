@@ -2,10 +2,10 @@
 
 bg=$(xrdb -get background)
 fg=$(xrdb -get foreground)
-gray=$(xrdb -get color10)
-color1=$(xrdb -get color13)
-color2=$(xrdb -get color5)
-color3=$(xrdb -get color9)
+gray=$(xrdb -get color11)
+color1=$(xrdb -get color9)
+color2=$(xrdb -get color14)
+color3=$(xrdb -get color3)
 color4=$(xrdb -get color1)
 
 # Multi monitor support. Needs MONITOR environment variable to be set for each instance of polybar

@@ -1,4 +1,5 @@
-gtk-theme-name=NumixSolarizedDarkMagenta
+gtk-theme-name=Adwaita-dark
+gtk-icon-theme-name=Adwaita
 gtk-font-name=Iosevka Aile 11
 gtk-cursor-theme-name=Adwaita
 gtk-cursor-theme-size=0
@@ -11,3 +12,4 @@ gtk-enable-input-feedback-sounds=1
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintmedium
+gtk-xft-rgba=rgb

@@ -14,7 +14,7 @@ return packer.startup(function()
     use "lewis6991/impatient.nvim"
 
     use {
-        "ishan9299/nvim-solarized-lua",
+        "norcalli/nvim-base16.lua",
         after = "packer.nvim",
         as = "colorscheme",
         config = function()
@@ -83,19 +83,19 @@ return packer.startup(function()
     }
 
     use {
-        "Pocco81/TrueZen.nvim",
-        cmd = "TZAtaraxis",
+        "folke/zen-mode.nvim",
+        cmd = "ZenMode",
         config = function()
-            require "plugins.truezen"
+            require "plugins.zenmode"
         end,
         setup = function()
-            require("mappings").truezen()
+            require("mappings").zenmode()
         end,
     }
 
     use {
         "folke/twilight.nvim",
-        after = "TrueZen.nvim",
+        after = "zen-mode.nvim",
         config = function()
             require "plugins.twilight"
         end,

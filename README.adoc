@@ -21,6 +21,7 @@ OS:: https://voidlinux.org[void linux]
 Shell:: https://www.mirbsd.org/mksh.htm[mksh] (link:./.mkshrc[config is here])
 WM:: https://herbstluftwm.org[herbstluftwm] (link:./.config/herbstluftwm[config is here])
 Bar:: https://polybar.github.io/[polybar] (link:./.config/polybar[config is here])
+Application Launcher:: https://github.com/davatorium/rofi[rofi] (link:./.config/rofi[config is here])
 Compositor:: https://github.com/yshui/picom[picom] (link:./.config/picom.conf[config is here])
 Screen Locker:: https://github.com/notchtc/slock[slock]
 Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
@@ -33,7 +34,7 @@ PDF Reader:: https://pwmt.org/projects/zathura/[zathura] (link:./.config/zathura
 Browser:: https://www.mozilla.org/en-US/firefox/new[firefox]
 Notification Daemon:: https://github.com/dunst-project/dunst[dunst] (link:./.config/dunst/dunstrc[config is here])
 Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font] & noto fonts emoji
-Colorscheme:: https://github.com/ishan9299/nvim-solarized-lua[solarized]
+Colorscheme:: https://github.com/jcornwall/base16-woodland-scheme[base16-woodland]
 
 Here is a full list of everything (stuff that either has a config or is used somewhere) that wasn't mentioned previously:
 
@@ -44,7 +45,6 @@ Here is a full list of everything (stuff that either has a config or is used som
 - hsetroot
 - notify-send
 - pipewire & pipewire-pulse
-- https://github.com/Ferdi265/numix-solarized-gtk-theme[numix-solarized-gtk-theme] (dark magenta variant)
 - trash-cli
 - wget
 - xprop

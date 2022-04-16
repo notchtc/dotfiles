@@ -78,8 +78,8 @@ M.nvimtree = function()
     map("n", "<leader>r", "<CMD>NvimTreeRefresh<CR>", opt)
 end
 
-M.truezen = function()
-    map("n", "<leader>tz", "<CMD>TZAtaraxis<CR>", opt)
+M.zenmode = function()
+    map("n", "<leader>z", "<CMD>ZenMode<CR>", opt)
 end
 
 return M

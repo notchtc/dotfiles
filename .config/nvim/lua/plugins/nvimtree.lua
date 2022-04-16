@@ -6,9 +6,6 @@ g.nvim_tree_git_hl = 1
 -- Change symlink arrow
 g.nvim_tree_symlink_arrow = " → "
 
--- Enable indent markers
-g.nvim_tree_indent_markers = 1
-
 -- Show git, folder and file icons
 g.nvim_tree_show_icons = {
     git = 0,
@@ -31,5 +28,10 @@ nvimtree.setup {
     view = {
         side = "left",
         width = 25,
+    },
+    renderer = {
+        indent_markers = {
+            enable = true,
+        },
     },
 }

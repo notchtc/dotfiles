@@ -1,6 +1,6 @@
 function exitcode {
     if [ "$?" == "0" ]; then
-        printf $'\E[35m'
+        printf $'\E[90m'
     else
         printf $'\E[31m'
     fi

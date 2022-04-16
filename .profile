@@ -30,7 +30,7 @@ export EDITOR=nvim
 export VISUAL="$EDITOR"
 export PAGER=less
 
-export FZF_DEFAULT_OPTS="-m --color '16,bg+:-1,border:0' --border sharp --preview-window sharp:wrap --layout=reverse --info inline"
+export FZF_DEFAULT_OPTS="-m --color '16,bg+:-1,border:8' --border sharp --preview-window sharp:wrap --layout=reverse --info inline"
 export LESS="--mouse -R"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 export QT_QPA_PLATFORMTHEME=qt5ct

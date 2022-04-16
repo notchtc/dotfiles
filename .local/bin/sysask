@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(printf 'lock\nrestart\nquit\nshutdown\nreboot' | dmenu "$@" -i -p 'What do you want to do? ')" in
+case "$(printf 'lock\nrestart\nquit\nshutdown\nreboot' | rofi -dmenu "$@" -i -p 'What do you want to do? ')" in
     'lock') slock ;;
     'quit') herbstclient quit || kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
     'restart') herbstclient reload || kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;

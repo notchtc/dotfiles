@@ -65,6 +65,11 @@ ln -sf "$path/.config/newsboat/config" "$XDG_CONFIG_HOME/newsboat/config"
 ln -sf "$path/.config/nsxiv/exec/key-handler" "$XDG_CONFIG_HOME/nsxiv/exec/key-handler"
 ln -sf "$path/.config/nsxiv/exec/image-info" "$XDG_CONFIG_HOME/nsxiv/exec/image-info"
 
+[ ! -d "$XDG_CONFIG_HOME/rofi" ] && mkdir "$XDG_CONFIG_HOME/rofi"
+ln -sf "$path/.config/rofi/config.rasi" "$XDG_CONFIG_HOME/rofi/config.rasi"
+ln -sf "$path/.config/rofi/dmenu.rasi" "$XDG_CONFIG_HOME/rofi/dmenu.rasi"
+ln -sf "$path/.config/rofi/youtube.rasi" "$XDG_CONFIG_HOME/rofi/youtube.rasi"
+
 [ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
 ln -sf "$path/.local/share/wall.png" "$XDG_DATA_HOME/wall.png"
 
