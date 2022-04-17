@@ -2,8 +2,8 @@
     bg: #231e18;
     fg: #cabcb1;
     selected: #b49368;
-    background-color: @bg;
     text-color:  @fg;
+    background-color: rgba(0, 0, 0, 0);
 }
 window {
     height:   100%;
@@ -12,16 +12,18 @@ window {
     anchor:   north;
 }
 inputbar {
-    padding: 3px;
+    padding: 3px 0px 1px 3px;
+    background-color: @bg;
 }
 mainbox {
     expand: true;
-    spacing: 6px;
+    spacing: 3px;
 }
 listview {
     padding: 3px;
     dynamic: false;
     lines: 0;
+    background-color: rgba(35, 30, 24, 0.95);
 }
 element-text {
     background-color: inherit;
@@ -29,7 +31,7 @@ element-text {
 }
 element selected  normal {
     background-color: @selected;
-    color: @background-color;
+    color: @bg;
 }
 error-message {
     expand: true;

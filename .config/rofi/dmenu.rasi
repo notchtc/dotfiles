@@ -5,15 +5,16 @@
     background-color: @bg;
     border-color:     @fg;
     text-color:       @fg;
-    font:             "Iosevka Aile 13.3";
+    font:             "Iosevka Aile 13.26";
 }
 window {
     anchor:   north;
     location: north;
     height:   24px;
-    width:    calc(100% - 12px);
-    x-offset: -3px;
-    y-offset: 3px;
+    width:    100%;
+//    width:    calc(100% - 12px);
+//    x-offset: -3px;
+//    y-offset: 3px;
     children: [ horibox ];
 }
 horibox {
