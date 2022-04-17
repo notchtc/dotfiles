@@ -183,7 +183,7 @@ hc unlock
 hc detect_monitors
 hc set auto_detect_monitors 1
 
-hsetroot -cover "$XDG_DATA_HOME"/wall.png &
+hsetroot -cover "$XDG_DATA_HOME/wall.png" &
 pgrep -x pipewire || pipewire &
 pgrep -x pipewire-pulse || pipewire-pulse &
 pgrep -x picom || picom -b --experimental-backends &

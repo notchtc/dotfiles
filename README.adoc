@@ -61,7 +61,7 @@ If you want only some of the configs, copy them to the appropriate directory.
 1. Install dependencies
 2. Clone the repository
 [source,shell]
-git clone https://github.com/notchtc/dotfiles.git "$HOME"/.dotfiles
+git clone --recurse-submodules https://github.com/notchtc/dotfiles.git "$HOME"/.dotfiles
 3. Enter the dotfiles directory.
 [source,shell]
 cd "$HOME"/.dotfiles

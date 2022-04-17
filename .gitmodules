@@ -1,0 +1,3 @@
+[submodule ".config/mpv/scripts/autosubsync"]
+	path = .config/mpv/scripts/autosubsync
+	url = https://github.com/joaquintorres/autosubsync-mpv

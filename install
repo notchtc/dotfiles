@@ -49,6 +49,7 @@ ln -sf "$path/.config/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura/zathurarc"
 [ ! -d "$XDG_CONFIG_HOME/mpv/scripts" ] && mkdir "$XDG_CONFIG_HOME/mpv/scripts"
 ln -sf "$path/.config/mpv/mpv.conf" "$XDG_CONFIG_HOME/mpv/mpv.conf"
 ln -sf "$path/.config/mpv/scripts/copy-permalink.lua" "$XDG_CONFIG_HOME/mpv/scripts/copy-permalink.lua"
+ln -sf "$path/.config/mpv/scripts/autosubsync" "$XDG_CONFIG_HOME/mpv/scripts/autosubsync"
 
 [ ! -d "$XDG_CONFIG_HOME/polybar" ] && mkdir "$XDG_CONFIG_HOME/polybar"
 ln -sf "$path/.config/polybar/config" "$XDG_CONFIG_HOME/polybar/config"
