@@ -10,6 +10,8 @@ M.colorizer = function()
 
     colorizer.setup({
       '*';
+      '!packer';
+      '!NvimTree';
     }, { rgb_fn = true; })
     COLORIZER_SETUP_HOOK()
 end
