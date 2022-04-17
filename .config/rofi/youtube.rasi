@@ -12,7 +12,7 @@ window {
     anchor:   north;
 }
 inputbar {
-    padding: 3px 0px 1px 3px;
+    padding: 1px 0px 1px 3px;
     background-color: @bg;
 }
 mainbox {

@@ -10,7 +10,7 @@
 window {
     anchor:   north;
     location: north;
-    height:   24px;
+    height:   23px;
     width:    100%;
 //    width:    calc(100% - 12px);
 //    x-offset: -3px;
