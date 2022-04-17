@@ -5,7 +5,7 @@
     background-color: @bg;
     border-color:     @fg;
     text-color:       @fg;
-    font:             "Iosevka Aile 13.26";
+    font:             "Iosevka Aile 13.2";
 }
 window {
     anchor:   north;
