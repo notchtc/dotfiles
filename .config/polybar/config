@@ -116,10 +116,10 @@ type = internal/network
 interface = wlp3s0
 interval = 5
 
-format-connected = "<label-connected> "
-format-disconnected = "<label-disconnected> "
-label-connected = %{A1:st -e iwctl:}直%{A}
-label-disconnected = %{A1:st -e iwctl:}睊%{A}
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = %{A1:st -e iwctl:}直 %{A}
+label-disconnected = %{A1:st -e iwctl:}睊 %{A}
 
 [settings]
 screenchange-reload = true
