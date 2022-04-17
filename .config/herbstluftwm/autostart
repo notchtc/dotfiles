@@ -164,10 +164,8 @@ hc attr theme.border_width 0
 hc attr theme.title_font "Iosevka Aile:size=10"
 hc attr theme.title_color "$bg"
 hc attr theme.normal.title_color "$fg"
+hc attr theme.floating.normal.color "$bg_alt"
 hc attr theme.floating.active.color "$bg_alt"
-hc attr theme.floating.active.title_color "$fg"
-hc attr theme.floating.title_height 15
-hc attr theme.floating.title_depth 3
 hc attr theme.floating.border_width 1
 
 hc watch tags.focus.frame_count
