@@ -192,7 +192,7 @@ dz_col &
 # if you are gonna launch multiple bars then use pkill or something instead
 {
     # reserve some space
-    hc pad 0 27
+    hc pad 0 23
     # launch polybar
     polybar bar -r &
     pid="$!"
