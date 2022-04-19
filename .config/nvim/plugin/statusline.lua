@@ -37,12 +37,16 @@ local function filepath()
         return ""
     end
 
+    return path .. "/"
+end
+
+local function filename()
     local name = vim.fn.expand "%:t"
     if name == "" then
         return ""
     end
 
-    return path .. "/" .. name .. " "
+    return name .. " "
 end
 
 local function filetype()
@@ -84,6 +88,7 @@ Statusline.active = function()
         "%<",
         "%#StatusLine# ",
         filepath(),
+        filename(),
         "%(%M %)",
         "%(%R%)",
         "%=",

@@ -74,6 +74,9 @@ ln -sf "$path/.config/rofi/youtube.rasi" "$XDG_CONFIG_HOME/rofi/youtube.rasi"
 [ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
 ln -sf "$path/.local/share/wall.png" "$XDG_DATA_HOME/wall.png"
 
+[ ! -d "$XDG_DATA_HOME/irssi" ] && mkdir "$XDG_DATA_HOME/irssi"
+ln -sf "$path/.local/share/irssi/default.theme" "$XDG_DATA_HOME/irssi/default.theme"
+
 [ ! -d "$HOME/.local/bin" ] && mkdir "$HOME/.local/bin"
 ln -sf "$path/.local/bin/battery" "$HOME/.local/bin/battery"
 ln -sf "$path/.local/bin/fetch" "$HOME/.local/bin/fetch"

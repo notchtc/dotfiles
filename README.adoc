@@ -32,6 +32,7 @@ Media Player:: https://mpv.io[mpv] (link:./.config/mpv[config is here])
 Image Viewer:: https://github.com/nsxiv/nsxiv[nsxiv] (link:./.config/nsxiv/exec[config is here])
 PDF Reader:: https://pwmt.org/projects/zathura/[zathura] (link:./.config/zathura/zathurarc[config is here])
 Browser:: https://www.mozilla.org/en-US/firefox/new[firefox]
+IRC Client:: https://irssi.org[irssi]
 Notification Daemon:: https://github.com/dunst-project/dunst[dunst] (link:./.config/dunst/dunstrc[config is here])
 Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile) & https://github.com/ryanoasis/nerd-fonts[iosevka nerd font] & noto fonts emoji
 Colorscheme:: https://github.com/jcornwall/base16-woodland-scheme[base16-woodland]
