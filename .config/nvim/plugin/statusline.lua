@@ -31,13 +31,27 @@ local function mode()
     return mode_colors[vim.fn.mode()][1]
 end
 
+local function filepath()
+    local path = vim.fn.expand "%:h"
+    if path == "" or path == "." then
+        return ""
+    end
+
+    local name = vim.fn.expand "%:t"
+    if name == "" then
+        return ""
+    end
+
+    return path .. "/" .. name .. " "
+end
+
 local function filetype()
     local type = bo.filetype
 
     if type == "" then
         return ""
     else
-        return type .. " | "
+        return type .. " "
     end
 end
 
@@ -47,7 +61,7 @@ local function fileencoding()
     if encoding == "utf-8" or encoding == "" then
         return ""
     else
-        return encoding .. " | "
+        return encoding .. " "
     end
 end
 
@@ -57,29 +71,39 @@ local function fileformat()
     if format == "unix" or format == "" then
         return ""
     else
-        return format .. " | "
+        return format .. " "
     end
 end
 
-function statusline()
-    local stl = {
+Statusline = {}
+
+Statusline.active = function()
+    return table.concat {
         "%#StatusLineMode#",
         mode(),
+        "%<",
         "%#StatusLine# ",
-        "%(%f %)",
+        filepath(),
         "%(%M %)",
         "%(%R%)",
-        "%=%<",
+        "%=",
         filetype(),
         fileencoding(),
         fileformat(),
+        "%<",
         "%l:%c",
     }
-    return table.concat(stl)
 end
 
-function statusline_inactive()
+function Statusline.inactive()
     return "%f "
 end
 
-vim.opt.statusline = "%!luaeval('statusline()')"
+vim.api.nvim_exec([[
+augroup Statusline
+au!
+au WinEnter,BufEnter * setlocal statusline=%!v:lua.Statusline.active()
+au WinLeave,BufLeave * setlocal statusline=%!v:lua.Statusline.inactive()
+au WinEnter,BufEnter,FileType NvimTree_* setlocal statusline=%!v:lua.Statusline.inactive()
+augroup END
+]], false)

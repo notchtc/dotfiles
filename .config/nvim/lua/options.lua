@@ -8,8 +8,8 @@ opt.clipboard = "unnamedplus"
 opt.mouse = "a"
 
 -- Numbers
-opt.number = true
-opt.relativenumber = true
+opt.number = false
+opt.relativenumber = false
 
 -- Only case sensitive when there are uppercase letters
 opt.ignorecase = true
