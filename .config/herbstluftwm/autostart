@@ -98,9 +98,9 @@ hc keybind XF86AudioRaiseVolume spawn pamixer -i 5
 hc keybind XF86AudioLowerVolume spawn pamixer -d 5
 hc keybind XF86AudioMute spawn pamixer -t
 
-hc keybind XF86AudioPrev spawn playerctl previous
-hc keybind XF86AudioNext spawn playerctl next
-hc keybind XF86AudioPlay spawn playerctl play-pause
+hc keybind XF86AudioPrev or , silent playerctl previous , spawn cmus-remote -r
+hc keybind XF86AudioNext or , silent playerctl next , spawn cmus-remote -n
+hc keybind XF86AudioPlay or , silent playerctl play-pause , spawn cmus-remote -u
 
 hc keybind XF86MonBrightnessUp spawn xbacklight -inc 15
 hc keybind XF86MonBrightnessDown spawn xbacklight -dec 15
