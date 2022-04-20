@@ -109,6 +109,7 @@ hc keybind Print spawn sh -c "maim -u | xclip -selection clipboard -t image/png"
 hc keybind Shift-Print spawn sh -c "maim -su | xclip -selection clipboard -t image/png"
 
 hc keybind $Mod-Control-r spawn giph --stop
+hc keybind $Mod-Control-p spawn sh -c "pkill pipewire && herbstclient reload"
 
 hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn firefox
