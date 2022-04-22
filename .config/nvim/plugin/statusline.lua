@@ -1,16 +1,17 @@
 local bo = vim.bo
+local fn = vim.fn
 
 local colors = require "colors"
 
-local mode_colors = {
+local modes = {
     ["n"] = { "normal", colors.green },
     ["no"] = { "n-pending", colors.green },
     ["i"] = { "insert", colors.blue },
     ["ic"] = { "insert", colors.blue },
     ["t"] = { "terminal", colors.green },
-    ["v"] = { "visual", colors.yellow },
-    ["V"] = { "v-line", colors.yellow },
-    [""] = { "v-block", colors.yellow },
+    ["v"] = { "visual", colors.orange },
+    ["V"] = { "v-line", colors.orange },
+    [""] = { "v-block", colors.orange },
     ["R"] = { "replace", colors.cyan },
     ["Rv"] = { "v-replace", colors.cyan },
     ["s"] = { "select", colors.cyan },
@@ -26,13 +27,13 @@ local mode_colors = {
 }
 
 local function mode()
-    vim.cmd("hi StatusLineMode guifg=" .. mode_colors[vim.fn.mode()][2])
+    vim.cmd("hi StatusLineMode guibg=" .. modes[fn.mode()][2] .. " guifg=" .. colors.bg)
 
-    return mode_colors[vim.fn.mode()][1]
+    return " " .. modes[fn.mode()][1] .. " "
 end
 
 local function filepath()
-    local path = vim.fn.expand "%:h"
+    local path = fn.pathshorten(fn.expand "%:h")
     if path == "" or path == "." then
         return ""
     end
@@ -41,7 +42,7 @@ local function filepath()
 end
 
 local function filename()
-    local name = vim.fn.expand "%:t"
+    local name = fn.expand "%:t"
     if name == "" then
         return ""
     end
@@ -81,7 +82,7 @@ end
 
 Statusline = {}
 
-Statusline.active = function()
+function Statusline.active()
     return table.concat {
         "%#StatusLineMode#",
         mode(),
