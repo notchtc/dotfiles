@@ -4,7 +4,7 @@ local opt = vim.opt
 opt.shell = "/bin/sh"
 
 -- Make life better
-opt.clipboard = "unnamedplus"
+opt.clipboard:append("unnamedplus")
 opt.mouse = "a"
 
 -- Numbers

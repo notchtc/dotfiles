@@ -9,10 +9,10 @@ M.colorizer = function()
     end
 
     colorizer.setup({
-      '*';
-      '!packer';
-      '!NvimTree';
-    }, { rgb_fn = true; })
+        "*",
+        "!packer",
+        "!NvimTree",
+    }, { rgb_fn = true })
     COLORIZER_SETUP_HOOK()
 end
 
@@ -25,10 +25,12 @@ M.blankline = function()
     blankline.setup {
         enabled = true,
         char_list = { "│", "╎", "┆", "┊", "╵" },
+        char_blankline = " ",
         filetype_exclude = { "txt", "packer", "help", "NvimTree" },
         buftype_exclude = { "terminal" },
         show_first_indent_level = false,
         show_foldtext = true,
+        use_treesitter = true,
     }
 end
 

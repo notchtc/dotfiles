@@ -1,34 +1,28 @@
-local g = vim.g
-local cmd = vim.cmd
-
-local colors = require "colors"
+local set_hl = vim.api.nvim_set_hl
 
 local base16 = require "base16"
+local colors = require "colors"
+
 base16(base16.themes.woodland, true)
 
-local function fg(group, color)
-    cmd("hi " .. group .. " guifg=" .. color)
-end
+set_hl(0, "StatusLine", {
+    ctermfg = 20,
+    ctermbg = 19,
+    fg = colors.fg,
+    bg = colors.bg,
+})
+set_hl(0, "StatusLineNC", {
+    ctermfg = 9,
+    ctermbg = 18,
+    fg = colors.fg,
+    bg = colors.bg,
+})
 
-local function bg(group, color)
-    cmd("hi " .. group .. " guibg=" .. color)
-end
-
-local function fg_bg(group, fgcol, bgcol)
-    cmd("hi " .. group .. " guifg=" .. fgcol .. " guibg=" .. bgcol)
-end
-
-local function link(group1, group2)
-    cmd("hi! link " .. group1 .. " " .. group2)
-end
-
-fg_bg("StatusLine", colors.fg, colors.bg)
-fg_bg("StatusLineNC", colors.fg, colors.bg)
-fg_bg("GitSignsAdd", colors.green, colors.bg)
-fg_bg("GitSignsChange", colors.blue, colors.bg)
-fg_bg("GitSignsDelete", colors.red, colors.bg)
-bg("VertSplit", colors.bg)
-link("LineNr", "Normal")
-link("SignColumn", "Normal")
-link("IndentBlanklineChar", "NonText")
-link("IndentBlanklineSpaceChar", "IndentBlanklineChar")
+set_hl(0, "GitSignsAdd", { fg = colors.green, bg = colors.bg })
+set_hl(0, "GitSignsChange", { fg = colors.blue, bg = colors.bg })
+set_hl(0, "GitSignsDelete", { fg = colors.red, bg = colors.bg })
+set_hl(0, "VertSplit", { bg = colors.bg })
+set_hl(0, "LineNr", { link = "Normal" })
+set_hl(0, "SignColumn", { link = "Normal" })
+set_hl(0, "IndentBlanklineChar", { fg = colors.gray, nocombine = true })
+set_hl(0, "IndentBlanklineSpaceChar", { link = "IndentBlanklineChar" })

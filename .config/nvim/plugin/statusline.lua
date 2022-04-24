@@ -1,8 +1,10 @@
 local bo = vim.bo
 local fn = vim.fn
+local api = vim.api
 
 local colors = require "colors"
 
+-- Stuff used by statusline
 local modes = {
     ["n"] = { "normal", colors.green },
     ["no"] = { "n-pending", colors.green },
@@ -27,7 +29,7 @@ local modes = {
 }
 
 local function mode()
-    vim.cmd("hi StatusLineMode guibg=" .. modes[fn.mode()][2] .. " guifg=" .. colors.bg)
+    api.nvim_set_hl(0, "StatusLineMode", { bg = modes[fn.mode()][2], fg = colors.bg })
 
     return " " .. modes[fn.mode()][1] .. " "
 end
@@ -80,6 +82,7 @@ local function fileformat()
     end
 end
 
+-- Create statusline
 Statusline = {}
 
 function Statusline.active()
@@ -105,11 +108,21 @@ function Statusline.inactive()
     return "%f "
 end
 
-vim.api.nvim_exec([[
-augroup Statusline
-au!
-au WinEnter,BufEnter * setlocal statusline=%!v:lua.Statusline.active()
-au WinLeave,BufLeave * setlocal statusline=%!v:lua.Statusline.inactive()
-au WinEnter,BufEnter,FileType NvimTree_* setlocal statusline=%!v:lua.Statusline.inactive()
-augroup END
-]], false)
+-- Setting statusline
+local id = api.nvim_create_augroup("Statusline", {})
+
+api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
+    group = id,
+    command = "setlocal statusline=%!v:lua.Statusline.active()",
+})
+
+api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
+    group = id,
+    command = "setlocal statusline=%!v:lua.Statusline.inactive()",
+})
+
+api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
+    group = id,
+    pattern = "NvimTree_*",
+    command = "setlocal statusline=%!v:lua.Statusline.inactive()",
+})
