@@ -18,11 +18,14 @@ set_hl(0, "StatusLineNC", {
     bg = colors.bg,
 })
 
-set_hl(0, "GitSignsAdd", { fg = colors.green, bg = colors.bg })
-set_hl(0, "GitSignsChange", { fg = colors.blue, bg = colors.bg })
-set_hl(0, "GitSignsDelete", { fg = colors.red, bg = colors.bg })
+set_hl(0, "NonText", {fg = colors.gray})
 set_hl(0, "VertSplit", { bg = colors.bg })
 set_hl(0, "LineNr", { link = "Normal" })
 set_hl(0, "SignColumn", { link = "Normal" })
+
+set_hl(0, "GitSignsAdd", { fg = colors.green, bg = colors.bg })
+set_hl(0, "GitSignsChange", { fg = colors.blue, bg = colors.bg })
+set_hl(0, "GitSignsDelete", { fg = colors.red, bg = colors.bg })
+
 set_hl(0, "IndentBlanklineChar", { fg = colors.gray, nocombine = true })
 set_hl(0, "IndentBlanklineSpaceChar", { link = "IndentBlanklineChar" })
