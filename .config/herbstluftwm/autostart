@@ -115,7 +115,7 @@ hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn firefox
 hc keybind $Mod-Control-Shift-m spawn st -e music
 hc keybind $Mod-Control-Shift-n spawn st -e newsboat
-hc keybind $Mod-b chain , pad 0 0 , cycle_value settings.frame_gap 0 3 , spawn polybar-msg cmd toggle
+hc keybind $Mod-b chain , pad 0 0 , cycle_value settings.frame_gap 0 1 , spawn polybar-msg cmd toggle
 # }}}
 
 # rules {{{
@@ -154,8 +154,8 @@ hc set frame_bg_active_color "$focus"
 hc set frame_border_width 0
 hc set always_show_frame on
 hc set frame_bg_transparent on
-hc set frame_gap 3
-hc set smart_frame_surroundings off
+hc set frame_gap 1
+hc set smart_frame_surroundings on
 
 hc attr theme.background_color "$bg"
 hc attr theme.normal.color "$bg"
@@ -171,7 +171,7 @@ hc attr theme.floating.border_width 1
 
 hc watch tags.focus.frame_count
 hc -i attribute_changed tags.focus.frame_count | while read -r frame; do
-    hc or / and , compare tags.focus.frame_count = 1 , set frame_transparent_width 0 / set frame_transparent_width 2
+    hc or / and , compare tags.focus.frame_count = 1 , set frame_transparent_width 0 / set frame_transparent_width 1
 done &
 # }}}
 
