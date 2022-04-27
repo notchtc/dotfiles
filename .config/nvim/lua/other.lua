@@ -7,7 +7,7 @@ au("BufWritePre", { command = [[%s/\n\+\%$//e]] })
 -- Reload Xresources on change
 au("BufWritePost", {
     pattern = "Xresources",
-    command = "!xrdb -load " .. vim.fn.expand "$XDG_CONFIG_HOME" .. "x11/Xresources",
+    command = "!xrdb -load " .. vim.fn.expand "$XDG_CONFIG_HOME/" .. "x11/Xresources",
 })
 
 -- Quit nvim-tree when it's the last window
