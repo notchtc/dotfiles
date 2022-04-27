@@ -17,7 +17,6 @@ inputbar {
 }
 mainbox {
     expand: true;
-    spacing: 3px;
 }
 listview {
     padding: 3px;
