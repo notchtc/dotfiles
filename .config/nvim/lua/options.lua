@@ -4,7 +4,7 @@ local opt = vim.opt
 opt.shell = "/bin/sh"
 
 -- Make life better
-opt.clipboard:append("unnamedplus")
+opt.clipboard:append "unnamedplus"
 opt.mouse = "a"
 
 -- Numbers
@@ -30,6 +30,9 @@ opt.listchars = {
     trail = "·",
     tab = "→ ",
 }
+
+-- Hide concealed text
+opt.conceallevel = 2
 
 -- Folding with treesitter
 opt.foldmethod = "expr"

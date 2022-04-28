@@ -100,4 +100,12 @@ return packer.startup(function()
             require "plugins.twilight"
         end,
     }
+
+    use {
+        "habamax/vim-asciidoctor",
+        ft = "asciidoc",
+        config = function()
+            require("plugins.others").asciidoctor()
+        end,
+    }
 end)

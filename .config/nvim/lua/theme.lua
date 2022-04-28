@@ -18,7 +18,7 @@ set_hl(0, "StatusLineNC", {
     bg = colors.bg,
 })
 
-set_hl(0, "NonText", {fg = colors.gray})
+set_hl(0, "NonText", { fg = colors.gray })
 set_hl(0, "VertSplit", { bg = colors.bg })
 set_hl(0, "LineNr", { link = "Normal" })
 set_hl(0, "SignColumn", { link = "Normal" })

@@ -34,4 +34,8 @@ M.blankline = function()
     }
 end
 
+M.asciidoctor = function()
+    g.asciidoctor_syntax_conceal = 1
+end
+
 return M
