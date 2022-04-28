@@ -1,0 +1,37 @@
+set home-page=https://notchtc.github.io
+set download-path=$XDG_DOWNLOAD_DIR
+set editor-command=st -e nvim %s
+
+set default-font=Iosevka Aile
+set monospace-font=Iosevka
+set sans-serif-font=Iosevka Aile
+set font-size=16
+set dark-mode=on
+set stylesheet=true
+
+set spell-checking=true
+set spell-checking-languages=en,pl
+
+set input-autohide=true
+
+set webgl=true
+set images=true
+set scripts=true
+set smooth-scrolling=true
+set html5-database=true
+set html5-local-storage=true
+set hardware-acceleration-policy=ondemand
+
+shortcut-add d=https://duckduckgo.com/lite/?q=$0
+shortcut-add w=https://en.wikipedia.org/w/index.php?search=$0
+shortcut-add g=https://boards.4channel.org/g/catalog
+shortcut-default d
+
+set completion-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka;
+set completion-hover-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka;
+set completion-selected-css=color:#cabcb1;background-color:#302b25;font:12pt Iosevka;
+set input-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka;
+set input-error-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka;
+set status-css=color:#ca7f32;background-color:#231e18;font:12pt Iosevka;
+set status-ssl-css=color:#b49368;background-color:#231e18;font:12pt Iosevka;
+set status-ssl-invalid-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka;

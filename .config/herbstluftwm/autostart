@@ -127,6 +127,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~"[F-f]irefox.*" tag=9
+hc rule once class~"[V-v]imb" tag=9
 hc rule class="KeePassXC" floating=on
 hc rule class="TelegramDesktop" tag=8 floating=on
 hc rule class="Element" tag=8 floating=on
