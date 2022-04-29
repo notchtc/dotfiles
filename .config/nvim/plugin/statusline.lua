@@ -90,12 +90,14 @@ function Statusline.active()
         "%#StatusLineMode#",
         mode(),
         "%<",
-        "%#StatusLine# ",
+        "%#Normal# ",
         filepath(),
         filename(),
         "%(%M %)",
         "%(%R%)",
+        "%#StatusLineBlank#",
         "%=",
+        "%#Normal#",
         filetype(),
         fileencoding(),
         fileformat(),
@@ -105,7 +107,7 @@ function Statusline.active()
 end
 
 function Statusline.inactive()
-    return "%f "
+    return "%#Normal#%f %#StatusLineBlank#%="
 end
 
 -- Setting statusline

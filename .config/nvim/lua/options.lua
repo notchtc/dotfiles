@@ -24,11 +24,21 @@ opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
 
--- Show trailing whitespace
+-- Enable listchars
 opt.list = true
 opt.listchars = {
     trail = "·",
     tab = "→ ",
+    extends = ">",
+    precedes = "<",
+}
+
+-- Set fillchars
+opt.fillchars = {
+    eob = " ", -- Remove EOB chars
+    -- My statusline vert split hack
+    stl = "│",
+    stlnc = "│",
 }
 
 -- Hide concealed text
@@ -44,11 +54,15 @@ opt.lazyredraw = true
 opt.swapfile = false
 
 -- Stuff to look cool
-opt.termguicolors = true
+if vim.fn.expand "$TERM" == "linux" then
+    opt.termguicolors = false
+else
+    opt.termguicolors = true
+end
 opt.background = "dark"
-opt.laststatus = 2
+opt.laststatus = 3
 opt.showmode = false
-opt.fillchars = { eob = " " }
+
 opt.cursorline = true
 
 -- Disable nvim intro

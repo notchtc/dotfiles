@@ -33,7 +33,6 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # Default apps
 export BROWSER=vimb
-export TERM=st
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 export PAGER=less

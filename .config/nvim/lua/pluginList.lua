@@ -66,6 +66,7 @@ return packer.startup(function()
     use {
         "norcalli/nvim-colorizer.lua",
         event = "VimEnter",
+        cond = vim.fn.expand "$TERM" ~= "linux",
         config = function()
             require("plugins.others").colorizer()
         end,

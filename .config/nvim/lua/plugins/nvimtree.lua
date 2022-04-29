@@ -19,8 +19,6 @@ if not present then
 end
 
 nvimtree.setup {
-    -- Open the tree by default when opening (n)vim or (n)vim $DIR
-    auto_open = false,
     -- Disable netrw
     disable_netrw = true,
     -- Prevent netrw from automatically opening when opening directories
@@ -33,5 +31,9 @@ nvimtree.setup {
         indent_markers = {
             enable = true,
         },
+    },
+    hijack_directories = {
+        enable = false,
+        auto_open = false,
     },
 }
