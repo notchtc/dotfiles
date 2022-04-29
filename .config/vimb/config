@@ -13,6 +13,7 @@ set spell-checking=true
 set spell-checking-languages=en,pl
 
 set input-autohide=true
+set incsearch=true
 
 set webgl=true
 set images=true
