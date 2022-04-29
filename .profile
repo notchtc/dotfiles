@@ -32,7 +32,7 @@ export DVDCSS_CACHE="$XDG_DATA_HOME/dvdcss"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # Default apps
-export BROWSER=firefox
+export BROWSER=vimb
 export TERM=st
 export EDITOR=nvim
 export VISUAL="$EDITOR"
