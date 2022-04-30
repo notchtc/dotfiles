@@ -26,13 +26,17 @@ set hardware-acceleration-policy=ondemand
 shortcut-add d=https://duckduckgo.com/lite/?q=$0
 shortcut-add w=https://en.wikipedia.org/w/index.php?search=$0
 shortcut-add g=https://boards.4channel.org/g/catalog
+shortcut-add gh=https://github.com
+shortcut-add ghr=https://github.com/$0/$1
 shortcut-default d
 
-set completion-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka;
-set completion-hover-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka;
-set completion-selected-css=color:#cabcb1;background-color:#302b25;font:12pt Iosevka;
-set input-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka;
-set input-error-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka;
-set status-css=color:#ca7f32;background-color:#231e18;font:12pt Iosevka;
-set status-ssl-css=color:#b49368;background-color:#231e18;font:12pt Iosevka;
-set status-ssl-invalid-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka;
+handler-add magnet=xdg-open %s
+
+set completion-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka Nerd Font;
+set completion-hover-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka Nerd Font;
+set completion-selected-css=color:#cabcb1;background-color:#302b25;font:12pt Iosevka Nerd Font;
+set input-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka Nerd Font;
+set input-error-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka Nerd Font;
+set status-css=color:#48413a;background-color:#231e18;font:12pt Iosevka Nerd Font;
+set status-ssl-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka Nerd Font;
+set status-ssl-invalid-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka Nerd Font;

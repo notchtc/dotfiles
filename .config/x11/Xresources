@@ -47,5 +47,13 @@ dmenu.selfgcolor: base00
 dmenu.fuzzycolor: base02
 dmenu.font: Iosevka Nerd Font:size=13
 
+tabbed.font: Iosevka Nerd Font:size=12
+tabbed.normbgcolor: base00
+tabbed.normfgcolor: base02
+tabbed.selbgcolor: base00
+tabbed.selfgcolor: base05
+tabbed.urgbgcolor: base00
+tabbed.urgfgcolor: base01
+
 st.font: Iosevka Nerd Font Mono:size=12:antialias=true:autohint=true
 st.borderpx: 6
