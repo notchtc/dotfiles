@@ -107,7 +107,11 @@ function Statusline.active()
 end
 
 function Statusline.inactive()
-    return "%#Normal#%f %#StatusLineBlank#%="
+    return "%#Normal#%f %#StatusLineBlank#"
+end
+
+function Statusline.nvimtree()
+    return "%#StatusLineMode# %f %#StatusLineBlank# "
 end
 
 -- Setting statusline
@@ -126,5 +130,5 @@ api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
 api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     group = id,
     pattern = "NvimTree_*",
-    command = "setlocal statusline=%!v:lua.Statusline.inactive()",
+    command = "setlocal statusline=%!v:lua.Statusline.nvimtree()",
 })
