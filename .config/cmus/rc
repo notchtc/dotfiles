@@ -45,6 +45,6 @@ set color_win_dir=default
 set color_error=red
 set color_info=cyan
 
-set status_display_program=cmusfm
+set status_display_program=~/.config/cmus/cmus_propagate.sh
 
 bind -f common q shell screen -d cmus

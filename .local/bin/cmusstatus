@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cmusfm "$@"
-kill -35 $(pidof dwmblocks)
