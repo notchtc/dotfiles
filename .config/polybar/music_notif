@@ -1,9 +1,9 @@
 #!/bin/sh
-file=$(cmus-remote -Q | grep -m1 file | cut -c6-)
+file=$(cmus-remote -Q 2>/dev/null | grep -m1 file | cut -c6-)
 album_dir=$(dirname "$file")
-artist=$(cmus-remote -Q | grep -m1 '^tag artist' | cut -c12-)
-title=$(cmus-remote -Q | grep -m1 '^tag title' | cut -c11-)
-album=$(cmus-remote -Q | grep -m1 '^tag album' | cut -c11-)
+artist=$(cmus-remote -Q 2>/dev/null | grep -m1 '^tag artist' | cut -c12-)
+title=$(cmus-remote -Q 2>/dev/null | grep -m1 '^tag title' | cut -c11-)
+album=$(cmus-remote -Q 2>/dev/null | grep -m1 '^tag album' | cut -c11-)
 
 found_covers="$(find "$album_dir" -type d -exec find {} -maxdepth 1 -type f \
     -iregex ".*/.*\(${album}\|cover\|folder\|artwork\|front\).*[.]\\(jpe?g\|png\|gif\|bmp\)" \; )"
