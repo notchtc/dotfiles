@@ -19,7 +19,7 @@ set inputbar-fg \#b49368 # accent
 set completion-bg \#231e18 # bg
 set completion-fg \#cabcb1 # fg
 set completion-highlight-bg \#b49368 # accent
-set completion-highlight-fg \#231e18 # bg_alt
+set completion-highlight-fg \#302b25 # bg_alt
 
 set recolor
 set recolor-darkcolor \#cabcb1 # fg

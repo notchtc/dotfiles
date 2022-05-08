@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for battery in /sys/class/power_supply/BAT?*; do
+    # Sets up the status and capacity
+    status="$(cat "$battery/status" 2>&1)"
+    capacity="$(cat "$battery/capacity" 2>&1)"
+    # Prints the info
+    notify-send -t 1500 --urgency low "$status" "Battery percentage is: <b>$capacity%</b>"
+done

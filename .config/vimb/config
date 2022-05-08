@@ -37,6 +37,6 @@ set completion-hover-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevk
 set completion-selected-css=color:#cabcb1;background-color:#302b25;font:12pt Iosevka Nerd Font;
 set input-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka Nerd Font;
 set input-error-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka Nerd Font;
-set status-css=color:#48413a;background-color:#231e18;font:12pt Iosevka Nerd Font;
+set status-css=color:#9d8b70;background-color:#231e18;font:12pt Iosevka Nerd Font;
 set status-ssl-css=color:#cabcb1;background-color:#231e18;font:12pt Iosevka Nerd Font;
 set status-ssl-invalid-css=color:#d35c5c;background-color:#231e18;font:12pt Iosevka Nerd Font;
