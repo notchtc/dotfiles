@@ -48,3 +48,4 @@ set color_info=cyan
 set status_display_program=~/.config/cmus/cmus_propagate.sh
 
 bind -f common q shell screen -d cmus
+bind -f common ^C shell pkill -x cmus && polybar-msg action "#cmus.hook.0"
