@@ -21,8 +21,8 @@
 
     ### Geometry ###
 
-    # dynamic width from 0 to 375
-    width = (0, 375)
+    # dynamic width from 0 to 385
+    width = (0, 385)
     # constant width of 300
     # width = 300
 
@@ -31,6 +31,8 @@
 
     # Position the notification in the top right corner
     origin = top-right
+
+    max_icon_size = 128
 
     # Offset from the origin
     offset = 3x26
@@ -192,7 +194,7 @@
     min_icon_size = 0
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 112
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/

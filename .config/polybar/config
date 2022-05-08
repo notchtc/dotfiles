@@ -80,11 +80,11 @@ battery = BAT1
 adapter = ADP1
 full-at = 100
 
-format-charging = %{A2:$XDG_CONFIG_HOME/polybar/battery:}<animation-charging>%{A}
+format-charging = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}<animation-charging>%{A}
 
-format-discharging = %{A2:$XDG_CONFIG_HOME/polybar/battery:}<ramp-capacity>%{A}
+format-discharging = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}<ramp-capacity>%{A}
 
-format-full = %{A2:$XDG_CONFIG_HOME/polybar/battery:}%{A}
+format-full = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}%{A}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -118,7 +118,7 @@ initial = 1
 format = <output>
 click-left = cmus-remote -u
 click-right = st -e music
-click-middle = notify-send "$(cmus-remote -Q | grep -m1 'tag artist' | cut -c12-)" "$(cmus-remote -Q | grep -m1 title | cut -c11-) ($(cmus-remote -Q | grep -m1 'tag album' | cut -c11-))"
+click-middle = $XDG_CONFIG_HOME/polybar/music_notif
 scroll-down = cmus-remote -r
 scroll-up = cmus-remote -n
 
