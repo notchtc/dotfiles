@@ -44,3 +44,16 @@ sed --follow-symlinks -i \
     -e "s|#.*/\* blue|$blue !important; \/* blue|" \
     -e "s|#.*/\* yellow|$yellow !important; \/* yellow|" \
     "$XDG_CONFIG_HOME/vimb/style.css"
+
+sed --follow-symlinks -i \
+    -e "s/#.*\/\/ bg$/$bg; \/\/ bg/" \
+    -e "s/#.*\/\/ fg$/$fg; \/\/ fg/" \
+    -e "s/#.*\/\/ accent$/$accent; \/\/ accent/" \
+    "$XDG_CONFIG_HOME/rofi/dmenu.rasi"
+
+sed --follow-symlinks -i \
+    -e "s/#.*\/\/ bg$/$bg; \/\/ bg/" \
+    -e "s/#.*; \/\/ bg-trans$/"$bg"f2; \/\/ bg-trans/" \
+    -e "s/#.*\/\/ fg$/$fg; \/\/ fg/" \
+    -e "s/#.*\/\/ accent$/$accent; \/\/ accent/" \
+    "$XDG_CONFIG_HOME/rofi/youtube.rasi"
