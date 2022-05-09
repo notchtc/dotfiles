@@ -64,7 +64,7 @@ herbstclient --idle "tag_*" 2>/dev/null | {
                 esac
 
                 # focus the monitor of the current bar before switching tags
-                echo "%{A1:herbstclient focus_monitor ${MON_IDX}; herbstclient use ${i:1}:}  ${i:1}  %{A -u -o F- B-}"
+                echo "%{A1:herbstclient focus_monitor ${MON_IDX}; herbstclient use ${i:1}:}%{O10}${i:1}%{O10}%{A -u -o F- B-}"
             done
 
             # reset foreground and background color to default
