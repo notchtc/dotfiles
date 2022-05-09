@@ -10,4 +10,4 @@ else
     exit
 fi
 
-printf "%s %s" "${title:0:30}" "$icon"
+printf "%s %s " "${title:0:30}" "$icon"

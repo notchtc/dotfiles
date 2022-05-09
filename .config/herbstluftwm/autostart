@@ -47,18 +47,18 @@ hc keybind $Mod-Control-k       resize up +$resizestep
 hc keybind $Mod-Control-l       resize right +$resizestep
 
 # tags
-tags="0 1 2 3 4 5 6 7 8 9"
-
-hc rename default 1 || true
+index=0
+tags="term web media games misc"
+hc rename default term || true
 for i in $tags; do
     hc add "$i"
-    key="$((i+1))"
+    key="$((index+1))"
     if [ -n "$key" ] ; then
-        hc keybind "$Mod-$key" use_index "$i"
-        hc keybind "$Mod-Shift-$key" move_index "$i"
+        hc keybind "$Mod-$key" use_index "$index"
+        hc keybind "$Mod-Shift-$key" move_index "$index"
+        index="$((index+1))"
     fi
 done
-hc merge_tag 0 1
 
 # cycle through tags
 hc keybind $Mod-period use_index +1 --skip-visible
@@ -126,12 +126,12 @@ hc rule floatplacement=smart
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc rule class~"[F-f]irefox.*" tag=9
-hc rule once class~"[V-v]imb" tag=9
-hc rule class~"[C-c]hromium" tag=9
+hc rule once class~"[F-f]irefox.*" tag=web
+hc rule once class~"[V-v]imb" tag=web
+hc rule once class~"[C-c]hromium" tag=web
 hc rule class="KeePassXC" floating=on
-hc rule class="TelegramDesktop" tag=8 floating=on
-hc rule class="Element" tag=8 floating=on
+hc rule class="TelegramDesktop" tag=web floating=on
+hc rule class="Element" tag=web floating=on
 hc rule class="Steam" floating=on
 hc rule class~".*\.exe" floating=on
 hc rule title="Picture-in-Picture" tag=0

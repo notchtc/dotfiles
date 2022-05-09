@@ -18,8 +18,8 @@ line-size = 3
 padding-left = 0
 padding-right = 1
 
-module-margin-left = 2
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = Iosevka Aile:size=11;3
 font-1 = Iosevka Nerd Font:size=11;3
@@ -30,7 +30,7 @@ modules-center = date
 modules-right = cmus pulseaudio battery wlan
 
 tray-position = right
-tray-padding = 2
+tray-padding = 3
 tray-maxsize = 17
 
 cursor-click = pointer
@@ -62,7 +62,7 @@ type = internal/pulseaudio
 
 use-ui-max = false
 
-format-volume = <ramp-volume>
+format-volume = "<ramp-volume> "
 label-volume-foreground = ${root.foreground}
 
 ramp-volume-0 = 奄
@@ -80,11 +80,11 @@ battery = BAT1
 adapter = ADP1
 full-at = 100
 
-format-charging = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}<animation-charging>%{A}
+format-charging = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}<animation-charging> %{A}
 
-format-discharging = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}<ramp-capacity>%{A}
+format-discharging = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}<ramp-capacity> %{A}
 
-format-full = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:}%{A}
+format-full = %{A2:$XDG_CONFIG_HOME/polybar/battery_notif:} %{A}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
