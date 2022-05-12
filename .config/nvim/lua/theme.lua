@@ -8,24 +8,19 @@ base16(base16.themes.woodland, true)
 set_hl(0, "StatusLine", {
     ctermfg = 15,
     ctermbg = 0,
-    fg = colors.gray,
+    fg = colors.fg,
     bg = colors.bg,
 })
 set_hl(0, "StatusLineNC", {
     ctermfg = 7,
     ctermbg = 0,
-    fg = colors.gray,
-    bg = colors.bg,
-})
-set_hl(0, "StatusLineBlank", {
-    ctermfg = 0,
-    ctermbg = 0,
-    fg = colors.bg,
+    fg = colors.fg,
     bg = colors.bg,
 })
 
 set_hl(0, "NonText", { fg = colors.gray })
 set_hl(0, "VertSplit", { fg = colors.gray, bg = colors.bg })
+set_hl(0, "NvimTreeVertSplit", { bg = colors.bg, fg = colors.bg })
 set_hl(0, "LineNr", { link = "Normal" })
 set_hl(0, "SignColumn", { link = "Normal" })
 

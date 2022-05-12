@@ -36,9 +36,6 @@ opt.listchars = {
 -- Set fillchars
 opt.fillchars = {
     eob = " ", -- Remove EOB chars
-    -- My statusline vert split hack
-    stl = "│",
-    stlnc = "│",
 }
 
 -- Hide concealed text
@@ -54,14 +51,11 @@ opt.lazyredraw = true
 opt.swapfile = false
 
 -- Stuff to look cool
-if vim.fn.expand "$TERM" == "linux" then
-    opt.termguicolors = false
-else
-    opt.termguicolors = true
-end
+opt.termguicolors = true
 opt.background = "dark"
 opt.laststatus = 3
 opt.showmode = false
+opt.guicursor:append "a:blinkon1"
 
 opt.cursorline = true
 

@@ -16,5 +16,7 @@ au("BufEnter", {
     nested = true,
 })
 
+au("VimLeave", { command = "set guicursor=a:ver2-blinkon1" })
+
 -- We can write to the shadafile now
 vim.opt.shadafile = ""

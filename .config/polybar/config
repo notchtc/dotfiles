@@ -117,7 +117,6 @@ initial = 1
 
 format = <output>
 click-left = cmus-remote -u
-double-click-left = #cmus.hook.0
 click-right = st -e music
 click-middle = $XDG_CONFIG_HOME/polybar/music_notif
 scroll-down = cmus-remote -r

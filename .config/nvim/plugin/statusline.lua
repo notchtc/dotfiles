@@ -90,14 +90,12 @@ function Statusline.active()
         "%#StatusLineMode#",
         mode(),
         "%<",
-        "%#Normal# ",
+        "%#StatusLine# ",
         filepath(),
         filename(),
         "%(%M %)",
         "%(%R%)",
-        "%#StatusLineBlank#",
         "%=",
-        "%#Normal#",
         filetype(),
         fileencoding(),
         fileformat(),
@@ -107,11 +105,11 @@ function Statusline.active()
 end
 
 function Statusline.inactive()
-    return "%#Normal#%f %#StatusLineBlank#"
+    return "%f "
 end
 
 function Statusline.nvimtree()
-    return "%#StatusLineMode# %f %#StatusLineBlank# "
+    return "%#StatusLineMode# %f %#StatusLine# "
 end
 
 -- Setting statusline
