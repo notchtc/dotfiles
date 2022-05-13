@@ -128,6 +128,7 @@ hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule once class~"[F-f]irefox.*" tag=web
 hc rule once class~"[V-v]imb" tag=web
+hc rule once instance~"[V-v]imb" tag=web
 hc rule once class~"[C-c]hromium" tag=web
 hc rule class="KeePassXC" floating=on
 hc rule class="TelegramDesktop" tag=web floating=on
@@ -136,6 +137,7 @@ hc rule class="Steam" floating=on
 hc rule class~".*\.exe" floating=on
 hc rule class="music" tag=media switchtag=on
 hc rule class~"[L-l]utris" tag=games
+hc rule class~"[X-x]onotic.*" tag=games
 hc rule title="Picture-in-Picture" tag=0
 # }}}
 
