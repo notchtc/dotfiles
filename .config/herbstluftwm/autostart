@@ -138,6 +138,7 @@ hc rule class~".*\.exe" floating=on
 hc rule class="music" tag=media switchtag=on
 hc rule class~"[L-l]utris" tag=games
 hc rule class~"[X-x]onotic.*" tag=games
+hc rule class~"[R-r]etroarch" tag=games
 hc rule title="Picture-in-Picture" tag=0
 # }}}
 
