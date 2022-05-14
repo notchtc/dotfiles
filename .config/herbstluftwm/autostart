@@ -154,7 +154,7 @@ urgent=$(xrdb -get color1)
 
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_normal_color "$bg"
+hc set frame_border_normal_color "$bg_alt"
 hc set frame_border_active_color "$focus"
 hc set frame_bg_normal_color "$bg_alt"
 hc set frame_bg_active_color "$focus"
@@ -191,7 +191,7 @@ hc unlock
 hc detect_monitors
 hc set auto_detect_monitors 1
 
-hsetroot -cover "$XDG_DATA_HOME/wall.png" &
+hsetroot -full "$XDG_DATA_HOME/wall.png" &
 pgrep -x pipewire || pipewire &
 pgrep -x pipewire-pulse || pipewire-pulse &
 pgrep -x picom || picom -b --experimental-backends &
