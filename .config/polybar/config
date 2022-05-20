@@ -62,7 +62,7 @@ type = internal/pulseaudio
 
 use-ui-max = false
 
-format-volume = %{T2}<ramp-volume> %{T-}
+format-volume = %{T2}<ramp-volume> %{O4}%{T-}
 label-volume-foreground = ${root.foreground}
 
 ramp-volume-0 = 奄
@@ -115,7 +115,7 @@ type = custom/ipc
 hook-0 = $XDG_CONFIG_HOME/polybar/cmus.sh
 initial = 1
 
-format = <output>
+format = <output>%{O2}
 click-left = cmus-remote -u
 click-right = st -e music
 click-middle = $XDG_CONFIG_HOME/polybar/music_notif
