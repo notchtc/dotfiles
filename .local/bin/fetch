@@ -14,14 +14,14 @@ fi
 
 thing() {
     if [ -n "$2" ]; then
-        printf "\033[1m%6s:\t\033[0m%s\n" "$1" "$2"
+        printf "\033[1m%6s\t\033[0m%s\n" "$1" "$2"
     else
         printf ""
     fi
 }
 
 if [ "$1" = "notif" ]; then
-    notify-send --urgency low "fetch" "<b>os:</b>     $os\n<b>kernel:</b> $kernel\n<b>shell:</b>  $shell\n<b>de/wm:</b>  $wm"
+    notify-send --urgency low "fetch" "<b>os</b>\t$os\n<b>kernel</b>\t$kernel\n<b>shell</b>\t$shell\n<b>de/wm</b>\t$wm"
 else
     thing "os" "$os"
     thing "kernel" "$kernel"
