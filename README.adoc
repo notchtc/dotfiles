@@ -25,7 +25,7 @@ Application Launcher:: https://github.com/davatorium/rofi[rofi] (link:./.config/
 Compositor:: https://github.com/yshui/picom[picom] (link:./.config/picom.conf[config is here])
 Screen Locker:: https://github.com/notchtc/slock[slock]
 Wallpaper Setter:: https://github.com/himdel/hsetroot[hsetroot]
-Terminal:: https://github.com/notchtc/st[st]
+Terminal:: https://github.com/endaaman/tym[tym]
 Text Editor:: https://neovim.io[neovim] (link:./.config/nvim[config is here])
 Music Player:: https://cmus.github.io[cmus] (link:./.config/cmus/rc[config is here])
 Media Player:: https://mpv.io[mpv] (link:./.config/mpv[config is here])

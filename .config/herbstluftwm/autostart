@@ -16,7 +16,7 @@ Mod=Mod4   # Use the super key as the main modifier
 
 hc keybind $Mod-Shift-q spawn sysask
 hc keybind $Mod-Shift-c close_or_remove
-hc keybind $Mod-Return spawn st
+hc keybind $Mod-Return spawn tym
 hc keybind $Mod-d spawn rofi -show run
 
 # basic movement in tiling and floating mode
@@ -113,8 +113,8 @@ hc keybind $Mod-Control-p spawn sh -c "pkill pipewire && herbstclient reload"
 
 hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn $BROWSER
-hc keybind $Mod-Control-Shift-m spawn st -c "music" -e music
-hc keybind $Mod-Control-Shift-n spawn st -c "rss" -e newsboat
+hc keybind $Mod-Control-Shift-m spawn tym -c "music" -e music
+hc keybind $Mod-Control-Shift-n spawn tym -c "rss" -e newsboat
 hc keybind $Mod-b chain , pad 0 0 , cycle_value settings.frame_gap 0 1 , spawn polybar-msg cmd toggle
 # }}}
 

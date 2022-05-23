@@ -106,8 +106,8 @@ interval = 5
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected = %{T2}%{A1:st -e iwctl:}直 %{A}%{T-}
-label-disconnected = %{T2}%{A1:st -e iwctl:}睊 %{A}%{T-}
+label-connected = %{T2}%{A1:tym -e iwctl:}直 %{A}%{T-}
+label-disconnected = %{T2}%{A1:tym -e iwctl:}睊 %{A}%{T-}
 
 [module/cmus]
 type = custom/ipc
@@ -117,7 +117,7 @@ initial = 1
 
 format = <output>%{O2}
 click-left = cmus-remote -u
-click-right = st -e music
+click-right = tym -e music
 click-middle = $XDG_CONFIG_HOME/polybar/music_notif
 scroll-down = cmus-remote -r
 scroll-up = cmus-remote -n

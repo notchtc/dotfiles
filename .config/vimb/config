@@ -1,6 +1,6 @@
 set home-page=https://notchtc.github.io
 set download-path=$XDG_DOWNLOAD_DIR
-set editor-command=st -e nvim %s
+set editor-command=tym -e nvim %s
 
 set default-font=Iosevka Aile
 set monospace-font=Iosevka
