@@ -113,8 +113,8 @@ hc keybind $Mod-Control-p spawn sh -c "pkill pipewire && herbstclient reload"
 
 hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
 hc keybind $Mod-Control-Shift-b spawn $BROWSER
-hc keybind $Mod-Control-Shift-m spawn tym -c "music" -e music
-hc keybind $Mod-Control-Shift-n spawn tym -c "rss" -e newsboat
+hc keybind $Mod-Control-Shift-m spawn tym --title "music" -e music
+hc keybind $Mod-Control-Shift-n spawn tym --title "rss" -e newsboat
 hc keybind $Mod-b chain , pad 0 0 , cycle_value settings.frame_gap 0 1 , spawn polybar-msg cmd toggle
 # }}}
 
@@ -135,8 +135,8 @@ hc rule class="TelegramDesktop" tag=web floating=on
 hc rule class="Element" tag=web floating=on
 hc rule class="Steam" floating=on
 hc rule class~".*\.exe" floating=on
-hc rule class="music" tag=media switchtag=on
-hc rule class="rss" tag=media switchtag=on
+hc rule title="music" tag=media switchtag=on
+hc rule title="rss" tag=media switchtag=on
 hc rule class~"[L-l]utris" tag=games
 hc rule class~"[X-x]onotic.*" tag=games
 hc rule class~"[R-r]etroarch" tag=games
