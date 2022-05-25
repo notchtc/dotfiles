@@ -1,3 +1,4 @@
+#!/bin/sh
 xrdb -load "$XDG_CONFIG_HOME"/x11/Xresources &
 setxkbmap pl -option "caps:swapescape" &
 exec dbus-launch --exit-with-session herbstluftwm
