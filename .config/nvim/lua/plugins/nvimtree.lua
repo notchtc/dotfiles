@@ -1,18 +1,3 @@
-local g = vim.g
-
--- Enable git highlight
-g.nvim_tree_git_hl = 1
-
--- Change symlink arrow
-g.nvim_tree_symlink_arrow = " → "
-
--- Show git, folder and file icons
-g.nvim_tree_show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-}
-
 local present, nvimtree = pcall(require, "nvim-tree")
 if not present then
     return
@@ -28,15 +13,35 @@ nvimtree.setup {
         width = 25,
     },
     renderer = {
+        highlight_git = true,
         indent_markers = {
             enable = true,
             icons = {
                 corner = "╰ ",
-            }
+            },
         },
-    },
-    hijack_directories = {
-        enable = false,
-        auto_open = false,
+        icons = {
+            symlink_arrow = " → ",
+            show = {
+                file = false,
+                folder = true,
+                folder_arrow = true,
+                git = false,
+            },
+            glyphs = {
+                default = "",
+                symlink = "",
+                folder = {
+                    arrow_closed = "",
+                    arrow_open = "",
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
+                    symlink_open = "",
+                },
+            },
+        },
     },
 }

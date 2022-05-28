@@ -1,42 +1,56 @@
-local base00 = "#231e18"
-local base01 = "#302b25"
-local base02 = "#48413a"
-local base03 = "#9d8b70"
-local base04 = "#b4a490"
-local base05 = "#cabcb1"
-local base06 = "#d7c8bc"
-local base07 = "#e4d4c8"
-local base08 = "#d35c5c"
-local base09 = "#ca7f32"
-local base0A = "#e0ac16"
-local base0B = "#b7ba53"
-local base0C = "#6eb958"
-local base0D = "#88a4d3"
-local base0E = "#bb90e2"
-local base0F = "#b49368"
-return {
-    color_window_background = base00,
-    color_background = base00,
-    color_foreground = base05,
-    color_bold = base05,
-    color_cursor = base05,
-    color_cursor_foreground = base00,
-    color_highlight = base05,
-    color_highlight_foreground = base00,
-    color_0 = base00,
-    color_1 = base08,
-    color_2 = base0B,
-    color_3 = base0A,
-    color_4 = base0D,
-    color_5 = base0E,
-    color_6 = base0C,
-    color_7 = base05,
-    color_8 = base03,
-    color_9 = base09,
-    color_10 = base01,
-    color_11 = base02,
-    color_12 = base04,
-    color_13 = base06,
-    color_14 = base0F,
-    color_15 = base07,
+local openPop = assert(io.popen('xrdb -query'))
+local xrdb = openPop:read('*all')
+openPop:close()
+
+if not xrdb or xrdb == '' then
+    return {
+        color_window_background = "#231e18",
+        color_background = "#231e18",
+        color_foreground = "#cabcb1",
+        color_bold = "#cabcb1",
+        color_cursor = "#cabcb1",
+        color_cursor_foreground = "#231e18",
+        color_highlight = "#cabcb1",
+        color_highlight_foreground = "#231e18",
+        color_0 = "#231e18",
+        color_1 = "#d35c5c",
+        color_2 = "#b7ba53",
+        color_3 = "#e0ac16",
+        color_4 = "#88a4d3",
+        color_5 = "#bb90e2",
+        color_6 = "#6eb958",
+        color_7 = "#cabcb1",
+        color_8 = "#9d8b70",
+        color_9 = "#ca7f32",
+        color_10 = "#302b25",
+        color_11 = "#48413a",
+        color_12 = "#b4a490",
+        color_13 = "#d7c8bc",
+        color_14 = "#b49368",
+        color_15 = "#e4d4c8",
+    }
+end
+
+local bg_line = string.sub(xrdb, string.find(xrdb, "*.background:%c#%x%x%x%x%x%x"))
+local bg = string.gsub(bg_line, ".*#", "#")
+
+local fg_line = string.sub(xrdb, string.find(xrdb, "*.foreground:%c#%x%x%x%x%x%x"))
+local fg = string.gsub(fg_line, ".*#", "#")
+
+local theme = {
+    color_window_background = bg,
+    color_background = bg,
+    color_foreground = fg,
+    color_bold = fg,
+    color_cursor = fg,
+    color_cursor_foreground = bg,
+    color_highlight = fg,
+    color_highlight_foreground = bg,
 }
+
+for i = 0, 15 do
+    local color = string.sub(xrdb, string.find(xrdb, "*.color" .. i .. ":%c#%x%x%x%x%x%x"))
+    theme["color_" .. i] = string.gsub(color, ".*#", "#")
+end
+
+return theme
