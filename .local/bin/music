@@ -1,2 +1,2 @@
 #!/bin/sh
-screen -q -r -D cmus || screen -S cmus $(which --skip-alias cmus)
+screen -q -r -D cmus || screen -S cmus "$(which --skip-alias cmus)"

@@ -1,3 +1,4 @@
+#!/bin/sh
 # propagate to the scrobler
 cmusfm "$@"
 
