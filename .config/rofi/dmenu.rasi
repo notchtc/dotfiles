@@ -26,11 +26,11 @@ listview {
     lines:      100;
 }
 prompt {
-    padding: 0px 3px;
+    padding: 0px 6px;
 }
 entry {
     expand: false;
-    width:  10em;
+    width: 6em;
 }
 element {
     padding: 0px 6px;
