@@ -2,7 +2,7 @@ set output_plugin=pulse
 
 set mpris=true
 set resume=true
-set stop_after_queue=true
+set continue_album=false
 set mouse=true
 
 set format_current=%{?a?%a · }%t
