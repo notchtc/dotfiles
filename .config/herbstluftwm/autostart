@@ -111,7 +111,7 @@ hc keybind Shift-Print spawn sh -c "maim -su | xclip -selection clipboard -t ima
 hc keybind $Mod-Control-r spawn giph --stop
 hc keybind $Mod-Control-p spawn sh -c "pkill pipewire && herbstclient reload"
 
-hc keybind $Mod-Control-Shift-y spawn ytfzf -D --pages=2
+hc keybind $Mod-Control-Shift-y spawn tym --title "youtube" -e "ytfzf --pages=2"
 hc keybind $Mod-Control-Shift-b spawn $BROWSER
 hc keybind $Mod-Control-Shift-m spawn tym --title "music" -e music
 hc keybind $Mod-Control-Shift-n spawn tym --title "rss" -e newsboat
@@ -136,6 +136,7 @@ hc rule class="Element" tag=web floating=on
 hc rule class="Steam" floating=on
 hc rule class~".*\.exe" floating=on
 hc rule title="music" tag=media switchtag=on
+hc rule title="youtube" tag=media switchtag=on
 hc rule title="rss" tag=media switchtag=on
 hc rule class~"[L-l]utris" tag=games
 hc rule class~"[X-x]onotic.*" tag=games
