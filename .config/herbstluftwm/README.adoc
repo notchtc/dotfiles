@@ -208,7 +208,7 @@ chtc <notnotcha0t1c@protonmail.com
 |Spawn on "games" tag
 
 |Steam
-|Floating
+|Spawn on "games" tag, floating
 
 |Anything launched with wine
 |Floating

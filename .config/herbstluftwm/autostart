@@ -132,17 +132,18 @@ hc rule once class~"[C-c]hromium" tag=web
 hc rule class="KeePassXC" floating=on
 hc rule class="TelegramDesktop" tag=web floating=on
 hc rule class="Element" tag=web floating=on
-hc rule class="Steam" floating=on
-hc rule class~".*\.exe" floating=on
 hc rule title="music" tag=media switchtag=on
 hc rule title="youtube" tag=media switchtag=on
 hc rule title="rss" tag=media switchtag=on
+hc rule class~"[S-s]team" tag=games
 hc rule class~"[L-l]utris" tag=games
 hc rule class~"[X-x]onotic.*" tag=games
 hc rule class~"[R-r]etroarch" tag=games
 hc rule title="Picture-in-Picture" tag=0
+hc rule class~".*\.exe" floating=on
 
 hc load web '(clients max:1)'
+hc floating games on
 # }}}
 
 hc set tree_style '╾│ ├└╼─┐'
