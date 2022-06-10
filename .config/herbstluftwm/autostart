@@ -85,7 +85,6 @@ hc mouseunbind --all
 hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
-
 # focus
 hc keybind $Mod-BackSpace   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
@@ -142,6 +141,8 @@ hc rule class~"[L-l]utris" tag=games
 hc rule class~"[X-x]onotic.*" tag=games
 hc rule class~"[R-r]etroarch" tag=games
 hc rule title="Picture-in-Picture" tag=0
+
+hc load web '(clients max:1)'
 # }}}
 
 hc set tree_style '╾│ ├└╼─┐'
@@ -171,6 +172,10 @@ hc attr theme.normal.color "$bg"
 hc attr theme.active.color "$focus"
 hc attr theme.urgent.color "$urgent"
 hc attr theme.border_width 0
+hc attr theme.title_when multiple_tabs
+hc attr theme.title_height 12
+hc attr theme.title_depth 3
+hc attr theme.title_align center
 hc attr theme.title_font "Iosevka Aile:size=10"
 hc attr theme.title_color "$bg"
 hc attr theme.normal.title_color "$fg"
@@ -199,17 +204,15 @@ pgrep -x pipewire-pulse || pipewire-pulse &
 pgrep -x picom || picom -b --experimental-backends &
 dz_col &
 
-# if you are gonna launch multiple bars then use pkill or something instead
 {
     # reserve some space
     hc pad 0 23
     # launch polybar
     polybar bar -r &
-    pid="$!"
     # wait until the panels should be stopped
     herbstclient -w '(quit_panel|reload)'
     # stop all started panels
-    kill "$pid"
+    polybar-msg cmd quit
     hc pad 0 0
 } &
 
