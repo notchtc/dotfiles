@@ -13,22 +13,22 @@ chtc <notnotcha0t1c@protonmail.com
 |Launch link:../../.local/bin/sysask[powermenu]
 
 |kbd:[Super+Enter]
-|Launch terminal (st)
+|Launch terminal (tym)
 
 |kbd:[Super+d]
 |Launch dmenu
 
 |kbd:[Super+Control+Shift+y]
-|Launch ytfzf with dmenu
+|Launch youtube videos (tym, ytfzf and it's dependencies)
 
 |kbd:[Super+Control+Shift+b]
-|Launch browser (firefox)
+|Launch browser (uses your `$BROWSER` variable)
 
 |kbd:[Super+Control+Shift+m]
-|Launch music player (st, cmus)
+|Launch music player (tym, cmus)
 
 |kbd:[Super+Control+Shift+n]
-|Launch RSS reader (st, newsboat)
+|Launch RSS reader (tym, newsboat)
 |===
 
 === Clients, frames and tags
@@ -158,10 +158,10 @@ chtc <notnotcha0t1c@protonmail.com
 |Toggle between play/pause (playerctl)
 
 |kbd:[XF86MonBrightnessUp]
-|Raise screen brightness by 15
+|Raise screen brightness by 15 (xbacklight)
 
 |kbd:[XF86MonBrightnessDown]
-|Lower screen brightness by 15
+|Lower screen brightness by 15 (xbacklight)
 
 |kbd:[Print]
 |Screenshot whole screen and copy it to clipboard (maim, xclip)
@@ -186,17 +186,26 @@ chtc <notnotcha0t1c@protonmail.com
 |_NET_WM_WINDOW_TYPE_NOTIFICATION,DOCK,DESKTOP
 |Not managed by window manager
 
-|Firefox
-|Spawn on tag 9
+|Firefox, Vimb, Chromium
+|Spawn on "web" tag
+
+|Telegram, Element
+|Spawn on "web" tag, floating
 
 |KeePassXC
 |Floating
 
-|Telegram
-|Spawn on tag 8, floating
+|Music Player (title of window is "music")
+|Spawn on "media" tag
 
-|Element
-|Spawn on tag 8, floating
+|RSS Reader (title of window is "rss")
+|Spawn on "media" tag
+
+|ytfzf (title of terminal is "youtube")
+|Spawn on "media" tag
+
+|Lutris, Xonotic, Retroarch
+|Spawn on "games" tag
 
 |Steam
 |Floating
