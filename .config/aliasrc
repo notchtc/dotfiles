@@ -2,7 +2,9 @@
 
 # editor
 alias e="$EDITOR"
-alias se="doas $EDITOR"
+alias se="sudo $EDITOR"
+
+alias sudo="sudo $@"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"
@@ -17,15 +19,15 @@ alias rml="trash-list"
 alias rmr="trash-restore"
 
 # dnf
-alias dni="doas dnf install"
-alias dnr="doas dnf remove"
-alias dnu="doas dnf upgrade"
-alias dnc="doas dnf autoremove && doas dnf clean all"
+alias dni="sudo dnf install"
+alias dnr="sudo dnf remove"
+alias dnu="sudo dnf upgrade"
+alias dnc="sudo dnf autoremove && doas dnf clean all"
 
 # xbps
-alias xr="doas xbps-remove -Rof"
-alias xu="doas xbps-install -Su"
-alias xc="doas xbps-remove -ROo"
+alias xr="sudo xbps-remove -Rof"
+alias xu="sudo xbps-install -Su"
+alias xc="sudo xbps-remove -ROo"
 
 # other
 adf() {
@@ -35,15 +37,7 @@ smn() {
     apropos . | cut -d "(" -f 1 | cut -d "," -f 1 | fzf --multi -q "$1" --preview "man {1} 2>/dev/null" | xargs -ro -I{} man {}
 }
 
-alias sudo="doas"
-
 alias buildsite="command rm -f docs/.files && ssg6 src docs \"chtc's site\" \"https://notchtc.github.io\""
-
-alias cmus="screen -q -r -D cmus || screen -S cmus $(which --skip-alias cmus)"
-
-alias irc="irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi"
-
-alias hc="herbstclient"
 
 alias ..="cd .."
 alias ...="cd ../.."

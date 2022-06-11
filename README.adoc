@@ -11,6 +11,8 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
+WARNING:: I currently use Fedora, only a few of these things will be updated, they might not even be working
+
 These are my very horrible dotfiles.
 
 Older rices are in the https://github.com/notchtc/dotfiles-old[dotfiles-old repository].

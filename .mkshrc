@@ -26,7 +26,7 @@ bind ^L=clear-screen
 bind -m ^[h='^ucd $HOME^[^e^m'
 
 . "$XDG_CONFIG_HOME/mksh/key-bindings.mksh"
-. "$XDG_CONFIG_HOME/mksh/completion.mksh"
+#. "$XDG_CONFIG_HOME/mksh/completion.mksh"
 . "$XDG_CONFIG_HOME/aliasrc"
 
 export GPG_TTY=$(tty)
