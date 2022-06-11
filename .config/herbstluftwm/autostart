@@ -115,6 +115,8 @@ hc keybind $Mod-Control-Shift-b spawn $BROWSER
 hc keybind $Mod-Control-Shift-m spawn tym --title "music" -e music
 hc keybind $Mod-Control-Shift-n spawn tym --title "rss" -e newsboat
 hc keybind $Mod-b chain , pad 0 0 , cycle_value settings.frame_gap 0 1 , spawn polybar-msg cmd toggle
+
+hc keybind $Mod-Escape spawn sh -c "setxkbmap -query | grep -q 'layout:\s\+pl$' && setxkbmap 'pl(szl)' || setxkbmap pl"
 # }}}
 
 # rules {{{
