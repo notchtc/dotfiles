@@ -79,6 +79,9 @@ ln -sf "$path/.config/rofi/youtube.rasi" "$XDG_CONFIG_HOME/rofi/youtube.rasi"
 ln -sf "$path/.config/vimb/config" "$XDG_CONFIG_HOME/vimb/config"
 ln -sf "$path/.config/vimb/style.css" "$XDG_CONFIG_HOME/vimb/style.css"
 
+[ ! -d "$XDG_CONFIG_HOME/ytfzf" ] && mkdir "$XDG_CONFIG_HOME/ytfzf"
+ln -sf "$path/.config/ytfzf/conf.sh" "$XDG_CONFIG_HOME/ytfzf/conf.sh"
+
 [ ! -d "$XDG_CONFIG_HOME/tym" ] && mkdir "$XDG_CONFIG_HOME/tym"
 ln -sf "$path/.config/tym/config.lua" "$XDG_CONFIG_HOME/tym/config.lua"
 ln -sf "$path/.config/tym/theme.lua" "$XDG_CONFIG_HOME/tym/theme.lua"
