@@ -4,8 +4,6 @@
 alias e="$EDITOR"
 alias se="sudo $EDITOR"
 
-alias sudo="sudo $@"
-
 # ls
 alias ls="ls --color=auto --group-directories-first"
 alias lsa="ls --color=auto -A --group-directories-first"
@@ -22,7 +20,7 @@ alias rmr="trash-restore"
 alias dni="sudo dnf install"
 alias dnr="sudo dnf remove"
 alias dnu="sudo dnf upgrade"
-alias dnc="sudo dnf autoremove && doas dnf clean all"
+alias dnc="sudo dnf autoremove && sudo dnf clean all"
 
 # xbps
 alias xr="sudo xbps-remove -Rof"
