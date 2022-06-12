@@ -24,6 +24,8 @@ Shell:: https://www.mirbsd.org/mksh.htm[mksh] (link:./.mkshrc[config is here])
 Text Editor:: https://neovim.io[neovim] (link:./.config/nvim[config is here])
 Media Player:: https://mpv.io[mpv] (link:./.config/mpv[config is here])
 Browser:: https://fanglingsu.github.io/vimb[firefox]
+Music Player:: https://wiki.gnome.org/Apps/Lollypop[lollypop]
+GTK3 Theme:: https://github.com/lassekongo83/adw-gtk3[adw-gtk3]
 Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile)
 
 == How to install
