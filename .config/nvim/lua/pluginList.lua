@@ -66,13 +66,6 @@ return packer.startup(function()
     use {
         "norcalli/nvim-colorizer.lua",
         event = "VimEnter",
-        cond = function()
-            if vim.fn.expand "$TERM" ~= "linux" then
-                return true
-            else
-                return false
-            end
-        end,
         config = function()
             require("plugins.others").colorizer()
         end,
@@ -110,9 +103,25 @@ return packer.startup(function()
 
     use {
         "habamax/vim-asciidoctor",
-        ft = "asciidoc",
+        ft = { "asciidoc", "asciidoctor" },
         config = function()
             require("plugins.others").asciidoctor()
+        end,
+    }
+
+    use {
+        "jose-elias-alvarez/null-ls.nvim",
+        ft = { "markdown", "asciidoc" },
+        config = function()
+            require("plugins.others").null_ls()
+        end,
+    }
+
+    use {
+        "folke/trouble.nvim",
+        after = "null-ls.nvim",
+        config = function()
+            require "plugins.trouble"
         end,
     }
 end)

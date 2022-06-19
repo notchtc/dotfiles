@@ -38,4 +38,17 @@ M.asciidoctor = function()
     g.asciidoctor_syntax_conceal = 1
 end
 
+M.null_ls = function()
+    local present, null_ls = pcall(require, "null-ls")
+    if not present then
+        return
+    end
+
+    null_ls.setup {
+        sources = {
+            null_ls.builtins.diagnostics.vale,
+        },
+    }
+end
+
 return M

@@ -30,3 +30,4 @@ set_hl(0, "GitSignsDelete", { fg = colors.red, bg = colors.bg })
 
 set_hl(0, "IndentBlanklineChar", { fg = colors.gray, nocombine = true })
 set_hl(0, "IndentBlanklineSpaceChar", { link = "IndentBlanklineChar" })
+set_hl(0, "IndentBlanklineSpaceCharBlankLine", { link = "IndentBlanklineChar" })
