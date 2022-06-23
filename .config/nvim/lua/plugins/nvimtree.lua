@@ -24,8 +24,8 @@ nvimtree.setup {
             symlink_arrow = " → ",
             show = {
                 file = false,
-                folder = true,
-                folder_arrow = true,
+                folder = false,
+                folder_arrow = false,
                 git = false,
             },
             glyphs = {

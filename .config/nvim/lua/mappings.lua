@@ -73,7 +73,7 @@ M.bufferline = function()
     map("n", "<M-c>", "<CMD>bdelete<CR>")
 
     -- Go to nth visible buffer
-    for i=1,9 do
+    for i = 1, 9 do
         map("n", "<M-" .. i .. ">", "<CMD>:BufferLineGoToBuffer " .. i .. "<CR>")
     end
 end
