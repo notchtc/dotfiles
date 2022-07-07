@@ -10,6 +10,7 @@ export XDG_DOCUMENTS_DIR=${XDG_DOCUMENTS_DIR:="$HOME/Documents"}
 export XDG_MUSIC_DIR=${XDG_MUSIC_DIR:="$HOME/Music"}
 export XDG_PICTURES_DIR=${XDG_PICTURES_DIR:="$HOME/Pictures"}
 export XDG_VIDEOS_DIR=${XDG_VIDEOS_DIR:="$HOME/Videos"}
+export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
 # Clean up ~/
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"

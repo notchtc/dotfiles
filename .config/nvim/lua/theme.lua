@@ -3,7 +3,7 @@ local set_hl = vim.api.nvim_set_hl
 local base16 = require "base16"
 local colors = require "colors"
 
-base16(base16.themes.woodland, true)
+base16(base16.themes["gruvbox-dark-hard"], true)
 
 set_hl(0, "StatusLine", {
     ctermfg = 15,

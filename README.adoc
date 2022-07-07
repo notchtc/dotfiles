@@ -21,6 +21,7 @@ Older rices are in the https://github.com/notchtc/dotfiles-old[dotfiles-old repo
 [horizontal]
 OS:: https://voidlinux.org[fedora linux]
 Shell:: https://www.mirbsd.org/mksh.htm[mksh] (link:./.mkshrc[config is here])
+Terminal:: https://codeberg.org/dnkl/foot[foot] (link:./.config/foot/foot.ini[config is here])
 Text Editor:: https://neovim.io[neovim] (link:./.config/nvim[config is here])
 Media Player:: https://mpv.io[mpv] (link:./.config/mpv[config is here])
 Browser:: https://fanglingsu.github.io/vimb[firefox]
