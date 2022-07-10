@@ -6,17 +6,16 @@ end
 local colors = require "colors"
 bufferline.setup {
     options = {
-        offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+        offsets = { { filetype = "NvimTree", text = "NvimTree", padding = 1 } },
         numbers = "none",
         separator_style = "thin",
         always_show_bufferline = false,
         show_buffer_icons = false,
         show_buffer_close_icons = false,
         show_close_icon = false,
-        modified_icon = "+",
-        left_trunc_marker = "<",
-        right_trunc_marker = ">",
-        indicator_icon = " ",
+        show_tab_indicators = false,
+        left_trunc_marker = "🠘",
+        right_trunc_marker = "🠚",
     },
     highlights = {
         fill = {
@@ -68,16 +67,10 @@ bufferline.setup {
             guifg = colors.bg,
             guibg = colors.bg,
         },
-        separator_visible = {
-            guifg = colors.bg2,
-            guibg = colors.bg,
-        },
-        separator_selected = {
-            guifg = colors.bg2,
+        indicator_visible = {
             guibg = colors.bg,
         },
         indicator_selected = {
-            guifg = colors.blue,
             guibg = colors.bg2,
         },
     },

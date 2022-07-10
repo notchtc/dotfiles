@@ -10,19 +10,11 @@ ln -sf "$path/.profile" "$HOME/.profile"
 
 ln -sf "$path/.config/aliasrc" "$XDG_CONFIG_HOME/aliasrc"
 ln -sf "$path/.config/wgetrc" "$XDG_CONFIG_HOME/wgetrc"
-ln -sf "$path/.config/picom.conf" "$XDG_CONFIG_HOME/picom.conf"
 
 [ ! -d "$XDG_CONFIG_HOME/mksh" ] && mkdir "$XDG_CONFIG_HOME/mksh"
 ln -sf "$path/.config/mksh/completion.mksh" "$XDG_CONFIG_HOME/mksh/completion.mksh"
 ln -sf "$path/.config/mksh/key-bindings.mksh" "$XDG_CONFIG_HOME/mksh/key-bindings.mksh"
 ln -sf "$path/.config/mksh/utils.mksh" "$XDG_CONFIG_HOME/mksh/utils.mksh"
-
-[ ! -d "$XDG_CONFIG_HOME/cmus" ] && mkdir "$XDG_CONFIG_HOME/cmus"
-ln -sf "$path/.config/cmus/rc" "$XDG_CONFIG_HOME/cmus/rc"
-ln -sf "$path/.config/cmus/cmus_propagate.sh" "$XDG_CONFIG_HOME/cmus/cmus_propagate.sh"
-
-[ ! -d "$XDG_CONFIG_HOME/dunst" ] && mkdir "$XDG_CONFIG_HOME/dunst"
-ln -sf "$path/.config/dunst/dunstrc" "$XDG_CONFIG_HOME/dunst/dunstrc"
 
 [ ! -d "$XDG_CONFIG_HOME/fontconfig" ] && mkdir "$XDG_CONFIG_HOME/fontconfig"
 ln -sf "$path/.config/fontconfig/fonts.conf" "$XDG_CONFIG_HOME/fontconfig/fonts.conf"
@@ -39,62 +31,27 @@ ln -sf "$path/.config/nvim" "$XDG_CONFIG_HOME/nvim"
 [ ! -d "$XDG_CONFIG_HOME/readline" ] && mkdir "$XDG_CONFIG_HOME/readline"
 ln -sf "$path/.config/readline/inputrc" "$XDG_CONFIG_HOME/readline/inputrc"
 
-[ ! -d "$XDG_CONFIG_HOME/x11" ] && mkdir "$XDG_CONFIG_HOME/x11"
-ln -sf "$path/.config/x11/xinitrc" "$XDG_CONFIG_HOME/x11/xinitrc"
-ln -sf "$path/.config/x11/Xresources" "$XDG_CONFIG_HOME/x11/Xresources"
-
-[ ! -d "$XDG_CONFIG_HOME/zathura" ] && mkdir "$XDG_CONFIG_HOME/zathura"
-ln -sf "$path/.config/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura/zathurarc"
-
 [ ! -d "$XDG_CONFIG_HOME/mpv" ] && mkdir "$XDG_CONFIG_HOME/mpv"
 [ ! -d "$XDG_CONFIG_HOME/mpv/scripts" ] && mkdir "$XDG_CONFIG_HOME/mpv/scripts"
 ln -sf "$path/.config/mpv/mpv.conf" "$XDG_CONFIG_HOME/mpv/mpv.conf"
 ln -sf "$path/.config/mpv/scripts/copy-permalink.lua" "$XDG_CONFIG_HOME/mpv/scripts/copy-permalink.lua"
 ln -sf "$path/.config/mpv/scripts/autosubsync" "$XDG_CONFIG_HOME/mpv/scripts/autosubsync"
 
-[ ! -d "$XDG_CONFIG_HOME/polybar" ] && mkdir "$XDG_CONFIG_HOME/polybar"
-ln -sf "$path/.config/polybar/config" "$XDG_CONFIG_HOME/polybar/config"
-ln -sf "$path/.config/polybar/info-hlwm-workspaces.sh" "$XDG_CONFIG_HOME/polybar/info-hlwm-workspaces.sh"
-ln -sf "$path/.config/polybar/cmus.sh" "$XDG_CONFIG_HOME/polybar/cmus.sh"
-ln -sf "$path/.config/polybar/battery_notif" "$XDG_CONFIG_HOME/polybar/battery_notif"
-ln -sf "$path/.config/polybar/music_notif" "$XDG_CONFIG_HOME/polybar/music_notif"
+[ ! -d "$XDG_CONFIG_HOME"/foot ] && mkdir "$XDG_CONFIG_HOME/foot"
+ln -sf "$path/.config/foot/foot.ini" "$XDG_CONFIG_HOME/foot/foot.ini"
 
-[ ! -d "$XDG_CONFIG_HOME/herbstluftwm" ] && mkdir "$XDG_CONFIG_HOME/herbstluftwm"
-ln -sf "$path/.config/herbstluftwm/autostart" "$XDG_CONFIG_HOME/herbstluftwm/autostart"
+[ ! -d "$XDG_CONFIG_HOME/zathura" ] && mkdir "$XDG_CONFIG_HOME/zathura"
+ln -sf "$path/.config/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura/zathurarc"
 
-[ ! -d "$XDG_CONFIG_HOME/newsboat" ] && mkdir "$XDG_CONFIG_HOME/newsboat"
-ln -sf "$path/.config/newsboat/config" "$XDG_CONFIG_HOME/newsboat/config"
+[ ! -d "$XDG_CONFIG_HOME/mako" ] && mkdir "$XDG_CONFIG_HOME/mako"
+ln -sf "$path/.config/mako/config" "$XDG_CONFIG_HOME/mako/config"
 
-[ ! -d "$XDG_CONFIG_HOME/nsxiv" ] && mkdir "$XDG_CONFIG_HOME/nsxiv"
-[ ! -d "$XDG_CONFIG_HOME/nsxiv/exec" ] && mkdir "$XDG_CONFIG_HOME/nsxiv/exec"
-ln -sf "$path/.config/nsxiv/exec/key-handler" "$XDG_CONFIG_HOME/nsxiv/exec/key-handler"
-ln -sf "$path/.config/nsxiv/exec/image-info" "$XDG_CONFIG_HOME/nsxiv/exec/image-info"
-
-[ ! -d "$XDG_CONFIG_HOME/rofi" ] && mkdir "$XDG_CONFIG_HOME/rofi"
-ln -sf "$path/.config/rofi/config.rasi" "$XDG_CONFIG_HOME/rofi/config.rasi"
-ln -sf "$path/.config/rofi/dmenu.rasi" "$XDG_CONFIG_HOME/rofi/dmenu.rasi"
-ln -sf "$path/.config/rofi/youtube.rasi" "$XDG_CONFIG_HOME/rofi/youtube.rasi"
-
-[ ! -d "$XDG_CONFIG_HOME/vimb" ] && mkdir "$XDG_CONFIG_HOME/vimb"
-ln -sf "$path/.config/vimb/config" "$XDG_CONFIG_HOME/vimb/config"
-ln -sf "$path/.config/vimb/style.css" "$XDG_CONFIG_HOME/vimb/style.css"
-
-[ ! -d "$XDG_CONFIG_HOME/ytfzf" ] && mkdir "$XDG_CONFIG_HOME/ytfzf"
-ln -sf "$path/.config/ytfzf/conf.sh" "$XDG_CONFIG_HOME/ytfzf/conf.sh"
-
-[ ! -d "$XDG_CONFIG_HOME/tym" ] && mkdir "$XDG_CONFIG_HOME/tym"
-ln -sf "$path/.config/tym/config.lua" "$XDG_CONFIG_HOME/tym/config.lua"
-ln -sf "$path/.config/tym/theme.lua" "$XDG_CONFIG_HOME/tym/theme.lua"
-
-[ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
-ln -sf "$path/.local/share/wall.png" "$XDG_DATA_HOME/wall.png"
-
-[ ! -d "$XDG_DATA_HOME/irssi" ] && mkdir "$XDG_DATA_HOME/irssi"
-ln -sf "$path/.local/share/irssi/default.theme" "$XDG_DATA_HOME/irssi/default.theme"
+[ ! -d "$XDG_CONFIG_HOME/waybar" ] && mkdir "$XDG_CONFIG_HOME/waybar"
+ln -sf "$path/.config/waybar/config" "$XDG_CONFIG_HOME/waybar/config"
+ln -sf "$path/.config/waybar/style.css" "$XDG_CONFIG_HOME/waybar/style.css"
 
 [ ! -d "$HOME/.local/bin" ] && mkdir "$HOME/.local/bin"
 ln -sf "$path/.local/bin/fetch" "$HOME/.local/bin/fetch"
-ln -sf "$path/.local/bin/sysask" "$HOME/.local/bin/sysask"
-ln -sf "$path/.local/bin/xbpsdiff" "$HOME/.local/bin/xbpsdiff"
-ln -sf "$path/.local/bin/music" "$HOME/.local/bin/music"
-ln -sf "$path/.local/bin/dz_col" "$HOME/.local/bin/dz_col"
+
+[ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
+ln -sf "$path/.local/share/wall.jpg" "$XDG_DATA_HOME/wall.jpg"

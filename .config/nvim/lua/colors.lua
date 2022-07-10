@@ -1,4 +1,4 @@
-local color = require("base16").themes["gruvbox-dark-hard"]
+local color = require("base16").themes["black-metal"]
 
 local colors = {
     bg = "#" .. color.base00,

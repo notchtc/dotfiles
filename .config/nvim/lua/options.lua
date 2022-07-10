@@ -54,6 +54,7 @@ opt.swapfile = false
 opt.termguicolors = true
 opt.background = "dark"
 opt.laststatus = 3
+opt.cmdheight = 0
 opt.showmode = false
 opt.guicursor:append "a:blinkon1"
 

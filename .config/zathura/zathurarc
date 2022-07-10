@@ -1,28 +1,28 @@
-set default-bg \#231e18 # bg
-set default-fg \#cabcb1 # fg
+set default-bg \#000000
+set default-fg \#c1c1c1
 
 set adjust-open "best-fit"
 
-set font "iosevka aile normal 13"
+set font "iosevka aile normal 12"
 
 set guioptions svh
 
-set scrollbar-bg \#231e18 # bg
-set scrollbar-fg \#cabcb1 # fg
+set scrollbar-bg \#000000
+set scrollbar-fg \#c1c1c1
 
-set statusbar-bg \#231e18 # bg
-set statusbar-fg \#cabcb1 # fg
+set statusbar-bg \#000000
+set statusbar-fg \#c1c1c1
 
-set inputbar-bg \#231e18 # bg
-set inputbar-fg \#b49368 # accent
+set inputbar-bg \#000000
+set inputbar-fg \#c1c1c1
 
-set completion-bg \#231e18 # bg
-set completion-fg \#cabcb1 # fg
-set completion-highlight-bg \#b49368 # accent
-set completion-highlight-fg \#302b25 # bg_alt
+set completion-bg \#000000
+set completion-fg \#c1c1c1
+set completion-highlight-bg \#dd9999
+set completion-highlight-fg \#302b25
 
 set recolor
-set recolor-darkcolor \#cabcb1 # fg
-set recolor-lightcolor \#231e18 # bg
+set recolor-darkcolor \#c1c1c1
+set recolor-lightcolor \#000000
 set recolor-reverse-video
 set recolor-keephue

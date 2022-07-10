@@ -3,7 +3,7 @@ local set_hl = vim.api.nvim_set_hl
 local base16 = require "base16"
 local colors = require "colors"
 
-base16(base16.themes["gruvbox-dark-hard"], true)
+base16(base16.themes["black-metal"], true)
 
 set_hl(0, "StatusLine", {
     ctermfg = 15,
@@ -20,7 +20,6 @@ set_hl(0, "StatusLineNC", {
 
 set_hl(0, "NonText", { fg = colors.gray })
 set_hl(0, "VertSplit", { fg = colors.gray, bg = colors.bg })
-set_hl(0, "NvimTreeVertSplit", { bg = colors.bg, fg = colors.bg })
 set_hl(0, "LineNr", { link = "Normal" })
 set_hl(0, "SignColumn", { link = "Normal" })
 

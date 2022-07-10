@@ -2,14 +2,14 @@
 
 exec 2> /dev/null
 
-os=$(grep '^PRETTY_NAME' /etc/os-release | cut -d "=" -f2 | tr -d '"')
+os=$(grep '^ID' /etc/os-release | cut -d "=" -f2 | tr -d '"')
 read -r _ _ version _ < /proc/version
 kernel=$(echo "$version" | cut -d "-" -f1)
 shell=$(basename "$SHELL")
 if [ -n "$XDG_CURRENT_DESKTOP" ]; then
     wm="$XDG_CURRENT_DESKTOP"
 else
-    wm=$(xprop -id "$(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}')" -notype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \")
+    wm=$(xprop -id "$(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}')" -noIDtype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \")
 fi
 
 thing() {

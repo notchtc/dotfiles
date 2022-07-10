@@ -108,25 +108,21 @@ function Statusline.inactive()
     return "%f "
 end
 
-function Statusline.nvimtree()
-    return "%#StatusLineMode# %f %#StatusLine# "
-end
-
 -- Setting statusline
 local id = api.nvim_create_augroup("Statusline", {})
 
 api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     group = id,
-    command = "setlocal statusline=%!v:lua.Statusline.active()",
+    command = "setlocal laststatus=3 | setlocal statusline=%!v:lua.Statusline.active()",
 })
 
 api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
     group = id,
-    command = "setlocal statusline=%!v:lua.Statusline.inactive()",
+    command = "setlocal laststatus=3 | setlocal statusline=%!v:lua.Statusline.inactive()",
 })
 
 api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     group = id,
     pattern = "NvimTree_*",
-    command = "setlocal statusline=%!v:lua.Statusline.nvimtree()",
+    command = "setlocal laststatus=0",
 })

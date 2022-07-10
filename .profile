@@ -46,8 +46,8 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export LIBERICA_DIR=/usr/lib/jvm/bellsoft-java8-full-amd64
 
 # Set path
-export PATH="$PATH:$HOME/.local/bin:$GEM_HOME/bin:$XDG_CONFIG_HOME/emacs/bin:$LIBERICA_DIR/bin:$XDG_DATA_HOME/npm/bin"
+export PATH="$PATH:$HOME/.local/bin:$GEM_HOME/bin:$XDG_CONFIG_HOME/emacs/bin:$LIBERICA_DIR/bin:$XDG_DATA_HOME/npm/bin:/var/lib/flatpak/exports/bin"
 
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
-fi
+#if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+#  exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
+#fi

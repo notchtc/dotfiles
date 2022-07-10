@@ -11,23 +11,28 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-IMPORTANT: I'm currently using Fedora, go to tag https://github.com/notchtc/dotfiles/tree/waldluft[waldluft] for the full rice (the files for the other software still stay in this repo because I'm lazy).
+WARNING:: I haven't gotten around with documenting dependencies and other stuff for this rice. You may have a not working setup when installing this and not having the things required.
 
 These are my very horrible dotfiles.
 
-Older rices are in the https://github.com/notchtc/dotfiles-old[dotfiles-old repository].
+Older rices are in https://github.com/notchtc/dotfiles/tags[tags] and the https://github.com/notchtc/dotfiles-old[dotfiles-old repository].
 
 == Used
 [horizontal]
 OS:: https://voidlinux.org[fedora linux]
+Compositor:: https://github.com/labwc/labwc[labwc] (link:./.config/labwc[config is here])
 Shell:: https://www.mirbsd.org/mksh.htm[mksh] (link:./.mkshrc[config is here])
+Bar:: https://github.com/Alexays/Waybar[waybar] (link:./.config/waybar[config is here])
 Terminal:: https://codeberg.org/dnkl/foot[foot] (link:./.config/foot/foot.ini[config is here])
+Notifications:: https://github.com/emersion/mako[mako] (link:./.config/mako/config[config is here])
 Text Editor:: https://neovim.io[neovim] (link:./.config/nvim[config is here])
 Media Player:: https://mpv.io[mpv] (link:./.config/mpv[config is here])
+PDF Reader:: https://pwmt.org/projects/zathura[zathura] (link:./.config/zathura/zathurarc[config is here])
 Browser:: https://fanglingsu.github.io/vimb[firefox]
 Music Player:: https://wiki.gnome.org/Apps/Lollypop[lollypop]
 GTK3 Theme:: https://github.com/lassekongo83/adw-gtk3[adw-gtk3]
 Font(s):: https://github.com/be5invis/Iosevka/[iosevka] (Default, Term and Aile)
+Colorscheme:: https://github.com/metalelf0/base16-black-metal-scheme[base16 black metal]
 
 == How to install
 [WARNING]
@@ -44,4 +49,4 @@ git clone --recurse-submodules https://github.com/notchtc/dotfiles.git "$HOME"/.
 3. Enter the dotfiles directory.
 [source,shell]
 cd "$HOME"/.dotfiles
-4. Run the install-fedora script.
+4. Run the install script.

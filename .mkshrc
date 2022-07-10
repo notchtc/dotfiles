@@ -15,7 +15,11 @@ function git_branch {
     fi
 }
 
-PS1='`exitcode`${PWD/#"$HOME"/\~}`git_branch`'$'\E[0m'
+function promptcmd {
+    printf $'\e]133;A\e\\'
+}
+
+PS1='`promptcmd``exitcode`${PWD/#"$HOME"/\~}`git_branch`'$'\E[0m'
 
 HISTFILE="$XDG_CONFIG_HOME/mksh/history"
 HISTSIZE=10104096

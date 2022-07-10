@@ -103,7 +103,7 @@ return packer.startup(function()
 
     use {
         "habamax/vim-asciidoctor",
-        ft = { "asciidoc", "asciidoctor" },
+        ft = "asciidoc",
         config = function()
             require("plugins.others").asciidoctor()
         end,
@@ -111,7 +111,7 @@ return packer.startup(function()
 
     use {
         "jose-elias-alvarez/null-ls.nvim",
-        ft = { "markdown", "asciidoc" },
+        ft = "markdown",
         config = function()
             require("plugins.others").null_ls()
         end,
