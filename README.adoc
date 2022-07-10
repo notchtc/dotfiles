@@ -11,7 +11,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-WARNING:: I haven't gotten around with documenting dependencies and other stuff for this rice. You may have a not working setup when installing this and not having the things required.
+WARNING: I haven't gotten around with documenting dependencies and other stuff for this rice. You may have a not working setup when installing this and not having the things required.
 
 These are my very horrible dotfiles.
 
