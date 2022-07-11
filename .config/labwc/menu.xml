@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+    <menu id="client-menu" label="ClientMenu">
+        <item label="Minimize">
+            <action name="Iconify" />
+        </item>
+        <item label="Maximize">
+            <action name="ToggleMaximize" />
+        </item>
+        <item label="Fullscreen">
+            <action name="ToggleFullscreen" />
+        </item>
+        <item label="Decorations">
+            <action name="ToggleDecorations" />
+        </item>
+        <item label="Close">
+            <action name="Close" />
+        </item>
+    </menu>
+    <menu id="root-menu" label="">
+        <item label="Launcher">
+            <action name="Execute"><command>fuzzel -f monospace:size=11 -i Adwaita -F filename,name,generic,categories -T foot -b 000000ff -t c1c1c1ff -m dd9999ff -s 999999ff -S 000000ff -C 333333ff -w 50 -x 6 -y 6 -l 20 -r 6</command></action>
+        </item>
+        <item label="ytfzf">
+            <action name="Execute"><command>ytfzf -D</command></action>
+        </item>
+        <item label="ani-cli">
+            <action name="Execute"><command>foot ani-cli</command></action>
+        </item>
+        <menu id="powermenu" label="Powermenu">
+            <item label="Reconfigure">
+                <action name="Reconfigure"></action>
+            </item>
+            <item label="Exit">
+                <action name="Exit"></action>
+            </item>
+            <item label="Logout">
+                <action name="Execute"><command>sh -c 'loginctl terminate-user $USER'</command></action>
+            </item>
+            <item label="Poweroff">
+                <action name="Execute"><command>systemctl poweroff</command></action>
+            </item>
+            <item label="Reboot">
+                <action name="Execute"><command>systemctl reboot</command></action>
+            </item>
+            <item label="Suspend">
+                <action name="Execute"><command>systemctl suspend</command></action>
+            </item>
+        </menu>
+    </menu>
+</openbox_menu>

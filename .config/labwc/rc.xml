@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+    <core>
+        <gap>3</gap>
+    </core>
+
+    <theme>
+        <name>black-metal</name>
+        <cornerRadius>6</cornerRadius>
+        <font>
+            <name>Iosevka Aile</name>
+            <size>11</size>
+        </font>
+    </theme>
+
+    <keyboard>
+        <keybind key="W-s">
+            <action name="ShowMenu"><menu>root-menu</menu></action>
+        </keybind>
+
+        <keybind key="W-c">
+            <action name="ShowMenu"><menu>client-menu</menu></action>
+        </keybind>
+
+        <keybind key="W-r">
+            <action name="Execute"><command>fuzzel -f monospace:size=11 -i Adwaita -F filename,name,generic,categories -T foot -b 000000ff -t c1c1c1ff -m dd9999ff -s 999999ff -S 000000ff -C 333333ff -w 50 -x 6 -y 6 -l 20 -r 6</command></action>
+        </keybind>
+
+        <keybind key="W-Return">
+            <action name="Execute"><command>footclient</command></action>
+        </keybind>
+
+        <keybind key="W-S-r">
+            <action name="Reconfigure" />
+        </keybind>
+
+        <keybind key="W-f">
+            <action name="ToggleFullscreen" />
+        </keybind>
+
+        <keybind key="W-q">
+            <action name="Close" />
+        </keybind>
+
+        <keybind key="W-h">
+            <action name="MoveToEdge"><direction>left</direction></action>
+        </keybind>
+        <keybind key="W-l">
+            <action name="MoveToEdge"><direction>right</direction></action>
+        </keybind>
+        <keybind key="W-k">
+            <action name="MoveToEdge"><direction>up</direction></action>
+        </keybind>
+        <keybind key="W-j">
+            <action name="MoveToEdge"><direction>down</direction></action>
+        </keybind>
+        <keybind key="W-S-h">
+            <action name="SnapToEdge"><direction>left</direction></action>
+        </keybind>
+        <keybind key="W-S-l">
+            <action name="SnapToEdge"><direction>right</direction></action>
+        </keybind>
+        <keybind key="W-S-k">
+            <action name="SnapToEdge"><direction>up</direction></action>
+        </keybind>
+        <keybind key="W-S-j">
+            <action name="SnapToEdge"><direction>down</direction></action>
+        </keybind>
+
+        <keybind key="W-Tab">
+            <action name="NextWindow" />
+        </keybind>
+
+        <keybind key="W-S-Tab">
+            <action name="PreviousWindow" />
+        </keybind>
+
+        <keybind key="Print">
+            <action name="Execute"><command>sh -c 'grim - | wl-copy'</command></action>
+        </keybind>
+
+        <keybind key="S-Print">
+            <action name="Execute"><command>sh -c 'grim -g `slurp` - | wl-copy'</command></action>
+        </keybind>
+
+        <keybind key="XF86AudioRaiseVolume">
+            <action name="Execute"><command>pamixer -i 5</command></action>
+        </keybind>
+
+        <keybind key="XF86AudioLowerVolume">
+            <action name="Execute"><command>pamixer -d 5</command></action>
+        </keybind>
+
+        <keybind key="XF86AudioMute">
+            <action name="Execute"><command>pamixer -t</command></action>
+        </keybind>
+
+        <keybind key="XF86AudioPrev">
+            <action name="Execute"><command>playerctl previous</command></action>
+        </keybind>
+
+        <keybind key="XF86AudioPlay">
+            <action name="Execute"><command>playerctl play-pause</command></action>
+        </keybind>
+
+        <keybind key="XF86AudioNext">
+            <action name="Execute"><command>playerctl next</command></action>
+        </keybind>
+
+        <keybind key="XF86MonBrightnessUp">
+            <action name="Execute"><command>light -A 5</command></action>
+        </keybind>
+
+        <keybind key="XF86MonBrightnessDown">
+            <action name="Execute"><command>light -U 5</command></action>
+        </keybind>
+    </keyboard>
+
+    <mouse>
+        <doubleClickTime>500</doubleClickTime>
+
+        <context name="Frame">
+            <mousebind button="W-Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="W-Left" action="Drag">
+                <action name="Move"/>
+            </mousebind>
+            <mousebind button="W-Right" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="W-Right" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+
+        <context name="Top">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="Left">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="Right">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="Bottom">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="TRCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="BRCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="TLCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+        <context name="BLCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize"/>
+            </mousebind>
+        </context>
+
+        <context name="TitleBar">
+            <mousebind button="Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Left" action="Drag">
+                <action name="Move"/>
+            </mousebind>
+            <mousebind button="Right" action="Click">
+                <action name="Focus" />
+                <action name="Raise" />
+                <action name="ShowMenu">
+                    <menu>client-menu</menu>
+                </action>
+            </mousebind>
+            <mousebind button="Left" action="DoubleClick">
+                <action name="Focus"/>
+                <action name="Raise"/>
+                <action name="ToggleMaximize"/>
+            </mousebind>
+        </context>
+
+        <context name="Maximize">
+            <mousebind button="Left" action="Click">
+                <action name="Focus"/>
+                <action name="Raise"/>
+                <action name="ToggleMaximize"/>
+            </mousebind>
+        </context>
+
+        <context name="WindowMenu">
+            <mousebind button="Left" action="Click">
+                <action name="ShowMenu">
+                    <menu>client-menu</menu>
+                </action>
+            </mousebind>
+        </context>
+
+        <context name="Iconify">
+            <mousebind button="left" action="Click">
+                <action name="Iconify"/>
+            </mousebind>
+        </context>
+
+        <context name="Close">
+            <mousebind button="Left" action="Click">
+                <action name="Close"/>
+            </mousebind>
+        </context>
+
+        <context name="Client">
+            <mousebind button="Left" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Middle" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+            <mousebind button="Right" action="Press">
+                <action name="Focus"/>
+                <action name="Raise"/>
+            </mousebind>
+        </context>
+
+        <context name="Root">
+            <mousebind button="Left" action="Press">
+                <action name="ShowMenu"><menu>root-menu</menu></action>
+            </mousebind>
+            <mousebind button="Right" action="Press">
+                <action name="ShowMenu"><menu>root-menu</menu></action>
+            </mousebind>
+            <mousebind button="Middle" action="Press">
+                <action name="ShowMenu"><menu>root-menu</menu></action>
+            </mousebind>
+        </context>
+    </mouse>
+</labwc_config>

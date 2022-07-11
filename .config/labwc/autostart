@@ -1,0 +1,9 @@
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=labwc >/dev/null 2>&1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 >/dev/null 2>&1 &
+gnome-keyring-daemon --daemonize --start >/dev/null 2>&1 &
+
+swaybg -m fit -i ~/.local/share/wall.jpg >/dev/null 2>&1 &
+foot --server >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
+
+gammastep-indicator -l manual:lat=50.1:lon=19 >/dev/null 2>&1 &

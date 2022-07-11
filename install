@@ -50,6 +50,12 @@ ln -sf "$path/.config/mako/config" "$XDG_CONFIG_HOME/mako/config"
 ln -sf "$path/.config/waybar/config" "$XDG_CONFIG_HOME/waybar/config"
 ln -sf "$path/.config/waybar/style.css" "$XDG_CONFIG_HOME/waybar/style.css"
 
+[ ! -d "$XDG_CONFIG_HOME/labwc" ] && mkdir "$XDG_CONFIG_HOME/labwc"
+ln -sf "$path/.config/labwc/rc.xml" "$XDG_CONFIG_HOME/labwc/rc.xml"
+ln -sf "$path/.config/labwc/menu.xml" "$XDG_CONFIG_HOME/labwc/menu.xml"
+ln -sf "$path/.config/labwc/environment" "$XDG_CONFIG_HOME/labwc/environment"
+ln -sf "$path/.config/labwc/autostart" "$XDG_CONFIG_HOME/labwc/autostart"
+
 [ ! -d "$HOME/.local/bin" ] && mkdir "$HOME/.local/bin"
 ln -sf "$path/.local/bin/fetch" "$HOME/.local/bin/fetch"
 
