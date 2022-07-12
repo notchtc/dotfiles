@@ -1,5 +1,5 @@
 {
-    "layer": "bottom",
+    "layer": "top",
     "position": "left",
     "spacing": 3,
     // Choose the order of the modules
@@ -28,7 +28,6 @@
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "rotate": 90,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "",
@@ -37,7 +36,6 @@
         "on-click": "footclient nmtui"
     },
     "pulseaudio": {
-        "rotate": 90,
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}",
         "tooltip-format": "{volume}% ({desc})",

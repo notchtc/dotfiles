@@ -1,10 +1,10 @@
 * {
     font-family: Iosevka Aile, "Font Awesome 5 Free", sans-serif;
-    font-size: 11pt;
+    font-size: 10pt;
 }
 
 window#waybar {
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.8);
     color: #c1c1c1;
     transition-property: background-color;
     transition-duration: .5s;
@@ -59,13 +59,14 @@ window#waybar.solo {
 #network,
 #pulseaudio,
 #tray {
-    padding: 6 0px;
+    padding: 0.3em 0px;
+    margin-left: 1pt;
     color: #c1c1c1;
 }
 
 #window,
 #workspaces {
-    margin: 3 0px;
+    margin: 3px 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
