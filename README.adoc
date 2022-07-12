@@ -25,7 +25,7 @@ Shell:: https://www.mirbsd.org/mksh.htm[mksh] (link:./.mkshrc[config is here])
 Bar:: https://github.com/Alexays/Waybar[waybar] (link:./.config/waybar[config is here])
 Terminal:: https://codeberg.org/dnkl/foot[foot] (link:./.config/foot/foot.ini[config is here])
 Notifications:: https://github.com/emersion/mako[mako] (link:./.config/mako/config[config is here])
-Application Launcher:: https://github.com/Cloudef/bemenu[bemenu]
+Application Launcher:: https://codeberg.org/dnkl/fuzzel[fuzzel]
 Text Editor:: https://neovim.io[neovim] (link:./.config/nvim[config is here])
 Media Player:: https://mpv.io[mpv] (link:./.config/mpv[config is here])
 PDF Reader:: https://pwmt.org/projects/zathura[zathura] (link:./.config/zathura/zathurarc[config is here])
