@@ -6,30 +6,30 @@ local colors = require "colors"
 
 -- Stuff used by statusline
 local modes = {
-    ["n"] = { "normal", colors.green },
-    ["no"] = { "n-pending", colors.green },
-    ["i"] = { "insert", colors.blue },
-    ["ic"] = { "insert", colors.blue },
-    ["t"] = { "terminal", colors.green },
-    ["v"] = { "visual", colors.orange },
-    ["V"] = { "v-line", colors.orange },
-    [""] = { "v-block", colors.orange },
-    ["R"] = { "replace", colors.cyan },
-    ["Rv"] = { "v-replace", colors.cyan },
-    ["s"] = { "select", colors.cyan },
-    ["S"] = { "s-line", colors.cyan },
-    [""] = { "s-block", colors.cyan },
-    ["c"] = { "command", colors.green },
-    ["cv"] = { "command", colors.green },
-    ["ce"] = { "command", colors.green },
-    ["r"] = { "prompt", colors.green },
-    ["rm"] = { "more", colors.green },
-    ["r?"] = { "confirm", colors.green },
-    ["!"] = { "shell", colors.green },
+    ["n"] = { "normal", colors.base0F },
+    ["no"] = { "n-pending", colors.base0F },
+    ["i"] = { "insert", colors.base08 },
+    ["ic"] = { "insert", colors.base08 },
+    ["t"] = { "terminal", colors.base0F },
+    ["v"] = { "visual", colors.base0B },
+    ["V"] = { "v-line", colors.base0B },
+    [""] = { "v-block", colors.base0B },
+    ["R"] = { "replace", colors.base08 },
+    ["Rv"] = { "v-replace", colors.base08 },
+    ["s"] = { "select", colors.base08 },
+    ["S"] = { "s-line", colors.base08 },
+    [""] = { "s-block", colors.base08 },
+    ["c"] = { "command", colors.base0F },
+    ["cv"] = { "command", colors.base0F },
+    ["ce"] = { "command", colors.base0F },
+    ["r"] = { "prompt", colors.base0F },
+    ["rm"] = { "more", colors.base0F },
+    ["r?"] = { "confirm", colors.base0F },
+    ["!"] = { "shell", colors.base0f },
 }
 
 local function mode()
-    api.nvim_set_hl(0, "StatusLineMode", { bg = modes[fn.mode()][2], fg = colors.bg })
+    api.nvim_set_hl(0, "StatusLineMode", { bg = modes[fn.mode()][2], fg = colors.base00 })
 
     return " " .. modes[fn.mode()][1] .. " "
 end

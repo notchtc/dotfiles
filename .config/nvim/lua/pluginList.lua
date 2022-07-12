@@ -14,23 +14,13 @@ return packer.startup(function()
     use "lewis6991/impatient.nvim"
 
     use {
-        "norcalli/nvim-base16.lua",
+        "echasnovski/mini.nvim",
         after = "packer.nvim",
-        as = "colorscheme",
         config = function()
             require "theme"
+            require "plugins.mini"
         end,
-    }
-
-    use {
-        "akinsho/bufferline.nvim",
-        after = "colorscheme",
-        config = function()
-            require "plugins.bufferline"
-        end,
-        setup = function()
-            require("mappings").bufferline()
-        end,
+        setup = "require('mappings').tabline()",
     }
 
     use {
@@ -41,87 +31,64 @@ return packer.startup(function()
     use {
         "nvim-treesitter/nvim-treesitter",
         event = { "BufRead", "BufNewFile" },
-        config = function()
-            require "plugins.treesitter"
-        end,
+        config = "require 'plugins.treesitter'",
     }
 
     use {
         "lukas-reineke/indent-blankline.nvim",
-        after = "colorscheme",
         event = "BufRead",
-        config = function()
-            require("plugins.others").blankline()
-        end,
+        config = "require('plugins.others').blankline()",
+        setup = "require('mappings').blankline()",
     }
 
     use {
         "lewis6991/gitsigns.nvim",
         after = "plenary.nvim",
-        config = function()
-            require "plugins.gitsigns"
-        end,
+        config = "require 'plugins.gitsigns'",
     }
 
     use {
         "norcalli/nvim-colorizer.lua",
-        event = "VimEnter",
-        config = function()
-            require("plugins.others").colorizer()
-        end,
+        cmd = "ColorizerToggle",
+        config = "require('plugins.others').colorizer()",
+        setup = "require('mappings').colorizer()",
     }
 
     use {
         "kyazdani42/nvim-tree.lua",
         cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle", "NvimTreeFocus" },
-        config = function()
-            require "plugins.nvimtree"
-        end,
-        setup = function()
-            require("mappings").nvimtree()
-        end,
+        config = "require 'plugins.nvimtree'",
+        setup = "require('mappings').nvimtree()",
     }
 
     use {
         "folke/zen-mode.nvim",
         cmd = "ZenMode",
-        config = function()
-            require "plugins.zenmode"
-        end,
-        setup = function()
-            require("mappings").zenmode()
-        end,
+        config = "require 'plugins.zenmode'",
+        setup = "require('mappings').zenmode()",
     }
 
     use {
         "folke/twilight.nvim",
         after = "zen-mode.nvim",
-        config = function()
-            require "plugins.twilight"
-        end,
+        config = "require 'plugins.twilight'",
     }
 
     use {
         "habamax/vim-asciidoctor",
         ft = "asciidoc",
-        config = function()
-            require("plugins.others").asciidoctor()
-        end,
+        config = "require('plugins.others').asciidoctor()",
     }
 
     use {
         "jose-elias-alvarez/null-ls.nvim",
         ft = "markdown",
-        config = function()
-            require("plugins.others").null_ls()
-        end,
+        config = "require('plugins.others').null_ls()",
     }
 
     use {
         "folke/trouble.nvim",
         after = "null-ls.nvim",
-        config = function()
-            require "plugins.trouble"
-        end,
+        config = "require 'plugins.trouble'",
     }
 end)

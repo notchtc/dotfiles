@@ -33,14 +33,6 @@ M.misc = function()
     -- Disable search highlighting
     map("n", "<Esc>", "<CMD>noh<CR>")
 
-    -- Folds
-    map("", "zo", "zo<CMD>IndentBlanklineRefresh<CR>")
-    map("", "za", "za<CMD>IndentBlanklineRefresh<CR>")
-    map("", "zr", "zr<CMD>IndentBlanklineRefresh<CR>")
-    map("", "zO", "zO<CMD>IndentBlanklineRefresh<CR>")
-    map("", "zA", "zA<CMD>IndentBlanklineRefresh<CR>")
-    map("", "zR", "zR<CMD>IndentBlanklineRefresh<CR>")
-
     -- Packer commands till because we are not loading it at startup
     command("PackerCompile", function()
         require "pluginList"
@@ -64,18 +56,29 @@ M.misc = function()
     end, {})
 end
 
-M.bufferline = function()
+M.blankline = function()
+    -- Folds
+    map("", "zo", "zo<CMD>IndentBlanklineRefresh<CR>")
+    map("", "za", "za<CMD>IndentBlanklineRefresh<CR>")
+    map("", "zr", "zr<CMD>IndentBlanklineRefresh<CR>")
+    map("", "zm", "zm<CMD>IndentBlanklineRefresh<CR>")
+    map("", "zO", "zO<CMD>IndentBlanklineRefresh<CR>")
+    map("", "zA", "zA<CMD>IndentBlanklineRefresh<CR>")
+    map("", "zR", "zR<CMD>IndentBlanklineRefresh<CR>")
+    map("", "zM", "zM<CMD>IndentBlanklineRefresh<CR>")
+end
+
+M.colorizer = function()
+    map("n", "<leader>c", "<CMD>ColorizerToggle<CR>")
+end
+
+M.tabline = function()
     -- Go to next/previous tab
-    map("n", "<M-.>", "<CMD>BufferLineCycleNext<CR>")
-    map("n", "<M-,>", "<CMD>BufferLineCyclePrev<CR>")
+    map("n", "<M-.>", "<CMD>bnext<CR>")
+    map("n", "<M-,>", "<CMD>bprev<CR>")
 
     -- Close tab
-    map("n", "<M-c>", "<CMD>bdelete<CR>")
-
-    -- Go to nth visible buffer
-    for i = 1, 9 do
-        map("n", "<M-" .. i .. ">", "<CMD>:BufferLineGoToBuffer " .. i .. "<CR>")
-    end
+    map("n", "<M-c>", "<CMD>bwipeout<CR>")
 end
 
 M.nvimtree = function()

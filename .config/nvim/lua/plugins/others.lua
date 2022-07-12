@@ -1,7 +1,5 @@
 local M = {}
 
-local g = vim.g
-
 M.colorizer = function()
     local present, colorizer = pcall(require, "colorizer")
     if not present then
@@ -13,7 +11,6 @@ M.colorizer = function()
         "!packer",
         "!NvimTree",
     }, { rgb_fn = true })
-    COLORIZER_SETUP_HOOK()
 end
 
 M.blankline = function()
@@ -26,7 +23,7 @@ M.blankline = function()
         enabled = true,
         char_list = { "│", "╎", "┆", "┊", "╵" },
         char_blankline = " ",
-        filetype_exclude = { "txt", "packer", "help", "NvimTree" },
+        filetype_exclude = { "txt", "packer", "help", "NvimTree", "starter" },
         buftype_exclude = { "terminal" },
         show_first_indent_level = false,
         show_foldtext = true,
@@ -35,7 +32,7 @@ M.blankline = function()
 end
 
 M.asciidoctor = function()
-    g.asciidoctor_syntax_conceal = 1
+    vim.g.asciidoctor_syntax_conceal = 1
 end
 
 M.null_ls = function()
