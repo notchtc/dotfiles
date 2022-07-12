@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "left",
     "spacing": 3,
     // Choose the order of the modules
