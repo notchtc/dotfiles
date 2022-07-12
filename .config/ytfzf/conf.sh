@@ -1,3 +1,3 @@
 external_menu() {
-    rofi -dmenu -theme youtube -p "$1"
+    $APPLAUNCHER -d -w 125 -P "$1"
 }

@@ -24,7 +24,7 @@
         </keybind>
 
         <keybind key="W-r">
-            <action name="Execute"><command>fuzzel -f monospace:size=11 -i Adwaita -F filename,name,generic,categories -T foot -b 000000ff -t c1c1c1ff -m dd9999ff -s 999999ff -S 000000ff -C 333333ff -w 50 -x 6 -y 6 -l 20 -r 6</command></action>
+            <action name="Execute"><command>$APPLAUNCHER -F filename,name,generic,categories</command></action>
         </keybind>
 
         <keybind key="W-Return">
@@ -85,15 +85,15 @@
         </keybind>
 
         <keybind key="XF86AudioRaiseVolume">
-            <action name="Execute"><command>pamixer -i 5</command></action>
+            <action name="Execute"><command>sh -c "pamixer -i 5 &amp;&amp; pamixer --get-volume > $WOBSOCK"</command></action>
         </keybind>
 
         <keybind key="XF86AudioLowerVolume">
-            <action name="Execute"><command>pamixer -d 5</command></action>
+            <action name="Execute"><command>sh -c "pamixer -d 5 &amp;&amp; pamixer --get-volume > $WOBSOCK"</command></action>
         </keybind>
 
         <keybind key="XF86AudioMute">
-            <action name="Execute"><command>pamixer -t</command></action>
+            <action name="Execute"><command>sh -c "pamixer -t &amp;&amp; ( pamixer --get-mute &amp;&amp; echo 0 > $WOBSOCK ) || pamixer --get-volume > $WOBSOCK"</command></action>
         </keybind>
 
         <keybind key="XF86AudioPrev">
@@ -109,11 +109,11 @@
         </keybind>
 
         <keybind key="XF86MonBrightnessUp">
-            <action name="Execute"><command>light -A 5</command></action>
+            <action name="Execute"><command>sh -c "light -A 5 &amp;&amp; light -G | cut -d "." -f 1 > $WOBSOCK"</command></action>
         </keybind>
 
         <keybind key="XF86MonBrightnessDown">
-            <action name="Execute"><command>light -U 5</command></action>
+            <action name="Execute"><command>sh -c "light -U 5 &amp;&amp; light -G | cut -d "." -f 1 > $WOBSOCK"</command></action>
         </keybind>
     </keyboard>
 

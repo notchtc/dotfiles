@@ -1,7 +1,6 @@
 {
     "layer": "bottom",
-    "position": "top",
-    "height": 22,
+    "position": "left",
     "spacing": 3,
     // Choose the order of the modules
     "modules-center": ["clock"],
@@ -12,36 +11,37 @@
         "spacing": 6
     },
     "clock": {
+        "rotate": 90,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d.%m.%Y %H:%M}"
     },
     "battery": {
+        "rotate": 90,
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time}",
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
+        "rotate": 90,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "",
         "tooltip-format": " {ifname} via {gwaddr}",
-        "format-linked": " {ifname} (No IP)",
         "format-disconnected": "",
         "on-click": "footclient nmtui"
     },
     "pulseaudio": {
+        "rotate": 90,
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": " {volume}%",
+        "format": "{icon}",
+        "tooltip-format": "{volume}% ({desc})",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",

@@ -56,8 +56,13 @@ ln -sf "$path/.config/labwc/menu.xml" "$XDG_CONFIG_HOME/labwc/menu.xml"
 ln -sf "$path/.config/labwc/environment" "$XDG_CONFIG_HOME/labwc/environment"
 ln -sf "$path/.config/labwc/autostart" "$XDG_CONFIG_HOME/labwc/autostart"
 
+[ ! -d "$XDG_CONFIG_HOME/ytfzf" ] && mkdir "$XDG_CONFIG_HOME/ytfzf"
+ln -sf "$path/.config/ytfzf/conf.sh" "$XDG_CONFIG_HOME/ytfzf/conf.sh"
+
 [ ! -d "$HOME/.local/bin" ] && mkdir "$HOME/.local/bin"
 ln -sf "$path/.local/bin/fetch" "$HOME/.local/bin/fetch"
 
 [ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
+[ ! -d "$XDG_DATA_HOME/themes" ] && mkdir "$XDG_DATA_HOME/themes"
 ln -sf "$path/.local/share/wall.jpg" "$XDG_DATA_HOME/wall.jpg"
+[ ! -d "$XDG_DATA_HOME/themes/black-metal" ] && ln -sf "$path/.local/share/themes/black-metal" "$XDG_DATA_HOME/themes/black-metal"
