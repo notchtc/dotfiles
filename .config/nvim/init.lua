@@ -1,15 +1,8 @@
--- Don't write to shadafile yet
-vim.opt.shadafile = "NONE"
-
-local modules = {
-    "impatient",
-    "options",
-    "mappings",
-    "other",
-}
-
-for i = 1, #modules, 1 do
-    pcall(require, modules[i])
+local present, impatient = pcall(require, "impatient")
+if present then
+    impatient.enable_profile()
 end
 
+require "options"
+require "other"
 require("mappings").misc()

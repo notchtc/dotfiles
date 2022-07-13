@@ -7,28 +7,22 @@ local M = {}
 vim.g.mapleader = " "
 
 M.misc = function()
-    -- Disable arrow keys for moving in normal mode
-    map("", "<up>", "")
-    map("", "<down>", "")
-    map("", "<left>", "")
-    map("", "<right>", "")
-
     -- Make navigating through splits easier
     map("", "<C-h>", "<C-w>h")
     map("", "<C-j>", "<C-w>j")
     map("", "<C-k>", "<C-w>k")
     map("", "<C-l>", "<C-w>l")
 
+    -- Go to next/previous tab
+    map("n", "<M-.>", "<CMD>bnext<CR>")
+    map("n", "<M-,>", "<CMD>bprev<CR>")
+
+    -- Close tab
+    map("n", "<M-c>", "<CMD>bwipeout<CR>")
+
     -- Make creating splits easier
     map("", "<leader>sv", "<CMD>split<CR>")
     map("", "<leader>sh", "<CMD>vsplit<CR>")
-
-    -- Go through wrapped lines
-    map("", "j", "gj")
-    map("", "k", "gk")
-
-    -- Spell Check
-    map("n", "<leader>sp", "<CMD>setlocal spell! spelllang=en_us<CR>")
 
     -- Disable search highlighting
     map("n", "<Esc>", "<CMD>noh<CR>")
@@ -70,15 +64,6 @@ end
 
 M.colorizer = function()
     map("n", "<leader>c", "<CMD>ColorizerToggle<CR>")
-end
-
-M.tabline = function()
-    -- Go to next/previous tab
-    map("n", "<M-.>", "<CMD>bnext<CR>")
-    map("n", "<M-,>", "<CMD>bprev<CR>")
-
-    -- Close tab
-    map("n", "<M-c>", "<CMD>bwipeout<CR>")
 end
 
 M.nvimtree = function()

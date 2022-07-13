@@ -1,7 +1,5 @@
-local colors = require "colors"
-
 require("mini.base16").setup {
-    palette = colors,
+    palette = require "colors",
     name = "black-metal",
     use_cterm = true,
 }

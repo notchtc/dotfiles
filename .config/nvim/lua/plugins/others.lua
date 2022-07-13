@@ -23,16 +23,12 @@ M.blankline = function()
         enabled = true,
         char_list = { "│", "╎", "┆", "┊", "╵" },
         char_blankline = " ",
-        filetype_exclude = { "txt", "packer", "help", "NvimTree", "starter" },
+        filetype_exclude = { "txt", "packer", "help", "NvimTree" },
         buftype_exclude = { "terminal" },
         show_first_indent_level = false,
         show_foldtext = true,
         use_treesitter = true,
     }
-end
-
-M.asciidoctor = function()
-    vim.g.asciidoctor_syntax_conceal = 1
 end
 
 M.null_ls = function()

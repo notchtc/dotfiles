@@ -11,6 +11,7 @@ return packer.startup(function()
         event = "VimEnter",
     }
 
+    use "nathom/filetype.nvim"
     use "lewis6991/impatient.nvim"
 
     use {
@@ -18,9 +19,9 @@ return packer.startup(function()
         after = "packer.nvim",
         config = function()
             require "theme"
-            require "plugins.mini"
+            require("mini.surround").setup {}
+            require("mini.tabline").setup { show_icons = false }
         end,
-        setup = "require('mappings').tabline()",
     }
 
     use {
@@ -30,7 +31,7 @@ return packer.startup(function()
 
     use {
         "nvim-treesitter/nvim-treesitter",
-        event = { "BufRead", "BufNewFile" },
+        event = "BufRead",
         config = "require 'plugins.treesitter'",
     }
 
@@ -72,12 +73,6 @@ return packer.startup(function()
         "folke/twilight.nvim",
         after = "zen-mode.nvim",
         config = "require 'plugins.twilight'",
-    }
-
-    use {
-        "habamax/vim-asciidoctor",
-        ft = "asciidoc",
-        config = "require('plugins.others').asciidoctor()",
     }
 
     use {

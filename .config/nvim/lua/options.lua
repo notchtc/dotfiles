@@ -1,11 +1,14 @@
 local opt = vim.opt
 
+vim.g.did_load_filetypes = 1
+
 -- Set shell to more minimal one
 opt.shell = "/bin/sh"
 
 -- Make life better
 opt.clipboard:append "unnamedplus"
 opt.mouse = "a"
+opt.undofile = true
 
 -- Numbers
 opt.number = false
@@ -57,32 +60,31 @@ opt.laststatus = 3
 opt.cmdheight = 0
 opt.showmode = false
 opt.guicursor:append "a:blinkon1"
-
 opt.cursorline = true
 
 -- Disable nvim intro
 opt.shortmess:append "casI"
 
--- Disable some built in plugins
+--disable builtin plugins
 local disabled_built_ins = {
+    "2html_plugin",
+    "getscript",
+    "getscriptPlugin",
+    "gzip",
+    "logipat",
     "netrw",
     "netrwPlugin",
     "netrwSettings",
     "netrwFileHandlers",
-    "gzip",
-    "zip",
-    "zipPlugin",
+    "matchit",
     "tar",
     "tarPlugin",
-    "getscript",
-    "getscriptPlugin",
-    "vimball",
-    "vimballPlugin",
-    "2html_plugin",
-    "logipat",
     "rrhelper",
     "spellfile_plugin",
-    "matchit",
+    "vimball",
+    "vimballPlugin",
+    "zip",
+    "zipPlugin",
 }
 
 for _, plugin in pairs(disabled_built_ins) do

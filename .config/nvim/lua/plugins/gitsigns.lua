@@ -13,6 +13,6 @@ require("gitsigns").setup {
         changedelete = { text = "╰" },
     },
     watch_gitdir = {
-        interval = 100,
+        interval = 250,
     },
 }
