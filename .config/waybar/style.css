@@ -7,7 +7,7 @@ window#waybar {
     background-color: #000000;
     color: #c1c1c1;
     transition-property: background-color;
-    transition-duration: .5s;
+    transition-duration: 100ms;
 }
 
 window#waybar.hidden {
@@ -58,6 +58,7 @@ window#waybar.solo {
 #battery,
 #network,
 #pulseaudio,
+#taskbar,
 #tray {
     padding: 0.3em 0px;
     margin-left: 1pt;
@@ -89,13 +90,18 @@ window#waybar.solo {
     }
 }
 
-#network.disconnected {
+#battery.charging {
+    color: #5f8787;
+}
+
+#battery.warning:not(.charging) {
     color: #dd9999;
 }
 
 #battery.critical:not(.charging) {
+    color: #dd9999;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;

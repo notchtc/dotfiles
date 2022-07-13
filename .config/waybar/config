@@ -20,18 +20,22 @@
         "states": {
             // "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
         "format": "{icon}",
-        "format-charging": "",
         "format-plugged": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "",
         "tooltip-format": " {ifname} via {gwaddr}",
+        "tooltip-format-wifi": " {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": " {ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-disabled": "",
+        "format-linked": "",
         "format-disconnected": "",
         "on-click": "footclient nmtui"
     },
