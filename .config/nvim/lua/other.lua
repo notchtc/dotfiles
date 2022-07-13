@@ -4,9 +4,14 @@ local au = vim.api.nvim_create_autocmd
 au("BufWritePre", { command = [[%s/\s\+$//e]] })
 au("BufWritePre", { command = [[%s/\n\+\%$//e]] })
 
-au("InsertEnter", { once = true, callback = function() require("mini.pairs").setup {} end})
+au("InsertEnter", {
+    once = true,
+    callback = function()
+        require("mini.pairs").setup {}
+    end,
+})
 
-vim.api.nvim_create_autocmd({"VimEnter", "BufEnter"}, {
+au({ "VimEnter", "BufEnter" }, {
     callback = function()
         if #vim.api.nvim_list_bufs() == 1 then
             vim.opt.showtabline = 1

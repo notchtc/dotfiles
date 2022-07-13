@@ -11,7 +11,6 @@ return packer.startup(function()
         event = "VimEnter",
     }
 
-    use "nathom/filetype.nvim"
     use "lewis6991/impatient.nvim"
 
     use {

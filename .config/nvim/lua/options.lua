@@ -1,7 +1,5 @@
 local opt = vim.opt
 
-vim.g.did_load_filetypes = 1
-
 -- Set shell to more minimal one
 opt.shell = "/bin/sh"
 
