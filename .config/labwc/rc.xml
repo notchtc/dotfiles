@@ -10,7 +10,7 @@
         <cornerRadius>6</cornerRadius>
         <font>
             <name>Iosevka Aile</name>
-            <size>11</size>
+            <size>10</size>
         </font>
     </theme>
 
@@ -37,6 +37,10 @@
 
         <keybind key="W-f">
             <action name="ToggleFullscreen" />
+        </keybind>
+
+        <keybind key="W-m">
+            <action name="ToggleMaximize" />
         </keybind>
 
         <keybind key="W-q">
