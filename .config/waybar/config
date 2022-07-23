@@ -1,13 +1,13 @@
 {
     "layer": "bottom",
     "position": "left",
-    "spacing": 3,
+    "spacing": 2,
     // Choose the order of the modules
     "modules-center": ["clock"],
     "modules-right": ["network", "pulseaudio", "battery", "tray"],
     // Modules configuration
     "tray": {
-        "icon-size": 15,
+        "icon-size": 13,
         "spacing": 6
     },
     "clock": {
