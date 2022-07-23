@@ -4,8 +4,9 @@ text-color=#c1c1c1ff
 border-size=1
 border-color=#333333ff
 border-radius=6
-width=225
+width=240
 height=200
+max-icon-size=80
 margin=3
 default-timeout=30000
 
