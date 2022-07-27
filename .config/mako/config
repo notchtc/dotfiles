@@ -9,6 +9,7 @@ height=200
 max-icon-size=80
 margin=3
 default-timeout=30000
+on-button-middle=dismiss-all
 
 [urgency=low]
 default-timeout=15000
