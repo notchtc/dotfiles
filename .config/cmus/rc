@@ -7,9 +7,9 @@ set mouse=true
 
 set format_current=%{?a?%a · }%t
 set format_statusline=%{status} %{?show_playback_position?%{position} %{?duration?/ %{duration}}?%{?duration?%{duration}}} %=%1{follow}%1{repeat}%1{shuffle}%1{?continue?%{continue}%{?volume? · }}%{?volume?%{volume}%%}
-set format_trackwin=│ %t %= %d
+set format_trackwin= %n. %t %= %d
 set format_trackwin_album=%l %{?y?(%y)}
-set format_trackwin_va=│ %t %= %d
+set format_trackwin_va= %t %= %d
 set format_treewin_artist=%a
 set format_treewin=╰ %l
 
@@ -33,7 +33,7 @@ set color_statusline_fg=default
 set color_trackwin_album_attr=bold
 set color_trackwin_album_fg=default
 
-set color_separator=black
+set color_separator=default
 
 set color_win_cur_attr=default
 set color_win_cur=yellow
@@ -45,14 +45,11 @@ set color_win_inactive_sel_bg=default
 set color_win_inactive_sel_fg=default
 set color_win_inactive_cur_sel_attr=bold
 set color_win_inactive_cur_sel_bg=default
-set color_win_inactive_cur_sel_fg=yellow
+set color_win_inactive_cur_sel_fg=red
 
 set color_win_dir=default
 
 set color_error=red
 set color_info=cyan
 
-set status_display_program=~/.config/cmus/cmus_propagate.sh
-
-bind -f common q shell screen -d cmus
-bind -f common ^C shell pkill -x cmus && polybar-msg action "#cmus.hook.0"
+#bind -f common q shell screen -d cmus
