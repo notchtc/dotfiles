@@ -48,10 +48,8 @@ return packer.startup(function()
     }
 
     use {
-        "norcalli/nvim-colorizer.lua",
-        cmd = "ColorizerToggle",
+        "NvChad/nvim-colorizer.lua",
         config = "require('plugins.others').colorizer()",
-        setup = "require('mappings').colorizer()",
     }
 
     use {

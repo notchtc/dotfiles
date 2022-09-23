@@ -11,7 +11,8 @@ au("InsertEnter", {
     end,
 })
 
-au({ "VimEnter", "BufEnter" }, {
+--[[
+  au({ "VimEnter", "BufEnter" }, {
     callback = function()
         if #vim.api.nvim_list_bufs() == 1 then
             vim.opt.showtabline = 1
@@ -20,6 +21,7 @@ au({ "VimEnter", "BufEnter" }, {
         end
     end,
 })
+--]]
 
 au("VimLeave", { command = "set guicursor=a:ver2-blinkon1" })
 

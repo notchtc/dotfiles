@@ -6,11 +6,14 @@ M.colorizer = function()
         return
     end
 
-    colorizer.setup({
-        "*",
-        "!packer",
-        "!NvimTree",
-    }, { rgb_fn = true })
+    colorizer.setup {
+        filetypes = {
+            "*";
+            "!packer";
+            "!NvimTree";
+            css = { rgb_fn = true; };
+        },
+    }
 end
 
 M.blankline = function()

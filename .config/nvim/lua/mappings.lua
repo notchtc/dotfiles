@@ -62,10 +62,6 @@ M.blankline = function()
     map("", "zM", "zM<CMD>IndentBlanklineRefresh<CR>")
 end
 
-M.colorizer = function()
-    map("n", "<leader>c", "<CMD>ColorizerToggle<CR>")
-end
-
 M.nvimtree = function()
     -- Toggle visibility of nvim-tree
     map("n", "<leader>n", "<CMD>NvimTreeFindFileToggle<CR>")
