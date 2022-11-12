@@ -35,7 +35,7 @@ smn() {
     apropos . | cut -d "(" -f 1 | cut -d "," -f 1 | fzf --multi -q "$1" --preview "man {1} 2>/dev/null" | xargs -ro -I{} man {}
 }
 
-alias buildsite="command rm -f docs/.files && ssg6 src docs \"chtc's site\" \"https://notchtc.github.io\""
+alias buildsite="command rm -f docs/.files && ssg src docs \"chtc's site\" \"https://notchtc.github.io\""
 
 alias ..="cd .."
 alias ...="cd ../.."

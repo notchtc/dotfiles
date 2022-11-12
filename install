@@ -16,15 +16,6 @@ ln -sf "$path/.config/mksh/completion.mksh" "$XDG_CONFIG_HOME/mksh/completion.mk
 ln -sf "$path/.config/mksh/key-bindings.mksh" "$XDG_CONFIG_HOME/mksh/key-bindings.mksh"
 ln -sf "$path/.config/mksh/utils.mksh" "$XDG_CONFIG_HOME/mksh/utils.mksh"
 
-[ ! -d "$XDG_CONFIG_HOME/fontconfig" ] && mkdir "$XDG_CONFIG_HOME/fontconfig"
-ln -sf "$path/.config/fontconfig/fonts.conf" "$XDG_CONFIG_HOME/fontconfig/fonts.conf"
-
-[ ! -d "$XDG_CONFIG_HOME/gtk-2.0" ] && mkdir "$XDG_CONFIG_HOME/gtk-2.0"
-ln -sf "$path/.config/gtk-2.0/gtkrc" "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
-
-[ ! -d "$XDG_CONFIG_HOME/gtk-3.0" ] && mkdir "$XDG_CONFIG_HOME/gtk-3.0"
-ln -sf "$path/.config/gtk-3.0/settings.ini" "$XDG_CONFIG_HOME/gtk-3.0/settings.ini"
-
 [ -d "$XDG_CONFIG_HOME/nvim" ] && rm -rf "$XDG_CONFIG_HOME/nvim"
 ln -sf "$path/.config/nvim" "$XDG_CONFIG_HOME/nvim"
 
@@ -37,32 +28,11 @@ ln -sf "$path/.config/mpv/mpv.conf" "$XDG_CONFIG_HOME/mpv/mpv.conf"
 ln -sf "$path/.config/mpv/scripts/copy-permalink.lua" "$XDG_CONFIG_HOME/mpv/scripts/copy-permalink.lua"
 [ ! -d "$XDG_CONFIG_HOME/mpv/scripts/autosubsync" ] && ln -sf "$path/.config/mpv/scripts/autosubsync" "$XDG_CONFIG_HOME/mpv/scripts/autosubsync"
 
-[ ! -d "$XDG_CONFIG_HOME"/foot ] && mkdir "$XDG_CONFIG_HOME/foot"
-ln -sf "$path/.config/foot/foot.ini" "$XDG_CONFIG_HOME/foot/foot.ini"
-
 [ ! -d "$XDG_CONFIG_HOME/zathura" ] && mkdir "$XDG_CONFIG_HOME/zathura"
 ln -sf "$path/.config/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura/zathurarc"
 
-[ ! -d "$XDG_CONFIG_HOME/mako" ] && mkdir "$XDG_CONFIG_HOME/mako"
-ln -sf "$path/.config/mako/config" "$XDG_CONFIG_HOME/mako/config"
+[ ! -d "$XDG_CONFIG_HOME/gtk-2.0" ] && mkdir "$XDG_CONFIG_HOME/gtk-2.0"
+ln -sf "$path/.config/gtk-2.0/gtkrc" "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
-[ ! -d "$XDG_CONFIG_HOME/waybar" ] && mkdir "$XDG_CONFIG_HOME/waybar"
-ln -sf "$path/.config/waybar/config" "$XDG_CONFIG_HOME/waybar/config"
-ln -sf "$path/.config/waybar/style.css" "$XDG_CONFIG_HOME/waybar/style.css"
-
-[ ! -d "$XDG_CONFIG_HOME/labwc" ] && mkdir "$XDG_CONFIG_HOME/labwc"
-ln -sf "$path/.config/labwc/rc.xml" "$XDG_CONFIG_HOME/labwc/rc.xml"
-ln -sf "$path/.config/labwc/menu.xml" "$XDG_CONFIG_HOME/labwc/menu.xml"
-ln -sf "$path/.config/labwc/environment" "$XDG_CONFIG_HOME/labwc/environment"
-ln -sf "$path/.config/labwc/autostart" "$XDG_CONFIG_HOME/labwc/autostart"
-
-[ ! -d "$XDG_CONFIG_HOME/ytfzf" ] && mkdir "$XDG_CONFIG_HOME/ytfzf"
-ln -sf "$path/.config/ytfzf/conf.sh" "$XDG_CONFIG_HOME/ytfzf/conf.sh"
-
-[ ! -d "$HOME/.local/bin" ] && mkdir "$HOME/.local/bin"
-ln -sf "$path/.local/bin/fetch" "$HOME/.local/bin/fetch"
-
-[ ! -d "$XDG_DATA_HOME" ] && mkdir "$XDG_DATA_HOME"
-[ ! -d "$XDG_DATA_HOME/themes" ] && mkdir "$XDG_DATA_HOME/themes"
-ln -sf "$path/.local/share/wall.jpg" "$XDG_DATA_HOME/wall.jpg"
-[ ! -d "$XDG_DATA_HOME/themes/black-metal" ] && ln -sf "$path/.local/share/themes/black-metal" "$XDG_DATA_HOME/themes/black-metal"
+[ ! -d "$XDG_CONFIG_HOME/gtk-3.0" ] && mkdir "$XDG_CONFIG_HOME/gtk-3.0"
+ln -sf "$path/.config/gtk-3.0/settings.ini" "$XDG_CONFIG_HOME/gtk-3.0/settings.ini"
