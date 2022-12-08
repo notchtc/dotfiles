@@ -1,0 +1,11 @@
+#!/bin/sh
+volume=$(pamixer --get-volume)
+mute=$(pamixer --get-mute)
+
+if [ "$mute" = "true" ]; then
+	mute="!"
+else
+	mute=""
+fi
+
+echo "$volume$mute" >> "$XDG_RUNTIME_DIR"/xob_vol

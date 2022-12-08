@@ -1,0 +1,6 @@
+Personal dotfiles, use GNU Stow to install these.
+Don't expect everything to work on your system out of the box.
+
+git clone https://github.com/notchtc/dotfiles
+cd dotfiles
+stow (insert the thing(s) you want here) or stow */ (to get everything)

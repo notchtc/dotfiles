@@ -1,5 +1,0 @@
-@theme "dmenu.rasi"
-
-configuration {
-    modi: [ run ];
-}
