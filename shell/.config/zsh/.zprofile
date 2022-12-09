@@ -29,7 +29,6 @@ export TERMINAL=alacritty
 export FZF_DEFAULT_OPTS="-m --color '16,bg+:-1,border:8' --border sharp --preview-window sharp:wrap --layout=reverse --info inline"
 export LESS="--mouse -R"
 export QT_STYLE_OVERRIDE=adwaita-dark
-export GPG_TTY=$(tty)
 
 # Don't allow duplicates in path
 typeset -aU path

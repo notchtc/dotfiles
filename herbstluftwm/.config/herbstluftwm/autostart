@@ -182,6 +182,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule fixedsize floating=on
 hc rule class='TelegramDesktop' tag=9
 hc rule class='KeePassXC' floating=true floatplacement=center
+hc rule class='Steam' floating=true
 
 # unlock, just to be sure
 hc unlock
