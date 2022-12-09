@@ -3,6 +3,8 @@
 # editor
 alias e="$EDITOR"
 alias se="sudo -E $EDITOR"
+alias qe="nvi"
+alias sqe="sudo nvi"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"
