@@ -30,7 +30,6 @@ hc attr theme.title_align center
 hc attr theme.title_font "Hack:size=10"
 hc attr theme.title_color "$bg"
 hc attr theme.normal.title_color "$fg"
-hc attr theme.floating.title_when always
 hc attr theme.floating.border_width 1
 
 hc set frame_bg_transparent on
@@ -39,6 +38,7 @@ hc set frame_border_active_color "$focus"
 hc set frame_bg_normal_color "$bg_alt"
 hc set frame_bg_active_color "$focus"
 hc set frame_border_width 0
+hc set frame_transparent_width 0
 hc set always_show_frame on
 hc set smart_frame_surroundings off
 hc set smart_window_surroundings off

@@ -5,4 +5,5 @@ configuration {
     sidebar-mode: true;
     drun-display-format: "{name}";
     show-icons: true;
+    matching: "fuzzy";
 }
