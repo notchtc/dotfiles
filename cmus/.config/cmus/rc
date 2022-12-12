@@ -7,9 +7,9 @@ set mouse=true
 
 set format_current=%{?a?%a · }%t
 set format_statusline=%{status} %{?show_playback_position?%{position} %{?duration?/ %{duration}}?%{?duration?%{duration}}} %=%1{follow}%1{repeat}%1{shuffle}%1{?continue?%{continue}%{?volume? · }}%{?volume?%{volume}%%}
-set format_trackwin=│ %t %= %d
+set format_trackwin= %t %= %d
 set format_trackwin_album=%l %{?y?(%y)}
-set format_trackwin_va=│ %t %= %d
+set format_trackwin_va= %t %= %d
 set format_treewin_artist=%a
 set format_treewin=╰ %l
 
@@ -33,7 +33,7 @@ set color_statusline_fg=default
 set color_trackwin_album_attr=bold
 set color_trackwin_album_fg=default
 
-set color_separator=black
+set color_separator=default
 
 set color_win_cur_attr=default
 set color_win_cur=blue

@@ -2,9 +2,9 @@
 
 # editor
 alias e="$EDITOR"
-alias se="sudo -E $EDITOR"
+alias se="doas -E $EDITOR"
 alias qe="nvi"
-alias sqe="sudo nvi"
+alias sqe="doas nvi"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"
@@ -17,10 +17,11 @@ alias rml="trash-list"
 alias rmr="trash-restore"
 
 # xbps
-alias xr="sudo xbps-remove -Rof"
-alias xu="sudo xbps-install -Su"
-alias xc="sudo xbps-remove -ROo"
+alias xr="doas xbps-remove -Rof"
+alias xu="doas xbps-install -Su"
+alias xc="doas xbps-remove -ROo"
 
 # other
+alias sudo="doas"
 alias hc="herbstclient"
 alias buildsite="command rm -f docs/.files && ssg src docs \"chtc's site\" \"https://notchtc.github.io\""
