@@ -1,12 +1,10 @@
-/usr/libexec/polkit-gnome-authentication-agent-1 &
 mkfifo "$XDG_RUNTIME_DIR"/xob_vol &
-setxkbmap -option caps:swapescape pl &
+setxkbmap -option caps:swapescape pl -variant colemak_dh &
 xrdb -merge "$XDG_CONFIG_HOME/x11/Xresources" &
 pipewire &
 pipewire-pulse &
 hsetroot -cover "$XDG_DATA_HOME/wall.jpg" &
 picom -b &
-udiskie &
 batsignal -b -w 25 -c 10 -d 5 &
 tail -f "$XDG_RUNTIME_DIR"/xob_vol | xob &
 unclutter -b &

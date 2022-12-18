@@ -1,0 +1,25 @@
+set autoindent
+" command editor opens on (^V^R)
+set cedit=^R
+" extended regular expressions
+set extended
+" file completion on tab (^V^V^V<tab>)
+set filec=^V	
+set noflash
+" case-insensitive searches unless upper-case
+set iclower
+set matchtime=1
+set path=.
+set ruler
+set searchincr
+set showmatch
+set tildeop
+set windowname
+" wrap through end of file when searching
+set wrapscan
+set shiftwidth=4
+set tabstop=4
+set wrapmargin=4
+
+map ^V y :^Rp:.,$!pbcopy^M:q^M
+map ^V p :read !pbpaste
