@@ -27,7 +27,7 @@ hc attr theme.title_when multiple_tabs
 hc attr theme.title_height 12
 hc attr theme.title_depth 3
 hc attr theme.title_align center
-hc attr theme.title_font "Hack:size=10"
+hc attr theme.title_font "Iosevka:size=10"
 hc attr theme.title_color "$bg"
 hc attr theme.normal.title_color "$fg"
 hc attr theme.floating.border_width 1
@@ -59,14 +59,11 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-q quit
-hc keybind $Mod-Shift-r reload
+hc keybind $Mod-Shift-q spawn sysask
 hc keybind $Mod-Shift-c close_or_remove
 hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d spawn rofi -show drun
 hc keybind $Mod-Ctrl-Tab spawn rofi -show window
-hc keybind $Mod-Shift-x spawn doas /usr/sbin/poweroff
-hc keybind $Mod-Shift-Ctrl-x spawn doas /usr/sbin/reboot
 
 # basic movement in tiling and floating mode
 # focusing clients

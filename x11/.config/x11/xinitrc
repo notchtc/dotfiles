@@ -1,5 +1,5 @@
 mkfifo "$XDG_RUNTIME_DIR"/xob_vol &
-setxkbmap -option caps:swapescape pl -variant colemak_dh &
+setxkbmap pl -variant colemak -option caps:swapescape &
 xrdb -merge "$XDG_CONFIG_HOME/x11/Xresources" &
 pipewire &
 pipewire-pulse &
@@ -9,3 +9,4 @@ batsignal -b -w 25 -c 10 -d 5 &
 tail -f "$XDG_RUNTIME_DIR"/xob_vol | xob &
 unclutter -b &
 exec dbus-run-session herbstluftwm
+

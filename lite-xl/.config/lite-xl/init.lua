@@ -28,7 +28,7 @@ fontconfig.use_blocking {
 		size = 12 * SCALE,
 	},
 	code_font = {
-		name = "Hack",
+		name = "monospace",
 		size = 13 * SCALE,
 	},
 }
