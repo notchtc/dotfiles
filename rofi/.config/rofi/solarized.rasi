@@ -10,7 +10,8 @@
     border-color: @alt-background;
     spacing: 2;
     background-color: #00000000;
-    border-radius: 3px;
+    border-radius: 5px;
+	font: "monospace 9";
 }
 window {
     background-color: @background;
