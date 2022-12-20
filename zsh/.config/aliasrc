@@ -2,9 +2,7 @@
 
 # editor
 alias e="$EDITOR"
-alias se="doas -E $EDITOR"
-alias qe="nvi"
-alias sqe="doas nvi"
+alias se="doas $EDITOR"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"

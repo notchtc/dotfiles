@@ -5,13 +5,13 @@ set resume=true
 set continue_album=false
 set mouse=true
 
-set format_current=%{?a?%a · }%t
-set format_statusline=%{status} %{?show_playback_position?%{position} %{?duration?/ %{duration}}?%{?duration?%{duration}}} %=%1{follow}%1{repeat}%1{shuffle}%1{?continue?%{continue}%{?volume? · }}%{?volume?%{volume}%%}
-set format_trackwin= %t %= %d
-set format_trackwin_album=%l %{?y?(%y)}
-set format_trackwin_va= %t %= %d
+set format_current= %{?a?%a · }%t
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration}}?%{?duration?%{duration}}} %=%1{follow}%1{repeat}%1{shuffle}%1{?continue?%{continue}%{?volume? · }}%{?volume?%{volume}%% }
+set format_trackwin= %t %= %d 
+set format_trackwin_album= %l %{?y?(%y)} 
+set format_trackwin_va= %t %= %a %d 
 set format_treewin_artist=%a
-set format_treewin=╰ %l
+set format_treewin=· %l
 
 set color_win_bg=default
 set color_win_fg=default

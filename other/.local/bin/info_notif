@@ -1,0 +1,8 @@
+# Loop through all attached batteries and format the info
+for battery in /sys/class/power_supply/BAT?*; do
+	# Sets up the status and capacity
+	status="$(cat "$battery/status" 2>&1)"
+	capacity="$(cat "$battery/capacity" 2>&1)"
+done
+
+notify-send "Info" "$(date '+%d.%m.%Y %H:%M')\n$capacity%, $status"

@@ -21,7 +21,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # Default apps
 export BROWSER=firefox
-export EDITOR=lite-xl
+export EDITOR=nvi
 export VISUAL="$EDITOR"
 export PAGER=less
 export TERMINAL=alacritty

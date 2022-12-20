@@ -17,7 +17,7 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: monospace 
+    family: monospace
 
   # Point size
   size: 12
@@ -26,15 +26,15 @@ font:
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
-    x: -1
-    y: -1
+    x: 0
+    y: 0
 
   # Use built-in font for box drawing characters.
   #
   # If `true`, Alacritty will use a custom built-in font for box drawing
   # characters (Unicode points 2500 - 259f).
   #
-  builtin_box_drawing: true
+  builtin_box_drawing: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false

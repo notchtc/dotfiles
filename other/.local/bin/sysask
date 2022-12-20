@@ -1,0 +1,10 @@
+#!/bin/sh
+case "$(printf "lock\nquit\nrestart\nsleep\nshutdown\nreboot" | rofi -dmenu -i -p 'What do you want to do? ')" in
+	"lock") slock ;;
+	"quit") herbstclient quit ;;
+	"restart") herbstclient reload ;;
+	"sleep") doas /usr/sbin/zzz & slock ;;
+	"shutdown") doas /usr/sbin/poweroff ;;
+	"reboot") doas /usr/sbin/reboot ;;
+	*) exit 1 ;;
+esac
