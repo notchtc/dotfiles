@@ -24,7 +24,7 @@ export BROWSER=firefox
 export EDITOR=nvi
 export VISUAL="$EDITOR"
 export PAGER=less
-export TERMINAL=alacritty
+export TERMINAL=xst
 
 export FZF_DEFAULT_OPTS="-m --color '16,bg+:-1,border:8' --border sharp --preview-window sharp:wrap --layout=reverse --info inline"
 export LESS="--mouse -R"
@@ -37,7 +37,3 @@ path+=("$HOME/.local/bin")
 path+=("$GEM_PATH/bin")
 # Set path
 export PATH
-
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
-fi

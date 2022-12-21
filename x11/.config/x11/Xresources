@@ -54,3 +54,22 @@
 !! white dark/light
 *color7:                S_base2
 *color15:               S_base3
+
+herbe.background_color: S_base03
+herbe.border_color: S_base02
+herbe.font_color: S_base0
+herbe.font_pattern: monospace:size=10
+herbe.line_spacing: 5
+herbe.padding: 5
+herbe.width: 125
+herbe.border_size: 2
+herbe.pos_x: 2
+herbe.pos_y: 2
+herbe.corner: 1
+herbe.duration: 10
+
+st.font: monospace:size=9
+st.borderpx: 5
+st.cursorshape: 5
+st.cursorthickness: 1
+st.scrollrate: 2

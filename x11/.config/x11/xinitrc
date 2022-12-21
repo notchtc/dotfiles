@@ -5,8 +5,7 @@ pipewire &
 pipewire-pulse &
 hsetroot -cover "$XDG_DATA_HOME/wall.jpg" &
 picom -b &
-batsignal -b -w 25 -c 10 -d 5 &
+batsignal -b -w 30 -c 20 -d 7 -M "herbe '%s!' 'Battery level: %s%%'" &
 tail -f "$XDG_RUNTIME_DIR"/xob_vol | xob &
 unclutter -b &
 exec dbus-run-session herbstluftwm
-

@@ -5,4 +5,4 @@ for battery in /sys/class/power_supply/BAT?*; do
 	capacity="$(cat "$battery/capacity" 2>&1)"
 done
 
-notify-send "Info" "$(date '+%d.%m.%Y %H:%M')\n$capacity%, $status"
+herbe "Info" "$(date '+%d.%m.%Y %H:%M')" "$capacity%, $status"

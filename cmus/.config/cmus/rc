@@ -15,7 +15,7 @@ set format_treewin=· %l
 
 set color_win_bg=default
 set color_win_fg=default
-set color_win_sel_attr=bold
+set color_win_sel_attr=italic
 set color_win_sel_bg=default
 set color_win_sel_fg=cyan
 set color_win_title_attr=default
@@ -30,14 +30,14 @@ set color_statusline_attr=default
 set color_statusline_bg=default
 set color_statusline_fg=default
 
-set color_trackwin_album_attr=bold
+set color_trackwin_album_attr=italic
 set color_trackwin_album_fg=default
 
 set color_separator=default
 
 set color_win_cur_attr=default
 set color_win_cur=blue
-set color_win_cur_sel_attr=bold
+set color_win_cur_sel_attr=italic
 set color_win_cur_sel_bg=default
 set color_win_cur_sel_fg=cyan
 set color_win_inactive_sel_attr=default
