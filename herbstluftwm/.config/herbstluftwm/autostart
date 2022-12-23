@@ -180,6 +180,7 @@ hc rule fixedsize floating=on
 hc rule class='TelegramDesktop' tag=9
 hc rule class='KeePassXC' floating=true floatplacement=center
 hc rule class='Steam' floating=true
+hc rule class='Lutris' floating=true
 
 # unlock, just to be sure
 hc unlock
