@@ -19,6 +19,12 @@ alias xr="doas xbps-remove -Rof"
 alias xu="doas xbps-install -Su"
 alias xc="doas xbps-remove -ROo"
 
+# cd
+alias ..2="cd ../../"
+alias ..3="cd ../../../"
+alias ..4="cd ../../../../"
+alias ..5="cd ../../../../../"
+
 # other
 alias sudo="doas"
 alias hc="herbstclient"

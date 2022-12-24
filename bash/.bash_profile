@@ -1,4 +1,5 @@
 # Set XDG directories
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:=$HOME/.local/share}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:=$HOME/.cache}"
 export XDG_STATE_HOME="${XDG_STATE_HOME:=$HOME/.local/state}"
@@ -18,6 +19,7 @@ export WINEPREFIX="$XDG_DATA_HOME/wine"
 export LESSHISTFILE=-
 export DVDCSS_CACHE="$XDG_DATA_HOME/dvdcss"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export HISTFILE="$XDG_DATA_HOME/bash_history"
 
 # Default apps
 export BROWSER=firefox
@@ -30,10 +32,7 @@ export FZF_DEFAULT_OPTS="-m --color '16,bg+:-1,border:8' --border sharp --previe
 export LESS="--mouse -R"
 export QT_STYLE_OVERRIDE=adwaita-dark
 
-# Don't allow duplicates in path
-typeset -aU path
-# Append to path
-path+=("$HOME/.local/bin")
-path+=("$GEM_PATH/bin")
 # Set path
-export PATH
+export PATH="$PATH:$HOME/.local/bin:$GEM_PATH/bin"
+
+. "$HOME/.bashrc"
