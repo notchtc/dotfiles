@@ -1,3 +1,4 @@
+#!/bin/sh
 # Loop through all attached batteries and format the info
 for battery in /sys/class/power_supply/BAT?*; do
 	# Sets up the status and capacity
@@ -5,4 +6,12 @@ for battery in /sys/class/power_supply/BAT?*; do
 	capacity="$(cat "$battery/capacity" 2>&1)"
 done
 
-herbe "Info" "$(date '+%d.%m.%Y %H:%M')" "$capacity%, $status"
+tags="$(cmus-remote -Q | grep tag | cut -d ' ' -f 2-)"
+title="$(echo "$tags" | grep ^title | cut -d ' ' -f 2-)"
+artist="$(echo "$tags" | grep ^artist | head -n 1 | cut -d ' ' -f 2-)"
+
+if [ ! -z "$title" ] && [ ! -z "$artist" ]; then 
+    nowplaying="$artist - $title"
+fi
+
+herbe "Info" "$(date '+%d.%m.%Y %H:%M')" "$capacity%, $status" "$nowplaying"
