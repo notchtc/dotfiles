@@ -1,5 +1,5 @@
 mkfifo "$XDG_RUNTIME_DIR"/xob_vol &
-setxkbmap pl -variant colemak -option caps:swapescape &
+setxkbmap pl -variant colemak_dh_ansi -option caps:swapescape &
 xrdb -merge "$XDG_CONFIG_HOME/x11/Xresources" &
 pipewire &
 pipewire-pulse &
