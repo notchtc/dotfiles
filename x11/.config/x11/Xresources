@@ -68,7 +68,7 @@ herbe.pos_y: 2
 herbe.corner: 1
 herbe.duration: 10
 
-st.font: monospace:size=9
+st.font: monospace:size=8:antialias=0
 st.borderpx: 5
 st.cursorshape: 5
 st.cursorthickness: 1
