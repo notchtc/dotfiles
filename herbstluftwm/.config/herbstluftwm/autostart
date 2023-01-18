@@ -59,11 +59,11 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-q spawn sysask
+hc keybind $Mod-Shift-q spawn sysask -fn monospace -nb "#002b36" -nf "#839496" -sb "#268bd2" -sf "#fdf6e3" -i
 hc keybind $Mod-Shift-c close_or_remove
 hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-d spawn rofi -show drun
-hc keybind $Mod-Ctrl-Tab spawn rofi -show window
+hc keybind $Mod-d spawn j4-dmenu-desktop --dmenu="dmenu -fn monospace -nb '#002b36' -nf '#839496' -sb '#268bd2' -sf '#fdf6e3' -i" --no-generic
+hc keybind $Mod-Shift-d spawn dmenu_run -fn monospace -nb "#002b36" -nf "#839496" -sb "#268bd2" -sf "#fdf6e3" -i 
 
 # basic movement in tiling and floating mode
 # focusing clients

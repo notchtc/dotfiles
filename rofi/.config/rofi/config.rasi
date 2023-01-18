@@ -1,8 +1,0 @@
-@theme "solarized.rasi"
-
-configuration {
-    modi: [ drun,run,window ];
-    sidebar-mode: true;
-    drun-display-format: "{name}";
-    matching: "fuzzy";
-}

@@ -1,5 +1,5 @@
 #!/bin/sh
-case "$(printf "lock\nquit\nrestart\nsleep\nshutdown\nreboot" | rofi -dmenu -i -p 'What do you want to do? ')" in
+case "$(printf "lock\nquit\nrestart\nsleep\nshutdown\nreboot" | dmenu $@ -p 'What do you want to do? ')" in
 	"lock") slock ;;
 	"quit") herbstclient quit ;;
 	"restart") herbstclient reload ;;
